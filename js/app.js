@@ -10,6 +10,7 @@ import {
 } from "./quiz.js";
 import { buildWrongAnswerReview } from "./review.js";
 import { createQuizStorage } from "./storage.js";
+import { resolvePageView } from "./page-routing.js";
 
 // ── Cute Reaction System 💖 ──────────────────────────────────────────────────
 const CORRECT_MESSAGES = [
@@ -205,6 +206,9 @@ function getTopWrongQuestions(wrongFreq, questionsById, limit = 5) {
 const app = document.querySelector("#app");
 const STORAGE_KEY = "htbt-quiz-app-state";
 const STATS_KEY = "htbt-quiz-app-stats";
+const HOME_PAGE_URL = "./index.html";
+const QUIZ_PAGE_URL = "./quiz.html";
+const pageMode = document.body.dataset.page === "quiz" ? "quiz" : "home";
 const storage = createQuizStorage(window.localStorage, STORAGE_KEY);
 const statsStorage = createQuizStorage(window.localStorage, STATS_KEY);
 
@@ -404,13 +408,19 @@ function render() {
   }
 
   const session = state.persisted.session;
+  const pageView = resolvePageView(pageMode, session);
 
-  if (!session) {
+  if (pageView === "home") {
     renderHome();
     return;
   }
 
-  if (!session.submitted) {
+  if (pageView === "redirect-home") {
+    redirectToHomePage();
+    return;
+  }
+
+  if (pageView === "quiz") {
     renderQuiz(session);
     return;
   }
@@ -879,7 +889,7 @@ function handleClick(event) {
   }
 
   if (action === "continue-session") {
-    render();
+    navigateToQuizPage();
     return;
   }
 
@@ -899,7 +909,7 @@ function handleClick(event) {
   }
 
   if (action === "go-home") {
-    renderHome();
+    navigateToHomePage();
     return;
   }
 
@@ -1124,6 +1134,11 @@ function startNewSession(mode, requestedCount = "all") {
   });
   state.persisted.lastResult = null;
   persistState();
+  if (pageMode === "home") {
+    navigateToQuizPage();
+    return;
+  }
+
   renderQuiz(state.persisted.session);
 }
 
@@ -1145,6 +1160,11 @@ function startReviewWrongSession() {
     fastMode: state.persisted.settings.fastMode
   });
   persistState();
+  if (pageMode === "home") {
+    navigateToQuizPage();
+    return;
+  }
+
   renderQuiz(state.persisted.session);
 }
 
@@ -1166,6 +1186,11 @@ function startBookmarkSession() {
     fastMode: state.persisted.settings.fastMode
   });
   persistState();
+  if (pageMode === "home") {
+    navigateToQuizPage();
+    return;
+  }
+
   renderQuiz(state.persisted.session);
 }
 
@@ -1199,7 +1224,29 @@ function resetAllState() {
   state.persisted.bookmarks = [];
   storage.clear();
   persistState();
+  if (pageMode === "quiz") {
+    navigateToHomePage();
+    return;
+  }
+
   renderHome();
+}
+
+function navigateToQuizPage() {
+  window.location.href = QUIZ_PAGE_URL;
+}
+
+function navigateToHomePage() {
+  window.location.href = HOME_PAGE_URL;
+}
+
+function redirectToHomePage() {
+  app.innerHTML = `
+    <div class="status-block">
+      <p>Khong co phien lam bai hop le. Dang quay ve trang chinh...</p>
+    </div>
+  `;
+  window.location.replace(HOME_PAGE_URL);
 }
 
 // ── Utilities ─────────────────────────────────────────────────────────────────
