@@ -14,29 +14,29 @@ import { resolvePageView } from "./page-routing.js";
 
 // ── Cute Reaction System 💖 ──────────────────────────────────────────────────
 const CORRECT_MESSAGES = [
-  { emoji: "💖", text: "Trời ơi đúng luôn, cưng quá vậy trời." },
-  { emoji: "🌷", text: "Đúng đẹp luôn nha, nhìn cái là biết người thông minh." },
-  { emoji: "✨", text: "Ui xịn quá, trả lời mà mượt như rót mật vào tai." },
-  { emoji: "🍓", text: "Bé làm câu này ngọt quá, muốn thưởng hoa điểm mười." },
-  { emoji: "🫶", text: "Đúng rồi đó, giỏi kiểu này ai chịu nổi." },
-  { emoji: "🌟", text: "Chuẩn không cần chỉnh, đúng là cục cưng của môn này." },
-  { emoji: "🎀", text: "Xinh xắn mà còn đúng nữa, khó ai đỡ nổi bé." },
-  { emoji: "🍬", text: "Ngọt như kẹo luôn, đáp án này bé chốt quá chuẩn." },
-  { emoji: "🥰", text: "Đúng rồi nha, thương cái cách bé học ghê." },
-  { emoji: "💫", text: "Câu này bé xử mượt quá, nhìn phát thấy cưng liền." },
+  { emoji: "💖", text: "Trời ơi đúng luôn á, bé giỏi quá làm tim anh tan chảy mất thôi." },
+  { emoji: "🌷", text: "Đúng đẹp quá nè, nhìn là biết bé thông minh và đáng yêu số một." },
+  { emoji: "✨", text: "Ui mượt ghê á, bé trả lời hay quá nghe mà muốn khen hoài luôn." },
+  { emoji: "🍓", text: "Câu này bé làm ngọt xỉu, xứng đáng được thưởng thật nhiều cái thơm." },
+  { emoji: "🫶", text: "Đúng rồi đó nha, giỏi như này thì ai mà không mê cho được." },
+  { emoji: "🌟", text: "Chuẩn quá luôn, đúng là cục cưng giỏi giang của anh." },
+  { emoji: "🎀", text: "Vừa xinh vừa giỏi nữa chứ, bé làm đúng nghe cưng muốn xỉu." },
+  { emoji: "🍬", text: "Đáp án này bé chốt ngọt như kẹo luôn, chuẩn ơi là chuẩn." },
+  { emoji: "🥰", text: "Đúng rồi nè, thương cái cách bé cố gắng và giỏi lên từng ngày ghê." },
+  { emoji: "💫", text: "Câu này bé xử khéo quá trời, nhìn phát là muốn ôm khen liền." },
 ];
 
 const WRONG_MESSAGES = [
-  { emoji: "🫠", text: "Sai dữ thần luôn, đáp án đi lạc không mang theo não hả trời." },
-  { emoji: "💀", text: "Câu này chọn kiểu gì nghe như kiến thức trượt chân ngã cầu thang." },
-  { emoji: "🤡", text: "Ủa alo, chọn đáp án này là đang diễn hài đúng không." },
-  { emoji: "🥴", text: "Sai mạnh bạo ghê, kiến thức chắc vừa đi uống trà sữa chưa về." },
-  { emoji: "🪦", text: "Cú chọn này chôn luôn sự tự tin của câu hỏi." },
-  { emoji: "🐔", text: "Đọc câu hỏi thì ít, lao vào chọn như gà mổ bàn phím thì nhiều." },
-  { emoji: "🌪️", text: "Sai xoáy như lốc, đáp án đúng nhìn bé chắc cũng muốn khóc." },
-  { emoji: "🫵", text: "Bắt được một bé chọn bừa rồi nha, khai mau." },
-  { emoji: "🚑", text: "Kiến thức câu này đang cần xe cấp cứu gấp." },
-  { emoji: "🧨", text: "Nổ to thật, nhưng tiếc là nổ sai đáp án." },
+  { emoji: "🫠", text: "Hơi tiếc một xíu thôi nè, nhưng bé ngoan của anh thử lại là được ngay." },
+  { emoji: "💞", text: "Câu này chưa đúng thôi, không sao hết, bé vẫn đáng yêu và cố thêm chút là ra nè." },
+  { emoji: "🌷", text: "Sai nhẹ một chút thôi à, bình tĩnh nha bé, mình làm lại là đúng liền." },
+  { emoji: "🥺", text: "Hong sao đâu nè, câu này chỉ đang thử thách bé chút xíu thôi đó." },
+  { emoji: "🍀", text: "Chưa trúng đáp án rồi, nhưng anh tin bé làm thêm một lần là chuẩn ngay." },
+  { emoji: "🫶", text: "Không sao hết á, bé cố gắng vậy là anh thương lắm rồi, mình thử lại nha." },
+  { emoji: "🌈", text: "Sai một câu không nói lên gì đâu, bé của anh vẫn giỏi và đáng khen lắm." },
+  { emoji: "💗", text: "Ui chưa đúng rồi nè, nhưng không buồn nha, có anh cổ vũ bé đây." },
+  { emoji: "✨", text: "Câu này mình lệch một chút thôi, tập trung lại xíu là bé làm được ngay." },
+  { emoji: "🎀", text: "Chưa đúng nhưng vẫn cưng lắm, bé thử lại thêm lần nữa nha yêu ơi." },
 ];
 
 function randomItem(arr) {
