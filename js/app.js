@@ -515,15 +515,15 @@ function renderHome() {
       <section class="control-row">
         <label class="toggle-card">
           <input type="checkbox" data-role="shuffle-toggle" ${state.persisted.settings.shuffleQuestions ? "checked" : ""} />
-          <span>🔀 Trộn thứ tự câu hỏi lúc bắt đầu</span>
+          <span>🔀 Trộn thứ tự câu hỏi</span>
         </label>
         <label class="toggle-card">
           <input type="checkbox" data-role="shuffle-options-toggle" ${state.persisted.settings.shuffleOptions ? "checked" : ""} />
-          <span>🔤 Đảo đáp án A/B/C/D lúc bắt đầu</span>
+          <span>🔤 Đảo đáp án A/B/C/D</span>
         </label>
         <label class="toggle-card">
           <input type="checkbox" data-role="fast-mode-toggle" ${state.persisted.settings.fastMode ? "checked" : ""} />
-          <span>⏩ Làm nhanh: chọn đáp án là qua câu tiếp</span>
+          <span>⏩ Làm nhanh</span>
         </label>
         <label class="toggle-card">
           <input type="checkbox" data-role="instant-feedback-toggle" ${state.persisted.settings.immediateFeedback ? "checked" : ""} />
