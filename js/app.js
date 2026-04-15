@@ -9,27 +9,29 @@ import { createQuizStorage } from "./storage.js";
 
 // ── Cute Reaction System 💖 ──────────────────────────────────────────────────
 const CORRECT_MESSAGES = [
-  { emoji: "🎉", text: "Chính xác rồi! Bé giỏi quá~" },
-  { emoji: "✨", text: "Xuất sắc! Bé thông minh ghê!" },
-  { emoji: "💖", text: "Chuẩn rồi! Bé học giỏi quá~" },
-  { emoji: "🌟", text: "Đúng rồi đó! Tự hào về bé lắm!" },
-  { emoji: "🎀", text: "Bé giỏi thế! Bé là nhất!" },
-  { emoji: "🥳", text: "Hoan hô! Bé làm được rồi!" },
-  { emoji: "🍭", text: "Ngọt ngào như bé vậy – Đúng!" },
-  { emoji: "🌸", text: "Trả lời đúng! Bé xinh lại còn giỏi~" },
-  { emoji: "🦋", text: "Tuyệt vời! Bé hiểu bài hết rồi đây!" },
-  { emoji: "💫", text: "Chính xác! Bé học chăm có khác!" },
+  { emoji: "💖", text: "Trời ơi đúng luôn, cưng quá vậy trời." },
+  { emoji: "🌷", text: "Đúng đẹp luôn nha, nhìn cái là biết người thông minh." },
+  { emoji: "✨", text: "Ui xịn quá, trả lời mà mượt như rót mật vào tai." },
+  { emoji: "🍓", text: "Bé làm câu này ngọt quá, muốn thưởng hoa điểm mười." },
+  { emoji: "🫶", text: "Đúng rồi đó, giỏi kiểu này ai chịu nổi." },
+  { emoji: "🌟", text: "Chuẩn không cần chỉnh, đúng là cục cưng của môn này." },
+  { emoji: "🎀", text: "Xinh xắn mà còn đúng nữa, khó ai đỡ nổi bé." },
+  { emoji: "🍬", text: "Ngọt như kẹo luôn, đáp án này bé chốt quá chuẩn." },
+  { emoji: "🥰", text: "Đúng rồi nha, thương cái cách bé học ghê." },
+  { emoji: "💫", text: "Câu này bé xử mượt quá, nhìn phát thấy cưng liền." },
 ];
 
 const WRONG_MESSAGES = [
-  { emoji: "🙈", text: "Ôi không! Sai rồi bé ơi, học tiếp nhé~" },
-  { emoji: "😅", text: "Hơi trật rồi, nhưng next câu bé sẽ đúng thôi!" },
-  { emoji: "🫂", text: "Không sao, lần sau bé đọc kỹ hơn nha~" },
-  { emoji: "🍀", text: "Thiếu chút xíu thôi! May mắn lần sau nha bé!" },
-  { emoji: "😤", text: "Câu này khó! Nhưng bé sẽ nhớ lần này rồi!" },
-  { emoji: "🤔", text: "Hmm sai rồi... Bé cần ôn lại phần này nha~" },
-  { emoji: "💪", text: "Sai nhưng không sao! Bé cố lên nhé!" },
-  { emoji: "🐣", text: "Ủa sai à? Không sao, bé ôn tiếp nhé!" },
+  { emoji: "🫠", text: "Sai dữ thần luôn, đáp án đi lạc không mang theo não hả trời." },
+  { emoji: "💀", text: "Câu này chọn kiểu gì nghe như kiến thức trượt chân ngã cầu thang." },
+  { emoji: "🤡", text: "Ủa alo, chọn đáp án này là đang diễn hài đúng không." },
+  { emoji: "🥴", text: "Sai mạnh bạo ghê, kiến thức chắc vừa đi uống trà sữa chưa về." },
+  { emoji: "🪦", text: "Cú chọn này chôn luôn sự tự tin của câu hỏi." },
+  { emoji: "🐔", text: "Đọc câu hỏi thì ít, lao vào chọn như gà mổ bàn phím thì nhiều." },
+  { emoji: "🌪️", text: "Sai xoáy như lốc, đáp án đúng nhìn bé chắc cũng muốn khóc." },
+  { emoji: "🫵", text: "Bắt được một bé chọn bừa rồi nha, khai mau." },
+  { emoji: "🚑", text: "Kiến thức câu này đang cần xe cấp cứu gấp." },
+  { emoji: "🧨", text: "Nổ to thật, nhưng tiếc là nổ sai đáp án." },
 ];
 
 function randomItem(arr) {
@@ -241,16 +243,16 @@ async function init() {
   hydratePersistedState();
 
   try {
-    const response = await fetch("../questions.json");
+    const response = await fetch("./data/questions.json");
 
     if (!response.ok) {
-      throw new Error(`Khong the tai questions.json (${response.status})`);
+      throw new Error(`Khong the tai data/questions.json (${response.status})`);
     }
 
     const questions = await response.json();
 
     if (!Array.isArray(questions) || questions.length === 0) {
-      throw new Error("questions.json khong co du lieu hop le.");
+      throw new Error("data/questions.json khong co du lieu hop le.");
     }
 
     state.questions = questions;
@@ -346,7 +348,7 @@ function sanitizePersistedSession() {
 function buildLoadErrorMessage(error) {
   const protocolHint =
     window.location.protocol === "file:"
-      ? "Ban can mo app bang local server, vi fetch questions.json se khong on dinh khi mo truc tiep file://."
+      ? "Ban can mo app bang local server, vi fetch data/questions.json se khong on dinh khi mo truc tiep file://."
       : "";
 
   return [error.message, protocolHint].filter(Boolean).join(" ");

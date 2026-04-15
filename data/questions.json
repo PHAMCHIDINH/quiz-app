@@ -1,0 +1,5073 @@
+[
+  {
+    "id": 1,
+    "question": "Nội dung của môn sinh lý bệnh được chia làm 2 phần lớn:",
+    "options": {
+      "A": "Sinh lý bệnh đại cương và sinh lý bệnh bộ phận",
+      "B": "Bệnh lý về hệ thống miễn dịch và hô hấp",
+      "C": "Sinh lý bệnh quá trình bệnh lý chung",
+      "D": "Sinh lý bệnh tiêu hóa và rối loạn chuyển hóa"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 2,
+    "question": "Sinh lý bệnh bộ phận nghiên cứu :",
+    "options": {
+      "A": "Bệnh lý của từng cơ quan bị bệnh",
+      "B": "Các khái niệm về bệnh",
+      "C": "Sinh lý bệnh quá trình bệnh lý chung",
+      "D": "Các quy luật chung nhất về bệnh"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 3,
+    "question": "Trong y học hiện đại lấy:",
+    "options": {
+      "A": "Công tác dự phòng và điều trị là chủ yếu",
+      "B": "Công tác điều trị là chính",
+      "C": "Công tác dự phòng là chính",
+      "D": "Công tác điều trị triệu chứng là chính"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 4,
+    "question": "Ý nghĩa quan trọng nhất của việc điều trị theo cơ chế bệnh sinh là:",
+    "options": {
+      "A": "Ngăn chặn được nguyên nhân gây bệnh",
+      "B": "Ngăn chặn được biến chứng của bệnh",
+      "C": "Ngăn chặn được di chứng của bệnh",
+      "D": "Ngăn chặn được vòng xoắn bệnh lý"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 5,
+    "question": "Điều trị có tác dụng ngay vào yếu tố gây bệnh là:",
+    "options": {
+      "A": "Điều trị theo nguyên nhân",
+      "B": "Điều trị triệu chứng",
+      "C": "Điều trị dự phòng",
+      "D": "Điều trị theo cơ chế bệnh sinh"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 6,
+    "question": "Môn sinh lý bệnh không có vai trò nào sau đây:",
+    "options": {
+      "A": "Sinh lý bệnh học soi sáng công tác dự phòng và điều trị",
+      "B": "Sinh lý bệnh là một môn y học cơ sở bản lề của y học hiện đại",
+      "C": "Sinh lý bệnh là lý luận và triết học của y học",
+      "D": "Sinh lý bệnh là nghiên cứu sự mất cân bằng âm dương trong cơ thể"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 7,
+    "question": "Quan niệm không đúng về bệnh hiện nay:",
+    "options": {
+      "A": "Bệnh có tính chất một cân bằng mới kém bền vững",
+      "B": "Bệnh là sự trừng phạt của chúa với tội lỗi của con người",
+      "C": "Bệnh hạn chế khả năng thích nghi của cơ thể",
+      "D": "Bệnh hạn chế khả năng lao động"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 8,
+    "question": "Trong bệnh nguyên mối quan hệ giữa nguyên nhân - hậu quả không có trường hợp nào sau đây:",
+    "options": {
+      "A": "Có nguyên nhân chắc chắn sẽ có hậu quả",
+      "B": "Có hậu quả chắc chắn phải có nguyên nhân",
+      "C": "Có nguyên nhân chưa hẳn đã có hậu quả",
+      "D": "Một nguyên nhân có thể gây ra nhiều hậu quả"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 9,
+    "question": "Bệnh sinh học nghiên cứu về:",
+    "options": {
+      "A": "Quy luật phát sinh của bệnh",
+      "B": "Quy luật phát sinh, phát triển, kết thúc của bệnh",
+      "C": "Quy luật phát sinh phát triển của bệnh",
+      "D": "Nguyên nhân gây ra bệnh"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 10,
+    "question": "Anh An và chị Bình đều bị ung thư dạ dày giai đoạn cuối BS tiên lượng cả 2 người chỉ có thể sống không quá 3 tháng Chị Bình không biết mình bị ung thư và chị vui vẻ tuân thủ đúng theo kế hoạch điều trị của bác sỹ vì vậy chị Bình đã kéo dài được cuộc sống hơn 2 năm Anh An trong một lần vô tình biết mình bị ung thư nên rất buồn, mặc dù cũng vẫn tuân thủ theo kế hoạch điều trị của bác sỹ nhưng sau 2 tháng điều trị anh đã tử vong Em hãy chọn yếu tố nào sau đây ảnh hưởng tới quá trình diễn biễn bệnh của anh An:",
+    "options": {
+      "A": "Tư tưởng không ảnh hưởng rõ rệt tới tính phản ứng của bệnh nhân",
+      "B": "Thầy thuốc làm cho người bệnh yên tâm, tin tưởng sẽ khỏi bệnh",
+      "C": "Yếu tố tâm lý làm bệnh diễn biến tốt lên hay xấu đi",
+      "D": "Chịu được chấn thương tinh thần và tự đấu tranh cho bệnh chóng khỏi"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 11,
+    "question": "Bệnh nhi nam, 5 tuổi vào viện với lý do đi ngoài phân nhiều nước 2 ngày (6 lần/ngày) Gia đình đưa cháu đến viện khám, ngay khi khám thấy cháu bé có dấu hiệu mất nước, Bác sỹ chỉ định cho cô điều dưỡng lập tức truyền dịch cho cháu Em hãy chọn đáp án đúng nhất về loại dịch cô điều dưỡng cần truyền cho bệnh nhi:",
+    "options": {
+      "A": "Đường Glucoza 5%",
+      "B": "Muối NaCL 9%",
+      "C": "Dung dịch Đạm",
+      "D": "Dung dịch Ringer lactat"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 12,
+    "question": "Nguyên nhân gây suy giảm miễn dịch mắc phải:",
+    "options": {
+      "A": "Các tác nhân gây tổn thương hệ miễn dịch",
+      "B": "Do không có tế bào gốc bẩm sinh",
+      "C": "Đáp ứng miễn dịch quá mức",
+      "D": "Các tác nhân gây giảm nguyên liệu tổng hợp vitamin A"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 13,
+    "question": "Kháng nguyên không có đặc tính nào sau đây:",
+    "options": {
+      "A": "Tính “lạ” của kháng nguyên",
+      "B": "Có các nhóm quyết định",
+      "C": "Trọng lượng phân tử nhỏ",
+      "D": "Có tính sinh kháng thể"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 14,
+    "question": "Loại Vắc xin nào sau đây là Vắc xin đa giá:",
+    "options": {
+      "A": "BCG",
+      "B": "OPV",
+      "C": "Sởi",
+      "D": "DPT"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 15,
+    "question": "Vắc xin 6 trong 1 gồm:",
+    "options": {
+      "A": "Lao, uốn ván, bạch hầu, bại liệt, bệnh do vi khuẩn Hib gây ra và Viêm gan B.",
+      "B": "Ho gà, uốn ván, bạch hầu, bại liệt, bệnh do vi khuẩn Hib gây ra và Viêm gan B.",
+      "C": "Lao, uốn ván, bạch hầu, bại liệt, bệnh do vi khuẩn Hib và Viêm não Nhật bản B.",
+      "D": "Ho gà, uốn ván, bạch hầu, bại liệt, bệnh do vi khuẩn Hib, Viêm não Nhật bản B"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 16,
+    "question": "Quá mẫn typ I còn được gọi là:",
+    "options": {
+      "A": "Quá mẫn do IgE",
+      "B": "Do phức hợp miễn dịch",
+      "C": "Gây tan hủy tế bào thông qua hoạt hóa bổ thể",
+      "D": "Quá mẫn muộn"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 17,
+    "question": "Tế bào lympho T có vai trò quan trọng trong:",
+    "options": {
+      "A": "Miễn dịch tự nhiên",
+      "B": "Miễn dịch qua trung gian tế bào",
+      "C": "Miễn dịch dịch thể",
+      "D": "Miễn dịch đặc hiệu"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 18,
+    "question": "Kháng nguyên xuất hiện trong máu không trải qua giai đoạn:",
+    "options": {
+      "A": "Kháng nguyên kết dính với các thành phần khác trong máu",
+      "B": "Kháng nguyên hoà tan trong máu",
+      "C": "Kháng nguyên khuyếch tán ra ngoài gian bào",
+      "D": "Kháng nguyên thoái hoá từ từ"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 19,
+    "question": "Yếu tố nào sau đây không ảnh hưởng đến tính sinh kháng thể của kháng nguyên",
+    "options": {
+      "A": "Cấu trúc của kháng nguyên",
+      "B": "Đường vào của kháng nguyên",
+      "C": "Liều lượng kháng nguyên",
+      "D": "Tính phản ứng của cơ thể vật chủ"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 20,
+    "question": "Tế bào lympho B có vai trò quan trọng trong:",
+    "options": {
+      "A": "Miễn dịch tự nhiên",
+      "B": "Miễn dịch qua trung gian tế bào",
+      "C": "Miễn dịch dịch thể",
+      "D": "Miễn dịch đặc hiệu"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 21,
+    "question": "Quá mẫn typ IV còn được gọi là:",
+    "options": {
+      "A": "Quá mẫn nhanh",
+      "B": "Quá mẫn muộn",
+      "C": "Suy giảm miễn dịch",
+      "D": "Truyền nhầm nhóm máu"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 22,
+    "question": "Một trong những đặc tính của bổ thể:",
+    "options": {
+      "A": "Kích thước phân tử lớn",
+      "B": "Có tính kháng nguyên",
+      "C": "Tính đặc hiệu với kháng nguyên",
+      "D": "Không bền với nhiệt"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 23,
+    "question": "Đặc điểm của miễn dịch tự nhiên:",
+    "options": {
+      "A": "Là miễn dịch sẵn có của cơ thể",
+      "B": "Để lại trí nhớ miễn dịch",
+      "C": "Không bền với nhiệt",
+      "D": "Làm tan vi khuẩn"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 24,
+    "question": "\" Sốc phản vệ \" còn được gọi là:",
+    "options": {
+      "A": "Quá mẫn Typ III",
+      "B": "Quá mẫn Typ II",
+      "C": "Quá mẫn Typ I",
+      "D": "Quá mẫn Typ IV"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 25,
+    "question": "Tính chất \"Có tính kháng nguyên\" thuộc:",
+    "options": {
+      "A": "Đặc tính của bổ thể",
+      "B": "Đặc tính của kháng nguyên",
+      "C": "Đặc tính của cả kháng nguyên và kháng thể",
+      "D": "Đặc tính của kháng thể"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 26,
+    "question": "Kháng thể có đặc tính",
+    "options": {
+      "A": "Kết hợp đặc hiệu với kháng nguyên",
+      "B": "Có tính lạ",
+      "C": "Có trọng lượng phân tử cao",
+      "D": "Có nhóm quyết định"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 27,
+    "question": "Nguồn gốc sinh ra kháng thể dịch thể",
+    "options": {
+      "A": "Lympho B",
+      "B": "Lympho T",
+      "C": "Tế bào mono",
+      "D": "Tế bào hồng cầu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 28,
+    "question": "Loại nào sau đây không phải kháng thể dịch thể",
+    "options": {
+      "A": "IgG",
+      "B": "IgM",
+      "C": "IgE",
+      "D": "IgB"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 29,
+    "question": "Loại kháng thể nào hình thành quá mẫn týp 1",
+    "options": {
+      "A": "IgG",
+      "B": "IgE",
+      "C": "IgA",
+      "D": "IgD"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 30,
+    "question": "Hậu quả của quá mẫn týp 1 gây",
+    "options": {
+      "A": "Sốc phản vệ",
+      "B": "Phản ứng bảo vệ cơ thể",
+      "C": "Bong mảnh ghép",
+      "D": "Bệnh tự miễn"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 31,
+    "question": "Hậu quả của quá mẫn týp 2",
+    "options": {
+      "A": "Sốc phản vệ",
+      "B": "Gây rối loạn sản xuất kháng thể",
+      "C": "Gây suy giảm miễn dịch",
+      "D": "Gây vỡ tế bào"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 32,
+    "question": "Suy giảm miễn dịch không gặp trong loại:",
+    "options": {
+      "A": "Miễn dịch tự nhiên",
+      "B": "Miễn dịch bẩm sinh",
+      "C": "Miễn dịch đặc hiệu",
+      "D": "Miễn dịch mắc phải"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 33,
+    "question": "Rối loạn sản xuất kháng thể có thể gặp trong:",
+    "options": {
+      "A": "Bệnh di truyền",
+      "B": "Bệnh tự miễn",
+      "C": "Bệnh bẩm sinh",
+      "D": "Bệnh do yếu tố thể trạng"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 34,
+    "question": "\"Mẫn cảm với nhiều kháng nguyên\" là yếu tố ảnh hưởng tới:",
+    "options": {
+      "A": "Quá trình tổng hợp kháng thể",
+      "B": "Quá trình xâm nhập của kháng nguyên",
+      "C": "Quá trình hoạt hóa bổ thể",
+      "D": "Quá trình đáp ứng miễn dịch"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 35,
+    "question": "Miễn dịch qua trung gian tế bào do:",
+    "options": {
+      "A": "Các bạch cầu đảm nhiệm",
+      "B": "Tế bào lympho T đảm nhiệm",
+      "C": "Tế bào lympho B đảm nhiệm",
+      "D": "Cả 2 tế bào lympho B và lympho T đảm nhiệm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 36,
+    "question": "Phản ứng\" bong mảnh ghép\" thuộc:",
+    "options": {
+      "A": "Quá mẫn Typ I",
+      "B": "Quá mẫn Typ II",
+      "C": "Quá mẫn Typ III",
+      "D": "Quá mẫn Typ IV"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 37,
+    "question": "Bổ thể không có đặc tính nào sau đây:",
+    "options": {
+      "A": "Có sẵn trong huyết thanh",
+      "B": "Không bền với nhiệt",
+      "C": "Hoạt động có tính đặc hiệu loài",
+      "D": "Làm tan vi khuẩn sau khi bị kháng thể ngưng kết"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 38,
+    "question": "Theo kiến thức em đã học bệnh nào sau đây là bệnh tự miễn:",
+    "options": {
+      "A": "Viêm kết mạc mắt",
+      "B": "Viêm đa khớp",
+      "C": "Viêm tinh hoàn vô trùng",
+      "D": "Viêm cơ"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 39,
+    "question": "Bệnh nhi nam, 09 tháng tuổi, khỏe mạnh được mẹ bé đưa đến phòng tiêm chủng vacxin theo lịch tiêm chủng vacxin để tiêm phòng vacxin Sởi, Em hãy chọn đáp án đúng cho mục đích của việc tiêm vacxin sởi cho bé:",
+    "options": {
+      "A": "Tạo miễn dịch chủ động tự nhiên với bệnh sởi",
+      "B": "Tạo miễn dịch chủ động có chủ ý với bệnh sởi",
+      "C": "Tạo miễn dịch thụ động tự nhiên với bệnh sởi",
+      "D": "Tạo Miễn dịch thụ động có chủ ývới bệnh sởi"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 40,
+    "question": "Bệnh nhi nam, 09 tháng tuổi, khỏe mạnh được mẹ bé đưa đến phòng tiêm chủng vacxin theo lịch tiêm chủng vacxin để tiêm phòng vacxin Sởi, Cơ chế của việc tiêm vacxin sởi cho bé là tiêm:",
+    "options": {
+      "A": "Chủng virus sởi đã làm giảm động lực để cơ thể sản xuất ra kháng thể chống lại bệnh sởi",
+      "B": "Chủng virus sởi chết để cơ thể sản xuất ra kháng thể chống lại bệnh sởi",
+      "C": "Độc tố của virus sởi đã làm mất động lực để cơ thể sản xuất ra kháng thể chống lại bệnh sởi",
+      "D": "Độc tố của virus sởi làm giảm động lực để cơ thể sản xuất ra kháng thể chống lại bệnh sởi"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 41,
+    "question": "Bệnh nhi nam, 09 tháng tuổi, khỏe mạnh được mẹ bé đưa đến phòng tiêm chủng vacxin theo lịch tiêm chủng vacxin để tiêm phòng vacxin Sởi, Chọn đáp án đúng nhất về đặc điểm và đường tiêm vacxin sởi cho bé:",
+    "options": {
+      "A": "Vacxin sởi ở dạng dung dịch đóng lọ (khi sử dụng phải lắc đều), tiêm 0,5ml/lần vào bắp thịt của trẻ",
+      "B": "Vacxin sởi ở dạng đông khô, khi tiêm phải pha với dung môi tiêm 0,1ml/lần vào trong da",
+      "C": "Vacxin sởi ở dạng động khô, trước khi sử dụng phải pha với dung môi, tiêm dưới da 0,5ml/lần",
+      "D": "Vacxin sởi ở dạng hỗn dịch, màu hồng cho trẻ uống 2 giọt/ lần vaof lúc 2,3 và 4 tháng tuổi"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 42,
+    "question": "Bệnh nhân nữ, 59 tuổi, khỏe mạnh, sáng nay bị con chó của nhà cắn vào cổ tay chảy máu nhiều, sau đó con chó đi mất, bệnh nhân được đưa đến phòng tiêm chủng vacxin và được tiêm ngay 1 ống huyết thanh kháng dại, Chọn đáp án đúng nhất giải thích cơ chế tiêm huyết thanh cho bệnh nhân:",
+    "options": {
+      "A": "Đưa vào cơ thể một lượng kháng thể, giúp cho cơ thể có ngay kháng thể đặc hiệu chống lại bệnh dại",
+      "B": "Đưa vào cơ thể bệnh nhân một lượng kháng nguyên là virusdại để cơ thể tự sản xuất ra kháng thểchống lại bệnh dại",
+      "C": "Đưa vào cơ thể bệnh nhân một lượng huyết thanh là virusdại để cơ thể tự sản xuất ra kháng thể chống lại bệnh dại",
+      "D": "Đưa vào cơ thể bệnh nhân một lượng kháng nguyên kháng virus dại để cơ thể có ngay kháng thể đặc hiệu chống lại bệnh dại"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 43,
+    "question": "Bệnh nhân nữ, 59 tuổi, khỏe mạnh,sáng nay bị con chó của nhà cắn vào cổ tay chảy máu nhiều, sau đó con chó đi mất, bệnh nhân được đưa đến phòng tiêm chủng vacxin và được tiêm ngay 1 ống huyết thanh kháng dại, kháng thể kháng bệnh dại trong cơ thể bệnh nhân có được:",
+    "options": {
+      "A": "Sau khi tiêm 1 tuần",
+      "B": "Sau khi tiêm 10 ngày",
+      "C": "Ngay sau khi tiêm",
+      "D": "Sau khi tiêm 14ngày"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 44,
+    "question": "Bệnh nhi nam 7 tuổi tiền sử khỏe mạnh Một hôm sang hàng xóm chơi thấy con mèo xinh cháu bế và chơi đùa với mèo 1 lúc Khi về nhà mẹ cháu thấy cháu ho nhiều và khó thở lên dữ dội Em hãy chọn đáp án đúng nhất về đáp ứng miễn dịch của bệnh nhân trên:",
+    "options": {
+      "A": "Sốc phản vệ toàn thân",
+      "B": "Phản ứng quá mẫn do phức hợp miễn dịch",
+      "C": "Phản ứng quá mẫn muộn",
+      "D": "Sốc phản vệ bộ phận"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 45,
+    "question": "Bệnh nhi nam 7 tuổi tiền sử khỏe mạnh Một hôm sang hàng xóm chơi thấy con mèo xinh cháu bế và chơi đùa với mèo 1 lúc Khi về nhà mẹ cháu thấy cháu ho nhiều và khó thở lên dữ dội Em hãy chọn đáp án đúng nhất giải thích cơ chế của hiện tượng trên:",
+    "options": {
+      "A": "Do sự kết hợp giữa lympho T đã mẫn cảm và kháng nguyên đặc hiệu, cùng với sự tiết ra các lymphokin làm hoạt hoá bạch cầu đơn nhân gây viêm tại chỗ",
+      "B": "Phản ứng kháng nguyên kháng thể làm hoạt hoá bạch cầu gây ngưng kết tế bào, tạo ra đông máu rải rác trong lòng mạch, tắc mạch",
+      "C": "Phản ứng kháng nguyên kháng thể làm vỡ tế bào mast, giải phóng các chất trung gian hóa học gây co thắt cơ trơn phế quản",
+      "D": "Phản ứng kháng nguyên kháng thể lưu hành trong máu và dễ lắng đọng ở mao mạch thận hay ở màng đáy cầu thận gây viêm mạn"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 46,
+    "question": "Người bệnh nam 30 tuổi, nhóm máu A khi anh bị tai nạn mất máu nhiều do hết máu nhóm A nên NB được chỉ định truyền nhóm máu O Khi đang truyền được 40ml máu, NB có biểu hiện sock mặt tái,vã mồ hôi, thở nhanh,da lạnh và huyết áp tụt Em hãy chọn đáp án đúng nhất về tuýp quá mẫn xảy ra ở NB trên:",
+    "options": {
+      "A": "Tuýp I: Quá mẫn do IgE",
+      "B": "Tuýp II: Quá mẫn do tan hủy tế bào",
+      "C": "Tuýp III: Quá mẫn do phức hợp miễn dịch lắng đọng",
+      "D": "Tuýp IV: Quá mẫn do tế bào Lympho T gặp kháng nguyên"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 47,
+    "question": "NB nam 30 tuổi, nhóm máu A khi anh bị tai nạn mất máu nhiều do hết máu nhóm A nên NB được chỉ định truyền nhóm máu O Khi đang truyền được 40ml máu, NB có biểu hiện sock mặt tái,vã mồ hôi, thở nhanh, da lạnh và huyết áp tụt Em hãy chọn đáp án không đúng về cơ chế của tuýp quá mẫn xảy ra ở bệnh nhân trên:",
+    "options": {
+      "A": "Phản ứng kháng nguyên kháng thể làm vỡ tế bào giải phóng K độc cơ tim gây hạ huyết áp",
+      "B": "Do sự kết hợp giữa lympho T đã mẫn cảm và kháng nguyên đặc hiệu, cùng với sự tiết ra các lymphokin làm hoạt hoá bạch cầu đơn nhân gây viêm tại chỗ",
+      "C": "Phản ứng kháng nguyên kháng thể làm hoạt hoá bạch cầu gây ngưng kết tế bào, tạo đông máu rải rác trong lòng mạch",
+      "D": "Phản ứng kháng nguyên kháng thể làm hoạt hoá hệ thống đông máu và tăng tính thấm thành mạch dẫn tới hiện tượng máu bị cô đặc tắc mạch"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 48,
+    "question": "Bệnh nhi nam 10 tuổi, do bị bỏng sâu độ 3 nên phải vá da Những ngày đầu mảnh da ghép hồng hào, đến ngày thứ 3 mép mảnh da ghép quăn lại cong lên và đổi màu Sau 5 ngày mảnh da càng ngày càng thâm đen lại và hoại tử dần Em hãy chọn đáp án đúng nhất giải thích cơ chế của bệnh lý này",
+    "options": {
+      "A": "Do tế bào Lympho T đã mẫn cảm gặp kháng nguyên đặc hiệu",
+      "B": "Do Bạch cầu đa nhân tập trung tại nơi có lắng đọng phức hợp miễn dịch gây viêm",
+      "C": "Do kết hợp kháng nguyên kháng thể có hoạt hóa bổ thể gây vỡ tế bào",
+      "D": "Do phản ứng kháng nguyên kháng thể ngay trên bề mặt tế bào mastoxits và bạch cầu ái kiềm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 49,
+    "question": "Người bệnh nam, 20 tuổi, tiền sử khỏe mạnh sau khi bị viêm họng 1 tuần, không điều trị gì NB thấy có biểu hiện phù, đái ít, nước tiểu màu đỏ NB đến viện được chẩn đoán là bệnh viêm cầu thận cấp Em hãy chọn đáp án đúng nhất giải thích cơ chế của người bệnh",
+    "options": {
+      "A": "Do tế bào Lympho T đã mẫn cảm gặp kháng nguyên đặc hiệu tại cầu thận",
+      "B": "Do Bạch cầu đa nhân tập trung tại nơi có lắng đọng phức hợp miễn dịch gây viêm tại cầu thận",
+      "C": "Do kết hợp kháng nguyên kháng thể có hoạt hóa bổ thể gây vỡ tế bào",
+      "D": "Do phản ứng kháng nguyên kháng thể ngay trên bề mặt tế bào mastoxits và bạch cầu ái kiềm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 50,
+    "question": "Người bệnh nữ 12 tuổi, sau đợt viêm họng được chẩn đoán là viêm họng do liên cầu khuẩn tan huyết nhóm A BS chỉ định cháu tiêm phòng thấp cấp I Em hãy chọn đáp án đúng nhất giải thích cơ chế của bệnh này",
+    "options": {
+      "A": "Do tế bào Lympho T đã mẫn cảm gặp kháng nguyên đặc hiệu tại khớp",
+      "B": "Do Bạch cầu đa nhân tập trung tại nơi có lắng đọng phức hợp miễn dịch gây viêm tại khớp",
+      "C": "Do kết hợp kháng nguyên kháng thể có hoạt hóa bổ thể gây vỡ tế bào",
+      "D": "Do phản ứng kháng nguyên kháng thể ngay trên bề mặt tế bào mastoxits và bạch cầu ái kiềm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 51,
+    "question": "Biến chứng nhiễm toan trong bệnh đái tháo đường do:",
+    "options": {
+      "A": "Tăng cetonic máu",
+      "B": "Tăng cholesterol máu",
+      "C": "Tăng protid máu",
+      "D": "Tăng glucose máu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 52,
+    "question": "Hormon ACTH gây tăng đường huyết thông qua Hormon:",
+    "options": {
+      "A": "Glucococticoit",
+      "B": "Adrenalin",
+      "C": "No Adrenalin",
+      "D": "Thyroxin"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 53,
+    "question": "Tác dụng không phải của Hor mon Insulin :",
+    "options": {
+      "A": "Hoạt hóa men hexokinase",
+      "B": "Tăng quá trình chuyển glucose từ máu vào tế bào",
+      "C": "Làm giảm thoái hóa các chất tạo glucose",
+      "D": "Tăng hoạt tính của insulinase"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 54,
+    "question": "Bình thường cơ thể có khả năng duy trì glucose máu ở mức thích hợp từ 0,8 - 1,2g/l là nhờ sự điều hoà của:",
+    "options": {
+      "A": "Hệ thống nội tiết và thần kinh",
+      "B": "Hệ thống tiêu hóa và thần kinh",
+      "C": "Hệ thống nội tiết và tiêu hóa",
+      "D": "Hệ thống nội tiết, tiêu hóa và thần kinh"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 55,
+    "question": "Khi nồng độ glucose máu tăng cao lên 1,6g/l (8,88 mmol/l), thì sẽ bị đào thải ra ngoài nước tiểu vì glucose:",
+    "options": {
+      "A": "Vượt quá khả năng lọc của thận",
+      "B": "Vượt quá khả năng bài tiết của thận",
+      "C": "Vượt quá khả năng tái hấp thu của ống thận",
+      "D": "Vượt quá khả năng tái hấp thu của cầu thận"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 56,
+    "question": "Nguyên nhân gây bệnh Tiểu đường typ I là do:",
+    "options": {
+      "A": "Tăng tiết của tế bào β của đảo tụy",
+      "B": "Giảm hoạt động của tế bào β đảo tụy",
+      "C": "Thiếu insulin tương đối",
+      "D": "Ưu năng của tuyến đối lập insulin"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 57,
+    "question": "Một trong những nguyên nhân gây giảm Glucose máu:",
+    "options": {
+      "A": "Ức chế thần kinh giao cảm",
+      "B": "Tăng hoạt tính của insulinase",
+      "C": "Giảm tiết insulin",
+      "D": "Hưng phấn thần kinh giao cảm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 58,
+    "question": "Bệnh nhân đái tháo đường xét nghiệm thấy xuất hiện đường niệu khi",
+    "options": {
+      "A": "Glucose máu > 18g/l",
+      "B": "Glucose máu > 13g/l",
+      "C": "Glucose máu > 16g/l",
+      "D": "Glucose máu từ 12g/l - 16g/l"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 59,
+    "question": "Các tế bào của cơ thể không cần insulin cũng sử dụng được glucose:",
+    "options": {
+      "A": "Tế bào não, lách, tủy, hồng cầu",
+      "B": "Tế bào não, gan, hồng cầu",
+      "C": "Tế bào não, lách, hồng cầu",
+      "D": "Tế bào não, gan, tủy xương"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 60,
+    "question": "Người bệnh “xơ gan” thường bị giảm đường máu là do:",
+    "options": {
+      "A": "Giảm bổ sung do giảm hấp thu từ ruột",
+      "B": "Rối loạn dự trữ Glucose ở gan",
+      "C": "Cơ thể tăng mức tiêu thụ glucose",
+      "D": "Cơ thể giảm mức tiêu thụ glucose"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 61,
+    "question": "Glucose máu tăng cao hơn mức bình thường gây hậu quả",
+    "options": {
+      "A": "Rối loạn điện giải",
+      "B": "Độc với các tế bào",
+      "C": "Rất độc với các tế bào",
+      "D": "Không ảnh hưởng gì đối với cơ thể"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 62,
+    "question": "Một trong những nguyên nhân tăng Glucose máu:",
+    "options": {
+      "A": "Tăng mức tiêu thụ glucose",
+      "B": "Rối loạn dự trữ ở gan",
+      "C": "Ức chế thần kinh giao cảm",
+      "D": "Thiếu vitamin B1"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 63,
+    "question": "Hormon làm giảm Glucose máu:",
+    "options": {
+      "A": "Glucagon",
+      "B": "Insulin",
+      "C": "Adrenalin",
+      "D": "Thyroxin"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 64,
+    "question": "Theo Hiệp hội ĐTĐ Mỹ, một trong 4 tiêu chuẩn chẩn đoán bệnh đái tháo đường là:",
+    "options": {
+      "A": "HA1C ≥ 5,5 %",
+      "B": "HA1C ≥ 6,5 %",
+      "C": "HA1C ≥ 7,5 %",
+      "D": "HA1C ≥ 8,5 %"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 65,
+    "question": "Theo Hiệp hội ĐTĐ Mỹ, một trong 4 tiêu chuẩn chẩn đoán bệnh đái tháo đường là:",
+    "options": {
+      "A": "Đường huyết lúc đói ≥ 120mg/dl (6.5 mmol/L)",
+      "B": "Đường huyết bất kì ≥ 130 mg/dl (7,1 mmol/l",
+      "C": "Đường huyết lúc đói ≥ 150 mg/dl (8.0 mmol/L)",
+      "D": "Đường huyết bất kì ≥ 200 mg/dl (11,1 mmol/l)."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 66,
+    "question": "Theo Hiệp hội ĐTĐ Mỹ, tiêu chuẩn chẩn đoán tiền đái tháo đường là:",
+    "options": {
+      "A": "Đường huyết lúc đói: từ 4,4 đến 6,6 mmol/L",
+      "B": "Đường huyết lúc đói: từ 5,6 đến 6,9 mmol/L",
+      "C": "Đường huyết lúc đói: từ 6,6 đến 7,8 mmol/L",
+      "D": "Đường huyết lúc đói: từ 7,8 đến 11,0 mmol/L"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 67,
+    "question": "Giảm glucose máu gây :",
+    "options": {
+      "A": "Kích thích trung tâm đói",
+      "B": "Kích thích trung tâm khát",
+      "C": "Ức chế trung tâm hô hấp",
+      "D": "Ức chế thần kinh giao cảm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 68,
+    "question": "Cơ chế của Bệnh tiểu đường typ II:",
+    "options": {
+      "A": "Có tính chất nguyên phát",
+      "B": "Do suy kiệt tế bào beta tụy",
+      "C": "Do tăng tiết phản ứng của tế bào beta tụy",
+      "D": "Điều trị bằng insulin rất có hiệu quả"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 69,
+    "question": "Một trong những hậu quả của giảm glucose máu:",
+    "options": {
+      "A": "Co giật, hôn mê, tử vong",
+      "B": "Tăng áp lực thẩm thấu",
+      "C": "Đái nhiều, mất nước và khát",
+      "D": "Rối loạn điện giải"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 70,
+    "question": "Bệnh HbS là bệnh có:",
+    "options": {
+      "A": "Hồng cầu hình gương",
+      "B": "Hồng cầu hình bia bắn",
+      "C": "Hồng cầu hình liềm",
+      "D": "Hồng cầu hình bầu dục"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 71,
+    "question": "Nguyên nhân nào không gây giảm protein huyết tương:",
+    "options": {
+      "A": "Rối loạn hấp thu ở ống tiêu hóa",
+      "B": "Tăng sử dụng protein",
+      "C": "Ăn quá nhiều đạm",
+      "D": "Giảm tổng hợp tại gan"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 72,
+    "question": "Lượng Protid huyết tương được Gan sản xuất là:",
+    "options": {
+      "A": "75% albumin và 85% globumin",
+      "B": "95% albumin và 85% globumin",
+      "C": "95% albumin và 65% globumin",
+      "D": "90% albumin và 85% globumin"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 73,
+    "question": "Các bệnh thiếu enzym, thiếu kháng thể do:",
+    "options": {
+      "A": "Rối loạn gen cấu trúc",
+      "B": "Rối loạn gen điều hòa",
+      "C": "Thiếu protein",
+      "D": "Thiều lipid"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 74,
+    "question": "Hậu quả của sự thay đổi thành phần protein huyết tương:",
+    "options": {
+      "A": "Protein huyết tương dễ bị kết tủa",
+      "B": "Tốc độ lắng hồng cầu tăng",
+      "C": "Protein huyết tương dễ bị kết tủa và tốc độ lắng hồng cầu tăng",
+      "D": "Protein huyết tương bị biến tính"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 75,
+    "question": "Vai trò của protid huyết tương:",
+    "options": {
+      "A": "Điều hòa cân bằng nội môi",
+      "B": "Tạo nên nguyên sinh chất",
+      "C": "Giúp cơ thể vận động",
+      "D": "Tạo áp lực keo"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 76,
+    "question": "Biểu hiện nào không phải do giảm protein huyết tương:",
+    "options": {
+      "A": "Thiếu máu, giảm sức đề kháng",
+      "B": "Sút cân, teo cơ, phù",
+      "C": "Trẻ em chậm lớn , chậm phát triển",
+      "D": "Xanh tím"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 77,
+    "question": "Tăng tổng hợp protein bộ phận gặp trong:",
+    "options": {
+      "A": "Tăng tiết hormon STH",
+      "B": "Ung thư",
+      "C": "Suy dinh dưỡng",
+      "D": "Hoại tử cơ quan"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 78,
+    "question": "Tăng tổng hợp protein chung của toàn cơ thể gặp trong:",
+    "options": {
+      "A": "Thời kì sinh trưởng",
+      "B": "Đái đường",
+      "C": "Tái tạo tổ chức",
+      "D": "Phì đại cơ quan"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 79,
+    "question": "Giảm tổng hợp protein bộ phận gặp trong:",
+    "options": {
+      "A": "Hoại tử cơ quan",
+      "B": "Đói trường diễn",
+      "C": "Suy dinh dưỡng",
+      "D": "Tái tạo tổ chức"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 80,
+    "question": "Nguyên nhân gây giảm protein huyết tương",
+    "options": {
+      "A": "Giảm tổng hợp chung",
+      "B": "Giảm mức sử dụng",
+      "C": "Tăng hấp thu ở ống tiêu hoá",
+      "D": "Sốt"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 81,
+    "question": "Nguyên nhân gây rối loạn tổng hợp protid về chất lượng:",
+    "options": {
+      "A": "Do rối loạn gen điều hoà",
+      "B": "Do di truyền",
+      "C": "Do rối loạn thần kinh",
+      "D": "Do rối loạn nội tiết"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 82,
+    "question": "BN nam 46 tuổi, tiền sử khỏe mạnh, béo phì, gần đây BN thấy khát nước hơn bình thường, đi xét nghiệm (sáng sớm chưa ăn gì) thấy chỉ số glucose máu là 69 mmol/l, glucose niệu (-) BS chẩn đoán là đường máu tăng cao BN rất băn khoăn và lo lắng Em hãy chọn nội dung tư vấn cho bệnh nhân:",
+    "options": {
+      "A": "Không cần dùng thuốc, nên nhịn ăn để giảm cân, uống nước theo nhu cầu",
+      "B": "Ăn giảm thức ăn đường, bột, tăng rau xanh, tăng hoạt động, thể dục giảm cân",
+      "C": "Không cần lo lắng, không cần điều trị gì",
+      "D": "Dùng thuốc hạ đường máu, thuốc giảm cân ngay"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 83,
+    "question": "BN nam 76 tuổi, tiền sử mắc bệnh tiểu đường hơn 10 năm, BN rất tuân thủ chế độ thuốc và ăn uống hạn chế đường bột. Chiều nay người nhà thấy bệnh nhân vã mồ hôi, nói ú ớ, mê sảng nên đưa bệnh nhân đến viện BN được thử test đường huyết giảm và chỉ định truyền dung dịch Glucoza ưu trương cấp cứu. Chỉ số đường huyết của bệnh nhân trong trường hợp này ở mức nào :",
+    "options": {
+      "A": "Dưới 3,3mmol/L",
+      "B": "Dưới 4,4mmol/L",
+      "C": "3,0 - 3,5mmol/L",
+      "D": "3,5- 4,0mmol/L"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 84,
+    "question": "BN nữ 70 tuổi, tiền sử mắc bệnh tiểu đường hơn 10 năm, gần 1 tháng nay bệnh nhân có 1 vết thương ở bàn chân phải, bệnh nhân đã khám và dùng thuốc theo đơn nhưng không khỏi mà ngày càng nặng thêm, bệnh nhân được đưa đến viện khám và điều trị Đáp án giải thích không đúng về cơ chế vết thươnglâu lành trên bệnh nhân:",
+    "options": {
+      "A": "Người bệnh tiểu đường gày, suy kiệt dẫn đến giảm miễn dịch",
+      "B": "Tăng glucose máu tạo điều kiện thuận lợi cho các vi sinh vật phát triển",
+      "C": "Tăng glucose máu, rối loạn chuyển hóa các chất, tế bào thiếu năng lượng",
+      "D": "Tăng glucose máu, huyết áp tăng gây tắc mạch, hoại tử tổ chức"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 85,
+    "question": "BN nam 50 tuổi, khỏe mạnh, đi khám sức khỏe định kỳ thấy chỉ số HDL tăng cao, các chỉ số khác đều bình thường, bệnh nhân rất lo lắng vì biết chỉ số HDL là 1 trong các loại mỡ máu, vậy khi tăng cao có nguy hiểm gì không? Em chọn lời khuyên nào sau đây để giải thích đối với BN:",
+    "options": {
+      "A": "HDL có tác dụng bảo vệ thành mạch vì vậy nếu HDL cao sẽ giảm nguy cơ xơ vữa động mạch",
+      "B": "HDL có tác dụng bảo vệ thành mạch vì vậy nếu HDL cao nguy cơ xơ vữa động mạch càng cao",
+      "C": "HDL gây nên các mảng bám mặt trong thành mạch vì vậy nếu HDL thấp nguy cơ xơ vữa động mạch càng cao",
+      "D": "HDL gây nên các mảng bám mặt trong thành mạch vì vậy nếu HDL cao nguy cơ xơ vữa động mạch càng cao"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 86,
+    "question": "Bệnh nhân nữ, 56 tuổi, tiền sử mắc bệnh thận hư nhiễm mỡ hơn 10 năm hiện tại vẫn đang dùng thuốc corticoit, hôm nay bệnh nhân đi xét nghiệm có chỉ số đường huyết là 7,2mmol/L Cơ chế gây tăng đường huyết nào không đúng của corticoit :",
+    "options": {
+      "A": "Làm ngăn cản Glucoza thấm vào màng tế bào",
+      "B": "Làm tăng tạo Glucoza từ Protid",
+      "C": "Tăng chuyển hóa Glycogen thành Glucoza tại gan",
+      "D": "Tăng chuyển hóa Glucoza thành Glycogen tại gan"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 87,
+    "question": "Bệnh nhân nam, 62 tuổi, được chẩn đoán là xơ gan, chỉ số xét nghiệm Protein huyết tương của bệnh nhân là 50g/l Cơ chế gây ra chỉ số Protein huyết tương trên bệnh nhân là:",
+    "options": {
+      "A": "Do cung cấp không đủ qua thức ăn",
+      "B": "Rối loạn hấp thu ở ống tiêu hoá",
+      "C": "Cơ thể giảm tổng hợp chung Protid, Lipid, Glucid",
+      "D": "Tăng sử dụng Protid trong quá trình hồi phục bệnh tật"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 88,
+    "question": "Bệnh nhi nữ, 5 tuổi, xanh xao chậm lớn, gia đình đưa trẻ đến viện khám và được chẩn đoán là thiếu máu tan máu bẩm sinh hồng cầu hình liềm. Em hãy chọn đúng cơ chế bệnh sinh của bệnh lý trên bệnh nhân:",
+    "options": {
+      "A": "Trong chuỗi β của HbA, acid amin ở vị trí số 6 glutamin bị thay đổi Valin, do đó cơ thể tổng hợp ra loại HbS",
+      "B": "Trong chuỗi β của HbA, acid amin ở vị trí số 6 glutamin bị thay đổi lysin, do đó cơ thể tổng hợp ra loại HbS",
+      "C": "Trong HbS chuỗi γ vẫn được tổng hợp ra nên HbS cấu tạo Hemoglobin có 4 chuỗi γ",
+      "D": "Trong HbS chuỗi β vẫn được tổng hợp ra nên HbS cấu tạo Hemoglobin có 4 chuỗi β"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 89,
+    "question": "Bệnh nhi nữ, 5 tuổi, xanh xao chậm lớn, gia đình đưa trẻ đến viện khám và được chẩn đoán là thiếu máu tan máu bẩm sinh HbS. Em hãy chọn đúng cơ chế bệnh sinh của triệu chứng thiếu máu trên bệnh nhân:",
+    "options": {
+      "A": "Hồng cầu có hình liềm nên dễ vỡ gây thiếu máu",
+      "B": "Hồng cầu có hình bia bắn nên dễ vỡ gây thiếu máu",
+      "C": "Hồng cầu có hình giọt nước nên dễ vỡ gây thiếu máu",
+      "D": "Hồng cầu có hình cầu nên dễ vỡ gây thiếu máu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 90,
+    "question": "Bệnh nhân nam, 62 tuổi, có tiền sử nghiện rượu đã 20 năm nay, được đưa đến viện và chẩn đoán là gan nhiễm mỡ Cơ chế gây ra bệnh trên bệnh nhân là:",
+    "options": {
+      "A": "Ethanol gây tăng tổng hợp acyl CoA rồi kết hợp với glycerolphosphat thành triglycerid",
+      "B": "Ethanol gây tăng hoạt hóa bên trong tế bào gan tạo thành acyl CoA rồi kết hợp với glycerol phosphat thành nhiều triglycerid",
+      "C": "Ethanol gây tăng NADH tại tế bào gan, kích thích tổng hợp acid béo dẫn đến tăng tổng hợp triglycerid trong tế bào gan",
+      "D": "Ethanol gây tăng tác dụng của lipoprotein lipase trong máu, hạt dưỡng chấp giải phóng nhiều abéo tự do vào gan"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 91,
+    "question": "Bệnh nhân nữ 22 tuổi, béo phì, gần 1 năm nay bệnh nhân ăn thực hiện giảm cân theo cách thường xuyên nhịn ăn BN đến khám siêu âm và được chẩn đoán là gan nhiễm mỡ Cơ chế nào giải thích cho bệnh lý của bệnh nhân:",
+    "options": {
+      "A": "Tế bào gan giảm tổng hợp protein do thiếu nguyên liệu",
+      "B": "Kích thích tổng hợp acid béo dẫn đến tăng tổng hợp triglyceride",
+      "C": "Thiếu các yếu tố cần thiết để tạo phospholipid",
+      "D": "Tăng các hạt dưỡng chấp do ăn nhiều lipid"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 92,
+    "question": "Khối lượng nước được phân bố ở gian bào là:",
+    "options": {
+      "A": "15 %",
+      "B": "10 – 15 %",
+      "C": "5 %",
+      "D": "50 %"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 93,
+    "question": "Sự trao đổi nước và điện giải giữa 2 khu vực gian bào và lòng mạch là nhờ:",
+    "options": {
+      "A": "Áp lực thủy tĩnh",
+      "B": "Áp lực keo",
+      "C": "Áp lực thẩm thấu",
+      "D": "Áp lực thủy tĩnh và áp lực keo"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 94,
+    "question": "Tác nhân kích thích trung tâm khát là tình trạng:",
+    "options": {
+      "A": "Tăng áp lực thẩm thấu ở tế bào",
+      "B": "Tăng áp lực thủy tĩnh trong lòng mạch",
+      "C": "Tăng áp lực thẩm thấu ở dịch gian bào",
+      "D": "Tăng áp lực keo trong lòng mạch"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 95,
+    "question": "Vai trò của các chất điện giải đối với cơ thể:",
+    "options": {
+      "A": "Làm dung môi cho mọi chất dinh dưỡng",
+      "B": "Quyết định chủ yếu áp lực thẩm thấu",
+      "C": "Duy trì khối lượng tuần hoàn",
+      "D": "Làm dung môi cho mọi phản ứng hóa học"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 96,
+    "question": "Hormon có vai trò lớn nhất trong duy trì hằng định khối lượng nước và áp lực thẩm thấu là:",
+    "options": {
+      "A": "Glucocorticoid",
+      "B": "Adrenalin",
+      "C": "ADH",
+      "D": "ADH và aldosterol"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 97,
+    "question": "Phân loại mất nước dựa theo lượng điện giải mất kèm theo mất nước có:",
+    "options": {
+      "A": "Mất nước ưu trương",
+      "B": "Mất nước độ 2",
+      "C": "Mất nước độ 1",
+      "D": "Mất nước ngoại bào"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 98,
+    "question": "Mất điện giải nhiều hơn lượng nước mất được xếp vào loại:",
+    "options": {
+      "A": "Mất nước nhược trương",
+      "B": "Mất nước đẳng trương",
+      "C": "Mất nước ưu trương",
+      "D": "Mất nước đại thể"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 99,
+    "question": "Phù trong suy tim cơ chế chính là do tăng :",
+    "options": {
+      "A": "Áp lực thủy tĩnh ở mao mạch phổi",
+      "B": "Áp lực keo ở tĩnh mạch ngoại vi",
+      "C": "Áp lực thủy tĩnh ở động mạch",
+      "D": "Áp lực thủy tĩnh ở tĩnh mạch ngoại vi"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 100,
+    "question": "Mất nước do ra nhiều mồ hôi là mất nước:",
+    "options": {
+      "A": "Đẳng trương",
+      "B": "Nhược trương",
+      "C": "Ưu trương",
+      "D": "Ngoại bào"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 101,
+    "question": "Phù là tình trạng tích nước quá mức bình thường ở:",
+    "options": {
+      "A": "Khoang gian bào",
+      "B": "Trong tế bào",
+      "C": "Khoang tự nhiên",
+      "D": "Trong lòng mạch"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 102,
+    "question": "Cơ chế nào sau đây gây phù thũng:",
+    "options": {
+      "A": "Tăng áp lực thuỷ tĩnh trong máu",
+      "B": "Tăng áp lực keo trong máu",
+      "C": "Giảm áp lực thuỷ tĩnh trong máu",
+      "D": "Giảm áp lực thẩm thấu trong máu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 103,
+    "question": "Cơ chế phù trong suy tim:",
+    "options": {
+      "A": "Tăng áp lực keo trong máu",
+      "B": "Giảm lọc ở cầu thận",
+      "C": "Giảm áp lực thuỷ tĩnh trong máu",
+      "D": "Giảm áp lực thẩm thấu trong máu"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 104,
+    "question": "Cơ chế phù trong phù phổi cấp do suy tim trái",
+    "options": {
+      "A": "Giảm áp lực keo trong máu",
+      "B": "Tăng áp lực keo trong máu",
+      "C": "Tăng tính thấm thành mạch do thiếu oxy",
+      "D": "Giảm áp lực thẩm thấu trong máu"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 105,
+    "question": "Cơ chế phù trong suy gan:",
+    "options": {
+      "A": "Giảm áp lực keo trong máu",
+      "B": "Giảm áp lực thuỷ tĩnh",
+      "C": "Giảm áp lực thẩm thấu trong máu",
+      "D": "Giảm áp lực tĩnh mạch cửa"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 106,
+    "question": "Cơ chế phù do giun chỉ chủ yếu do:",
+    "options": {
+      "A": "Tăng tính thẩm thành mạch",
+      "B": "Giảm áp lực keo trong máu",
+      "C": "Tắc mạch bạch huyết",
+      "D": "Tăng áp lực thủy tĩnh"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 107,
+    "question": "Hormon ADH do:",
+    "options": {
+      "A": "Thuỳ sau tuyến yên tiết ra",
+      "B": "Vỏ thượng thận tiết ra",
+      "C": "Tuyến tuỵ tiết ra",
+      "D": "Tuyến giáp tiết ra"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 108,
+    "question": "Giảm Natri huyết thường do:",
+    "options": {
+      "A": "Bệnh nội tiết",
+      "B": "Thiểu năng thận",
+      "C": "Do mất natri qua đường tiêu hoá",
+      "D": "Nhiễm trùng nặng"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 109,
+    "question": "Nước được phân bố ở lòng mạch:",
+    "options": {
+      "A": "Tế bào: 50%, gian bào: 5%, lòng mạch: 15%",
+      "B": "Tế bào: 50%, gian bào: 15%, lòng mạch: 5%",
+      "C": "Tế bào: 15%, gian bào: 50%, lòng mạch: 5%",
+      "D": "Tế bào: 15%, gian bào: 5%, lòng mạch: 50%"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 110,
+    "question": "Tăng kali huyết là trường hợp cấp cứu vì:",
+    "options": {
+      "A": "Gây liệt chi, tắc ruột",
+      "B": "Giảm huyết áp",
+      "C": "Gây ngừng tim",
+      "D": "Nhịp tim nhanh"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 111,
+    "question": "Nhiễm acid cố định là tăng acid do:",
+    "options": {
+      "A": "Chuyển hóa tạo ra",
+      "B": "Đào thải H+ ở thận",
+      "C": "Trung tâm hô hấp kém nhạy cảm",
+      "D": "Hô hấp tạo ra"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 112,
+    "question": "Thận tham gia điều hòa pH bằng cách :",
+    "options": {
+      "A": "Đào thải kiềm",
+      "B": "Đào thải acid, phục hồi dự trữ kiềm",
+      "C": "Phục hồi dự trữ acid",
+      "D": "Đào thải kiềm, phục hồi dự trữ acid"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 113,
+    "question": "Hệ đệm gồm:",
+    "options": {
+      "A": "Một acid và một muối kiềm mạnh",
+      "B": "Một kiềm yếu và một muối kiềm",
+      "C": "Một acid yếu và muối của nó với một base mạnh",
+      "D": "Một acid yếu và muối của nó với một base"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 114,
+    "question": "Nhiễm acid mất bù có đặc điểm:",
+    "options": {
+      "A": "Tỉ số hệ đệm bicarbonat tăng",
+      "B": "Tỉ số hệ đệm bicarbonat chưa thay đổi",
+      "C": "PH máu tăng",
+      "D": "Cơ thể điều hoà loại bỏ được acid"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 115,
+    "question": "Nhiễm acid còn bù có đặc điểm:",
+    "options": {
+      "A": "Cơ thể không còn khả năng trung hoà loại bỏ acid",
+      "B": "Tỉ số hệ đệm bicarbonat đã bị thay phá vỡ",
+      "C": "PH máu tăng",
+      "D": "Tỉ số hệ đệm bicarbonat chưa bị thay đổi"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 116,
+    "question": "Nhiễm acid hơi là nhiễm acid:",
+    "options": {
+      "A": "Tăng acid H2CO3 trong máu",
+      "B": "Tăng acid máu do chuyển hoá tạo ra",
+      "C": "Gọi theo mức độ",
+      "D": "Gọi theo cơ chế bệnh sinh"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 117,
+    "question": "Nhiễm acid hơi bệnh lý có thể gặp trong:",
+    "options": {
+      "A": "Đái đường",
+      "B": "Trong cơn đói",
+      "C": "Hen phế quản",
+      "D": "Tiêu chảy cấp"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 118,
+    "question": "Nhiễm acid hơi sinh lý gặp trong:",
+    "options": {
+      "A": "Ngộ độc thuốc mê",
+      "B": "Khi lao động nặng",
+      "C": "Gây mê sâu",
+      "D": "Liệt cơ hô hấp"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 119,
+    "question": "Nhiễm \" kiềm hơi \" xảy ra khi:",
+    "options": {
+      "A": "Sau ăn",
+      "B": "Nôn nhiều",
+      "C": "Tăng thông khí",
+      "D": "Uống nhiều thuốc kiềm"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 120,
+    "question": "Tiêu chảy có nguy cơ gây ra:",
+    "options": {
+      "A": "Nhiễm acid cố định",
+      "B": "Nhiễm kiềm hơi",
+      "C": "Nhiễm acid hơi",
+      "D": "Nhiễm kiềm cố định"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 121,
+    "question": "Hút quá nhiều dịch dạ dày gây:",
+    "options": {
+      "A": "Nhiễm acid cố định",
+      "B": "Nhiễm kiềm hơi",
+      "C": "Nhiễm acid hơi",
+      "D": "Nhiễm kiềm cố định"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 122,
+    "question": "Dùng thuốc ức chế trung tâm hô hấp có nguy cơ gây ra:",
+    "options": {
+      "A": "Nhiễm acid hơi bệnh lý",
+      "B": "Nhiễm kiềm chuyển hóa",
+      "C": "Nhiễm acid chuyển hóa",
+      "D": "Nhiễm kiềm cố định bệnh lý"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 123,
+    "question": "Nhiễm kiềm hơi có đặc điểm:",
+    "options": {
+      "A": "Tăng đào thải CO2",
+      "B": "PH máu giảm",
+      "C": "Giảm đào thải CO2",
+      "D": "Gặp do nôn nhiều"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 124,
+    "question": "Dùng thuốc lợi tiểu quá nhiều có thể gây:",
+    "options": {
+      "A": "Nhiễm acid chuyển hóa",
+      "B": "Nhiễm kiềm cố định",
+      "C": "Nhiễm kiềm hơi",
+      "D": "Nhiễm acid hơi"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 125,
+    "question": "Sự thay đổi nồng độ CO2 ảnh hưởng nhiều nhất đến",
+    "options": {
+      "A": "Trung tâm khát",
+      "B": "Trung tâm đói",
+      "C": "Phản xạ thần kinh",
+      "D": "Trung tâm hô hấp"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 126,
+    "question": "Thận tham gia điều hòa pH máu nhờ đặc điểm của:",
+    "options": {
+      "A": "Tế bào ống thận",
+      "B": "Tế bào bàng quang",
+      "C": "Tế bào cầu thận",
+      "D": "Tế bào thận"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 127,
+    "question": "Hệ đệm bicarbonat là hệ đệm có chủ yếu trong:",
+    "options": {
+      "A": "Hồng cầu",
+      "B": "Tế bào ống thận",
+      "C": "Huyết tương",
+      "D": "Tế bào chung của cơ thể"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 128,
+    "question": "Hệ đệm có vai trò quan trọng trong việc đào thải acid carbonic:",
+    "options": {
+      "A": "Hệ đệm Bicarbonat",
+      "B": "Hệ đệm photphat",
+      "C": "Hệ đệm Proteint",
+      "D": "Hệ đệm hồng cầu"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 129,
+    "question": "Bạn Vinh buổi sáng ăn ăn cơm rang vì bạn cho hơi nhiều muối nên cả ngày hôm đó bạn thấy khát và uống nước liên tục Em hãy giải thích tại sao ăn mặn lại uống nhiều nước",
+    "options": {
+      "A": "Tăng áp lực thẩm thấu gian bào và tế bào",
+      "B": "Tăng áp lực thẩm thấu gian bào",
+      "C": "Tăng áp lực thẩm thấu tế bào",
+      "D": "Tăng áp lực thẩm thấu trong máu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 130,
+    "question": "Trẻ nam 8 tháng tuổi, cháu đi ngoài 5-6 lần/ ngày 2 ngày nay Gia đình đưa cháu tới viện được khám và chẩn đoán là Tiếu chảy cấp, được chỉ định truyền dịch bù nước và điện giải ngay Tại sao khi bị tiêu chảy cấp cần phải bù nước và điện giải kịp thời và nhanh chóng:",
+    "options": {
+      "A": "Mất nước nhiễm toan gây nhiễm độc thần kinh và rối loạn chức năng các cơ quan",
+      "B": "Mất nước nhiều kèm theo mất điện giải gây tăng áp lực thẩm thấu gian bào",
+      "C": "Mất nước nhiều có thể bị hạ huyết áp trụy mạch",
+      "D": "Mất nước kèm theo mất cân bằng acid base"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 131,
+    "question": "Trẻ Nam 6 tháng tuổi bị sốt 39-40 độ 2 ngày nay, trẻ được đưa tới khám và chẩn đoán sốt cao chưa rõ nguyên nhân và được chỉ định truyền dịch và hướng dẫn người nhà cho bé uống nhiều nước Tại sao khi người bệnh bị sốt lại phải cho uống nhiều nước hoặc truyền dịch:",
+    "options": {
+      "A": "Mất nước nhiễm toan gây nhiễm độc thần kinh và rối loạn chức năng các cơ quan",
+      "B": "Mất nước nhiều kèm theo mất điện giải gây tăng áp lực thẩm thấu gian bào",
+      "C": "Mất nước nhiều kèm theo mất điện giải có thể bị hạ huyết áp trụy mạch",
+      "D": "Mất nước kèm theo mất cân bằng acid base"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 132,
+    "question": "Khi làm thực nghiệm tiêm 2ml axit lactic 3% vào tĩnh mạch rìa tai thỏ Thấy thỏ thở nhanh, sâu hơn bình thường sau 30 giây thỏ lại trở về bình thường? Em hãy chọn đáp án đúng nhất để giải thích tại sao",
+    "options": {
+      "A": "Do thiếu oxy nên thở nhanh sâu để lấy oxy cho cơ thể",
+      "B": "Do thừa oxy nên thở nhanh sâu để đào thải oxy khỏi cơ thể",
+      "C": "Do thiếu CO2 nên thở nhanh sâu để lấy CO2 cho cơ thể",
+      "D": "Do thừa CO2 nên thở nhanh sâu để đào thải CO2 khỏi cơ thể"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 133,
+    "question": "Khi tiêm 5ml NaHCO3 10% vào tĩnh mạch rìa tai thỏ Thấy thỏ ngừng thở khoảng 45 giây sau đó thỏ thở lại trở về bình thường? Em hãy chọn đáp án đúng nhất để giải thích tại sao",
+    "options": {
+      "A": "Do thiếu oxy nên thở chậm lại để giữ lại oxy cho cơ thể",
+      "B": "Do thừa oxy nên thở chậm lại để đào thải oxy khỏi cơ thể",
+      "C": "Do thiếu CO2 nên thở chậm lại để giữ lại CO2 cho cơ thể",
+      "D": "Do thừa CO2 nên thở chậm lại để đào thải CO2 khỏi cơ thể"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 134,
+    "question": "Cháu bé 5 tuổi thể trạng gầy yếu, mệt mỏi, chiều cao và cân nặng của bé đều thấp hơn độ tuổi của bé, mẹ bé cho biết từ bé cháu rất hay bị tiêu chảy, đã được chẩn đoán suy dinh dưỡng 1 tháng trước, gần đây gia đình thấy cháu tăng cân nhanh không bình thường Khi đi khám được chẩn đoán là suy dinh dưỡng Em hãy giải thích tại sao cháu suy dinh dưỡng lại có biểu hiện tăng cân.",
+    "options": {
+      "A": "Do giảm áp lực keo trong máu nên nước từ lòng mạch ra ngoài gian bào gây phù",
+      "B": "Do tăng áp lực thuỷ tĩnh trong máu, nước từ lòng mạch ra ngoài gian bào gây phù",
+      "C": "Do tăng tính thấm của thành mạch với protein nước ra ngoài gian bào gây phù",
+      "D": "Do giảm áp lực thẩm thấu trong máu và gian bào gây phù"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 135,
+    "question": "Người bệnh nam 62 tuổi có tiền sử nghiện rượu nặng, thời gian gần đây ông thấy da ngày càng vàng, bụng to lên làm cho ông rất mệt mỏi khó thở Ông đi khám được chẩn đoán là xơ gan cổ chướng và chọc hút được 500ml dịch màng bụng của ông Em hãy chọn đáp án không đúng giải thích vì sao ông lại có dịch trong ổ bụng",
+    "options": {
+      "A": "Giảm áp lực keo trong máu",
+      "B": "Tăng áp lực tĩnh mạch cửa",
+      "C": "Tăng Aldosteron gây giữ nước và muối",
+      "D": "Giảm tính thấm thành mạch do gan không huỷ hết chất độc"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 136,
+    "question": "Viêm là một phản ứng sinh học của cơ thể liên quan đến:",
+    "options": {
+      "A": "Các tế bào miễn dịch, mạch máu, các hóa chất trung gian",
+      "B": "Các tế bào miễn dịch, mạch máu, các chất dinh dưỡng",
+      "C": "Các tế bào miễn dịch, khối lượng nước, các hóa chất trung gian",
+      "D": "Các tế bào miễn dịch, khối lượng nước, các chất dinh dưỡng"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 137,
+    "question": "Viêm là một phản ứng sinh học của cơ thể có không có chức năng:",
+    "options": {
+      "A": "Bắt đầu phục hồi mô",
+      "B": "Sinh kháng thể chống lại nguyên nhân gây bệnh",
+      "C": "Loại bỏ nguyên nhân ban đầu làm tế bào tổn thương,",
+      "D": "Dọn sạch các tế bào chết, mô bị tổn thương từ chấn thương ban đầu, trong quá trình viêm."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 138,
+    "question": "Năm dấu hiệu lâm sàng của viêm là:",
+    "options": {
+      "A": "Ho, khó thở, đau và rối loạn chức năng các cơ quan",
+      "B": "Đau bụng, nôn, tiêu chảy và rối loạn nước điện giải",
+      "C": "Sưng, nóng, đỏ, đau và rối loạn chức năng",
+      "D": "Đau ngực, khó thở, sốt và rối loạn thần kinh"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 139,
+    "question": "“Viêm thanh dịch” thuộc cách phân loại:",
+    "options": {
+      "A": "Theo nguyên nhân",
+      "B": "Theo thành phần dịch rỉ viêm",
+      "C": "Theo vị trí",
+      "D": "Theo tính chất"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 140,
+    "question": "Những biến đổi chủ yếu trong viêm không có biến đổi sau:",
+    "options": {
+      "A": "Rối loạn tuần hoàn",
+      "B": "Rối loạn chuyển hóa",
+      "C": "Rối loạn thần kinh thực vật",
+      "D": "Tổn thương mô và tăng sinh tế bào"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 141,
+    "question": "Xung huyết tĩnh mạch và ứ máu trong viêm là",
+    "options": {
+      "A": "Giai đoạn cuối cùng của rối loạn vận mạch",
+      "B": "Giai đoạn đầu tiên của rối loạn vận mạch",
+      "C": "Giai đoạn sớm nhất của phản ứng tuần hoàn",
+      "D": "Giai đoạn cuối cùng của quá trình viêm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 142,
+    "question": "Phù ở giai đoạn xung huyết động mạch trong viêm là do:",
+    "options": {
+      "A": "Tăng áp lực thủy tĩnh",
+      "B": "Tăng áp lực keo",
+      "C": "Tăng tính thấm thành mạch",
+      "D": "Giảm áp lực keo"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 143,
+    "question": "Hiện tượng xung huyết động mạch trong viêm có tác dụng:",
+    "options": {
+      "A": "Máu bị cô đặc và đông máu rải rác trong lòng mạch",
+      "B": "Đưa nhiều bạch cầu, Fibrinogen và kháng thể tới ổ viêm.",
+      "C": "Bạch cầu bám mạch làm tăng ma sát của thành mạch.",
+      "D": "Tăng tính thấm thành mạch gây phù tại ổ viêm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 144,
+    "question": "Hiện tượng xung huyết động mạch trong viêm do một trong các cơ chế:",
+    "options": {
+      "A": "Máu bị cô đặc và đông máu rải rác trong lòng mạch",
+      "B": "Đưa nhiều bạch cầu, Fibrinogen và kháng thể tới ổ viêm.",
+      "C": "Bạch cầu bám mạch làm tăng ma sát của thành mạch.",
+      "D": "Hưng phấn thần kinh giãn mạch ở khu vực vi tuần hoàn gây giãn mạch."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 145,
+    "question": "Hiện tượng xung huyết tĩnh mạch trong viêm do 1 trong cơ chế sau:",
+    "options": {
+      "A": "Máu bị cô đặc và đông máu rải rác trong lòng mạch",
+      "B": "Hưng phấn thần kinh giãn mạch",
+      "C": "Tổn thương các sợi liên kết ở vùng vi tuần hoàn",
+      "D": "Đưa nhiều bạch cầu, Fibrinogen và kháng thể tới ổ viêm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 146,
+    "question": "Hiện tượng xung huyết tĩnh mạch trong viêm gây hậu quả:",
+    "options": {
+      "A": "Máu bị cô đặc và đông máu rải rác trong lòng mạch",
+      "B": "Đưa nhiều bạch cầu, Fibrinogen và kháng thể tới ổ viêm.",
+      "C": "Bạch cầu bám mạch làm tăng ma sát của thành mạch.",
+      "D": "Tăng tính thấm thành mạch gây phù tại ổ viêm"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 147,
+    "question": "Trong dịch rỉ viêm:",
+    "options": {
+      "A": "Nồng độ protein thấp",
+      "B": "Nồng độ Glucose thấp",
+      "C": "Nồng độ protein cao",
+      "D": "Nồng độ glucose cao"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 148,
+    "question": "Một trong những số phận của bạch cầu:",
+    "options": {
+      "A": "Tồn tại lâu trong vi khuẩn",
+      "B": "Tự tiêu hủy",
+      "C": "Bị tiêu diệt nhờ lysosom",
+      "D": "Trở về máu bằng đường bạch huyết"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 149,
+    "question": "Tính chất, màu sắc của thành phần dịch rỉ viêm phụ thuộc vào:",
+    "options": {
+      "A": "Trạng thái thần kinh",
+      "B": "Nội tiết",
+      "C": "Môi trường thực bào",
+      "D": "Nguyên nhân gây viêm"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 150,
+    "question": "Nguyên nhân bên trong gây tổn thương viêm là:",
+    "options": {
+      "A": "Hoại tử tổ chức",
+      "B": "Sinh vật",
+      "C": "Cơ giới",
+      "D": "Tác nhân lý - hoá học"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 151,
+    "question": "Tế bào tham gia vào quá trình thực bào tại ổ viêm:",
+    "options": {
+      "A": "Bạch cầu ưa acid",
+      "B": "Bạch cầu đa nhân trung tính",
+      "C": "Bạch cầu lympho",
+      "D": "Bạch cầu ưa kiềm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 152,
+    "question": "Cơ chế của hiện tượng bạch cầu xuyên mạch là:",
+    "options": {
+      "A": "Nhờ dòng máu chảy chậm mà bạch cầu dễ dàng bám vào thành mạch.",
+      "B": "Nhờ phản xạ co mạch mà bạch cầu dễ dàng xuyên mạch",
+      "C": "Nhờ các chất trung gian hóa học có sẵn trong máu gọi bạch cầu đến",
+      "D": "Nhờ các loại vi trùng xuyên qua lớp bao xơ của thành mạch lọt vào ổ viêm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 153,
+    "question": "Giai đoạn phục hồi của tăng sinh tổ chức tại ổ viêm có đặc điểm:",
+    "options": {
+      "A": "Tăng sinh dòng bạch cầu",
+      "B": "Tăng sinh toàn diện",
+      "C": "Chủ yếu tăng sinh tổ chức hạt",
+      "D": "Tăng sinh dòng tiểu cầu"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 154,
+    "question": "Giai đoạn đầu của tăng sinh tổ chức tại ổ viêm có đặc điểm:",
+    "options": {
+      "A": "Chủ yếu là tăng bạch cầu, nhất là bạch cầu đa nhân",
+      "B": "Tăng sinh tổ chức hạt",
+      "C": "Tăng sinh toàn diện",
+      "D": "Tăng số lượng Hồng cầu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 155,
+    "question": "Cơ chế hình thành dịch rỉ viêm là:",
+    "options": {
+      "A": "Giảm áp lực thuỷ tĩnh trong các mạch máu tại ổ viêm",
+      "B": "Giảm áp lực thẩm thâu ở tổ chức",
+      "C": "Tăng tính thấm thành mạch",
+      "D": "Giảm áp lực keo ở tổ chức"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 156,
+    "question": "Nội dung nào sau đây phản ánh đúng mối quan hệ giữa cơ thể với phản ứng viêm:",
+    "options": {
+      "A": "Trạng thái thần kinh có ảnh hưởng sâu sắc đến phản ứng viêm của cơ thể",
+      "B": "Trạng thái thần kinh không liên quan đến phản ứng viêm của cơ thể",
+      "C": "Các chất nội tiết không liên quan đến phản ứng viêm của cơ thể",
+      "D": "Phản ứng viêm không gây ảnh hưởng đến toàn thân của cơ thể"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 157,
+    "question": "Đặc điểm thể hiện dịch rỉ viêm khác với dịch thẩm:",
+    "options": {
+      "A": "Thành phần hữu hình giảm",
+      "B": "Nồng độ protein cao",
+      "C": "pH của dịch rỉ viêm tăng",
+      "D": "Lượng kiềm giảm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 158,
+    "question": "Giai đoạn đầu tiên của phản ứng tuần hoàn trong viêm thể hiện:",
+    "options": {
+      "A": "Co mạch chớp nhoáng",
+      "B": "Tổn thương tổ chức",
+      "C": "Bạch cầu xuyên mạch",
+      "D": "Dịch rỉ viêm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 159,
+    "question": "“Phản ứng tế bào” trong viêm còn được gọi là:",
+    "options": {
+      "A": "Phản ứng sóm nhất",
+      "B": "Phản ứng cơ bản nhất",
+      "C": "Phản ứng muộn nhất",
+      "D": "Phản ứng tăng sinh"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 160,
+    "question": "Yếu tố nào sau đây làm tăng quá trình thực bào:",
+    "options": {
+      "A": "Dùng Cafein",
+      "B": "Gây mê",
+      "C": "Ức chế thần kinh",
+      "D": "Dùng thuốc ngủ"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 161,
+    "question": "Nội tiết tố nào sau đây làm tăng phản ứng viêm:",
+    "options": {
+      "A": "Các nội tiết tố thượng thận",
+      "B": "Các nội tiết tố sinh dục",
+      "C": "Các nội tiết tố tuyến tụy",
+      "D": "Nội tiết tố tăng trưởng"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 162,
+    "question": "Bệnh nhân Nam, 62 tuổi có tiền sử nghiện rượu nặng, thời gian gần đây ông thấy da ngày càng vàng, bụng to lên làm cho ông rất mệt mỏi khó thở Ông đi khám được chẩn đoán là xơ gan cổ chướngvà chọc hút được 500ml dịch màng bụng Cơ chế nào không gây nên dịch màng bụng trên bệnh nhân:",
+    "options": {
+      "A": "Do tăng áp lực thuỷ tĩnh trong các mạch máu",
+      "B": "Tăng tính thấm thành mạchlàm giãn các khe hở giữa các tế bào biểu mô của thành mạch",
+      "C": "Do tăng áp lực thẩm thấu và áp lực keo",
+      "D": "Do tắc mạch bạch huyết toàn bộ ổ bụng"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 163,
+    "question": "Bệnh nhân Nam, 62 tuổi có tiền sử nghiện rượu nặng, thời gian gần đây ông thấy da ngày càng vàng, bụng to lên làm cho ông rất mệt mỏi khó thở BN đi khám được chẩn đoán là xơ gan cổ chướngvà chọc hút được 500ml dịch màng bụng. Thành phần nào không có trong dịch màng bụng của bệnh nhân:",
+    "options": {
+      "A": "Các thành phần bình thường từ máu thoát ra",
+      "B": "Các chất trung gian: histamin, serotomin, axetylchomin gây giãn mạch, tăng tính thấm và đau",
+      "C": "Các cục máu đông và xác đại thực bào",
+      "D": "Các kinin huyết tương, acid nhân, Các men"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 164,
+    "question": "Bệnh nhi nam, 3 tuổi bị bỏng do giẫm vào nồi canh nóng 3 tháng nay Hiện tại vết phỏng bị co kéo nhăn nhúm, các ngón chân và da vùng mu bàn chân bị dính vào nhau làm cho em rất đau đi lại khó khăn Giai đoạn của viêm trên bệnh nhân:",
+    "options": {
+      "A": "Xung huyết động mạch",
+      "B": "Xung huyết tĩnh mạch và ứ máu",
+      "C": "Bạch cầu xuyên mạch và thực bào",
+      "D": "Tăng sinh tế lào và liền vết thương"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 165,
+    "question": "Bệnh nhân nam 30 tuổi, tiền sử khỏe mạnh, bệnh nhân sưng và rất đau họng, khó nuốt và nuốt đau, đến khám và được chẩn đoán là viêm Amydan cấp Cơ chế của triệu chứng sưng họng gây nuốt khó của bệnh nhân:",
+    "options": {
+      "A": "Co các tiểu động mạch do hưng phấn thần kinh co mạch và các cơ trơn bị kích thích",
+      "B": "Hiện tượng xung huyết động mạch làm tăng áp lực thủy tĩnh gây hiện tượng phù cứng tại ổ viêm",
+      "C": "Dịch rỉ viêm chèn ép vào thần kinh và do hoá chất trung gian tác động vào thần kinh",
+      "D": "Giãn mạch cực độ, dòng máu chảy chậm rồi dừng hẳn làm mất tuần hoàn từ động mạch sang tĩnh mạch"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 166,
+    "question": "Bệnh nhân nam 30 tuổi, tiền sử khỏe mạnh, bệnh nhân sưng và rất đau họng, khó nuốt và nuốt đau, đến khám và được chẩn đoán là viêm Amydan cấp Cơ chế của triệu chứng đau họng gây nuốt đaucủa bệnh nhân:",
+    "options": {
+      "A": "Dịch rỉ viêm chèn ép vào thần kinh và do hoá chất trung gian tác động vào thần kinh",
+      "B": "Co các tiểu động mạch do hưng phấn thần kinh co mạch và các cơ trơn bị kích thích",
+      "C": "Hiện tượng xung huyết động mạch làm tăng áp lực thủy tĩnh gây hiện tượng phù cứng tại ổ viêm",
+      "D": "Giãn mạch cực độ, dòng máu chảy chậm rồi dừng hẳn làm mất tuần hoàn từ động mạch sang tĩnh mạch"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 167,
+    "question": "Bệnh nhân nam 30 tuổi, tiền sử khỏe mạnh, bệnh nhân sưng và rất đau họng, khó nuốt và nuốt đau, đến khám và được chẩn đoán là viêm Amydan cấp, bệnh nhân sốt 39 0 c Triệu chứng sốtcủa bệnh nhân không do Cơ chếnào sau đây gây ra:",
+    "options": {
+      "A": "Tăng chuyển hóa tạo năng lượng cho phản ứng bảo vệ cơ thể",
+      "B": "Tăng tuần hoàn tại chỗ, tăng thực bào, tăng sinh kháng thể",
+      "C": "Tăng nội tiết, tăng hoạt động của hệ liên võng",
+      "D": "Tăng sinh phát triển tổ chức hạt nhanh liền sẹo"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 168,
+    "question": "Bệnh nhân nam 30 tuổi, tiền sử khỏe mạnh, bệnh nhân đến khám và được chẩn đoán là viêm Amydan cấp, bệnh nhân sốt 39 0 c liên tục, dùng thuốc và chườm chườm lạnh thì nhiệt độ cơ thể bệnh vẫn ở mức cao Chọn giải thích đúng nhất cho tình trạng của bệnh nhân:",
+    "options": {
+      "A": "Do trung tâm điều hoà nhiệt hưng phấn mạnh nhất trước khi nhiệt độ tăng và kéo dài cho tới khi giai đoạn sốt đứng",
+      "B": "Do trung tâm điều hoà nhiệtức chế mạnh nhất trước khi nhiệt độ tăng và kéo dài cho tới khi giai đoạn sốt đứng",
+      "C": "Do trung tâm điều hoà nhiệt ức chế mạnh nhất trước khi nhiệt độ tăng và kéo dài cho tới khi giai đoạn sốt lui",
+      "D": "Do trung tâm điều hoà nhiệt hưng phấn mạnh nhất trước khi nhiệt độ tăng và kéo dài cho tới khi giai đoạn sốt lui"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 169,
+    "question": "Bệnh nhi nam, 20 tuổi vào viện được chẩn đoán là cảm sốt ngày thứ 3 Hiện tại bệnh nhân đã đỡ sốt nhưng ăn rất ít, không muốn ăn Cơ chế nào giải thích cho tình trạng của bệnh nhân",
+    "options": {
+      "A": "Do rối loạn chuyển hóa các chất",
+      "B": "Do rối loạn thần kinh giao cảm",
+      "C": "Do rối loạn hấp thu các chất",
+      "D": "Do rối loạn chuyển hóa nước điện giải"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 170,
+    "question": "Bệnh nhi nam, 05 tuổi vào viện được chẩn đoán là viêm phế quản phổi ngày thứ 3 Hiện tại bệnh nhân sốt 39 độ, khó thở nhiều, môi đỏ mọng, cơ chế nào giải thích cho tình trạng hiện tại của bệnh nhân",
+    "options": {
+      "A": "Do ăn kém giảm chuyển hóa các chất, thiếu dinh dưỡng",
+      "B": "Do tăng sử dụng glucose càng làm xuất hiện nhiễm acid máu.",
+      "C": "Do rối loạn hấp thu các chất, thiếu dinh dưỡng",
+      "D": "Do tăng sử dụng glucose càng làm xuất hiện nhiễm kiềm máu"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 171,
+    "question": "Nguyên nhân của tăng thân nhiêt:",
+    "options": {
+      "A": "Rối loạn trung tâm điều hoà nhiệt",
+      "B": "Rối loạn chuyển hoá nặng",
+      "C": "Suy dinh dưỡng",
+      "D": "Đái tháo đường"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 172,
+    "question": "Nên dùng thuốc hạ sốt ở giai đoạn nào tốt nhất:",
+    "options": {
+      "A": "Giai đoạn sốt tăng",
+      "B": "Đầu gia đoạn sốt đứng",
+      "C": "Cuối gia đoạn sốt đứng",
+      "D": "Giai đoạn sốt lui"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 173,
+    "question": "Ý nghĩa của phản ứng sốt",
+    "options": {
+      "A": "Tăng khả năng chống độc và khử độc của gan, tăng fibrinogen",
+      "B": "Tăng phát triển số lượng vi khuẩn",
+      "C": "Kích thích sinh sản của vi rút",
+      "D": "Giảm số lượng bạch cầu và khả năng thực bào của Bạch cầu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 174,
+    "question": "Rối loạn chuyển hoá đường do Sốt gây ra là:",
+    "options": {
+      "A": "Dự trữ glycogen tăng",
+      "B": "Glucoza máu tăng",
+      "C": "Glucoza máu giảm",
+      "D": "Đường niệu giảm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 175,
+    "question": "Rối loạn chuyển hoá các chất do Sốt gây ra là:",
+    "options": {
+      "A": "Sốt tăng dự trữ glycogen tăng",
+      "B": "Sốt tăng Lipit máu tăng",
+      "C": "Sốt tăng bài tiết NaCl tăng",
+      "D": "Sốt tăng đào thải nước tăng"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 176,
+    "question": "Khái niệm xoắn khuẩn:",
+    "options": {
+      "A": "Là những vi khuẩn lượn xoắn, di động được nhờ có lông",
+      "B": "Là những vi khuẩn lượn xoắn, di động",
+      "C": "Di động hoặc không, nếu di động thì có lông quanh thân",
+      "D": "Không di động"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 177,
+    "question": "Đặc điểm cấu tạo tế bào của vi khuẩn:",
+    "options": {
+      "A": "Có nhân điển hình",
+      "B": "Không có nhân",
+      "C": "Không có màng nhân",
+      "D": "Có bộ máy phân bào"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 178,
+    "question": "Đặc điểm chất nguyên sinh của vi khuẩn:",
+    "options": {
+      "A": "Protein và Polipeptid chiếm khoảng 50% trọng lượng khô",
+      "B": "Protein và Polipeptid chiếm khoảng 80% trọng lượng khô",
+      "C": "Không có Enzym nội bào",
+      "D": "Chứa nội độc tố"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 179,
+    "question": "Đặc điểm màng nguyên sinh của tế bào vi khuẩn:",
+    "options": {
+      "A": "Có tính thẩm thấu chọn lọc và vận chuyển điện tử…",
+      "B": "Là nơi tổng hợp nhân của vi khuẩn",
+      "C": "Là nơi tổng hợp các Ribosom cho tế bào",
+      "D": "Là nơi bám của các lông của vi khuẩn"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 180,
+    "question": "Đặc điểm vách của vi khuẩn Gram dương:",
+    "options": {
+      "A": "Gồm nhiều lớp Petidoglycan, có tính vững chắc",
+      "B": "Gồm một lớp Petidoglycan, tính vững chắc thấp",
+      "C": "Petidoglycan bản hóa học là Lipid và Acid Amin",
+      "D": "Thành phần Acid Teichoic ít có ở nhóm vi khuẩn này"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 181,
+    "question": "Đặc điểm vách của vi khuẩn Gram âm:",
+    "options": {
+      "A": "Gồm nhiều lớp Petidoglycan, nên có tính vững chắc",
+      "B": "Bên ngoài vách còn có lớp Lipopolysaccharit",
+      "C": "Tính đặc hiệu kháng nguyên thấp",
+      "D": "Cấu tạo bởi phức hợp Lipopolysaccharit"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 182,
+    "question": "Một trong những tính chất sau không thuộc đặc tính của vách vi khuẩn:",
+    "options": {
+      "A": "Quyết định tính kháng nguyên thân",
+      "B": "Có tính thẩm thấu chọn lọc",
+      "C": "Là nơi tác động của một số kháng sinh",
+      "D": "Là nơi mang các điểm tiếp nhận đặc hiệu cho thực thể vi khuẩn"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 183,
+    "question": "Đặc điểm vách tế bào vi khuẩn:",
+    "options": {
+      "A": "Quyết định nên hình thể của vi khuẩn",
+      "B": "Quyết định tính chất gây bệnh của vi khuẩn",
+      "C": "Được cấu tạo bởi phức hợp Lipopolysaccharit (LPS)",
+      "D": "Bao bên ngoài vỏ của vi khuẩn"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 184,
+    "question": "Đặc điểm cấu tạo vỏ của vi khuẩn:",
+    "options": {
+      "A": "Là một lớp vỏ cứng bao ngoài vách, có vai trò bảo vệ vi khuẩn",
+      "B": "Là một lớp nhầy, lỏng lẻo, không rõ rệt bao quanh vi khuẩn",
+      "C": "Mọi loại vi khuẩn đều có vỏ khi gặp điều kiện không thuận lợi",
+      "D": "Chỉ những trực khuẩn Gram âm mới có vỏ"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 185,
+    "question": "Đặc điểm cấu tạo và chức năng của lông vi khuẩn:",
+    "options": {
+      "A": "Là những sợi Protein dài và xoắn",
+      "B": "Xuất phát từ màng tế bào xuyên qua vách tế bào",
+      "C": "Giúp vi khuẩn tồn tại được trong những điều kiện không thuận lợi",
+      "D": "Giúp vi khuẩn truyền giới tính từ vi khuẩn này sang vi khuẩn khác"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 186,
+    "question": "Đặc điểm cấu tạo và chức năng Pili của vi khuẩn:",
+    "options": {
+      "A": "Cấu tạo hóa học là Protein",
+      "B": "Nếu mất Pili vi khuẩn sẽ không truyền được các yếu tố di truyền từ vi khuẩn này sang vi khuẩn khác được",
+      "C": "Nếu mất Pili vi khuẩn sẽ không tồn tại được",
+      "D": "Một vi khuẩn đực có thể có một hoặc nhiều Pili giới tính"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 187,
+    "question": "Đặc điểm cấu tạo và chức năng của nha bào của vi khuẩn:",
+    "options": {
+      "A": "Mọi loài vi khuẩn trong điều kiện sống không thuận lợi đều có khả năng sinh nha bào",
+      "B": "Ở trạng thái nha bào vi khuẩn vẫn có khả năng gây bệnh",
+      "C": "Màng nha bào bao bên ngoài nhân AND",
+      "D": "Nha bào có hai lớp vách trong và ngoài"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 188,
+    "question": "Đặc điểm chuyển hóa và dinh dưỡng của vi khuẩn:",
+    "options": {
+      "A": "Tất cả vi khuẩn gây bệnh đều là vi khuẩn tự dưỡng",
+      "B": "Vi khuẩn chuyển hóa được là nhờ các Enzym nội và ngoại bào",
+      "C": "Vi khuẩn chuyển hóa được nhờ có các Enzym ngoại bào",
+      "D": "Chỉ những vi khuẩn kí sinh trong tế bào mới gây được bệnh"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 189,
+    "question": "Đặc điểm chuyển hóa và dinh dưỡng của vi khuẩn:",
+    "options": {
+      "A": "Quá trình chuyển hóa tạo ra một số chất như nội độc tố, vitamin",
+      "B": "Tất cả vi khuẩn gây bệnh đều là vi khuẩn tự dưỡng",
+      "C": "Tất cả vi khuẩn gây bệnh đều là vi khuẩn dị dưỡng",
+      "D": "Enzym ngoại bào có vai trò thực hiện quá trình chuyển hóa phức tạp"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 190,
+    "question": "Đặc điểm các loại môi trường nhân tạo để nuôi cấy vi khuẩn:",
+    "options": {
+      "A": "Môi trường cơ bản: phải đủ các yếu tố dinh dưỡng cần thiết cho đa số vi khuẩn",
+      "B": "Môi trường cơ bản: để nuôi cấy các vi khuẩn tăng trưởng nhanh",
+      "C": "Môi trường chuyên biệt: là môi trường cơ bản có thêm hồng cầu",
+      "D": "Môi trường chuyên biệt: để nuôi cấy các vi khuẩn tăng trưởng chậm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 191,
+    "question": "Thuốc kháng sinh là những chất ngăn chặn vi khuẩn nhân lên hay tiêu diệt vi khuẩn bằng cơ chế:",
+    "options": {
+      "A": "Tác động vào sự cân bằng lý học của tế bào vi khuẩn",
+      "B": "Tác động vào các giai đoạn chuyển hóa của đời sống vi khuẩn",
+      "C": "Ức chế sinh tổng hợp Protein",
+      "D": "Tác động vào giai đoạn phân chia của tế bào vi khuẩn"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 192,
+    "question": "Kháng sinh có đặc điểm:",
+    "options": {
+      "A": "Có nguồn gốc cơ bản từ các chất hóa học",
+      "B": "Có nguồn gốc cơ bản từ thực vật",
+      "C": "Mỗi loại kháng sinh chỉ tác động lên một nhóm hay một loại vi khuẩn nhất định",
+      "D": "Kháng sinh có hoạt phổ rộng là kháng sinh tiêu diệt được nhiều loại vi khuẩn gây bệnh khác nhau"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 193,
+    "question": "Chất tẩy uế và chất sát khuẩn giống nhau ở điểm:",
+    "options": {
+      "A": "Trích từ động vật, thực vật hoặc vi sinh vật",
+      "B": "Có thể dùng tại chỗ như bôi ngoài da",
+      "C": "Thường chỉ dùng để tẩy uế đồ vật",
+      "D": "Gây độc hại cho cơ thể"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 194,
+    "question": "Kháng sinh làm hư hại màng nguyên tương vi khuẩn theo cơ chế:",
+    "options": {
+      "A": "Kháng sinh làm thay đổi tính thẩm thấu chọn lọc của vách vi khuẩn",
+      "B": "Kháng sinh làm tăng tính thẩm thấu chọn lọc của màng nguyên tương vi khuẩn",
+      "C": "Kháng sinh làm thay đổi tính thẩm thấu chọn lọc của màng nguyên tương",
+      "D": "Kháng sinh làm thay đổi tính thẩm thấu của màng nhân"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 195,
+    "question": "Kháng sinh ức chế sinh tổng hợp Protein của vi khuẩn theo một trong các cơ chế sau:",
+    "options": {
+      "A": "Phá hủy tiểu phần 30S của Ribosom",
+      "B": "Phá hủy tiểu phần 50S của Ribosom",
+      "C": "Cản trở sự liên kết của các Acid Amin ở tiểu phần 50S",
+      "D": "Tác động vào Emzym Catalase ở tiểu phần 50S"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 196,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo liệt kê trên bảng một vài nét miêu tả về đặc tính của Cầu khuẩn như sau: có đường kính từ 0,8-1,0 m và tụ với nhau thành từng đám giống như chum nho, bắt màu Gram dương, không có lông, không sinh nha bào Thầy giáo yêu cầu SV lựa chọn con Cầu khuẩn có đầy đủ các đặc tính Thầy nêu ra trong số 4 con Cầu khuẩn được trình bày dưới đây:",
+    "options": {
+      "A": "Cầu khuẩn lậu (Neisseria gonorrhoeae)",
+      "B": "Tụ cầu khuẩn (Staphylococcus)",
+      "C": "Liên cầu khuẩn (Streptococcus)",
+      "D": "Phế cầu (Streptococcus pneumoniae)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 197,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo liệt kê trên bảng một vài nét miêu tả về đặc tính của Tụ Cầu khuẩn như sau: có men Coagulase trên môi trường nuôi cấy có máu, khuẩn lạc hình dạng chữ S, có màu vàng Sau đó, Thầy đưa ra 1 list gồm tên 4 con Tụ cầu (trình bày dưới đây) và yêu cầu SV lựa chọn con Tụ cầu khuẩn có đầy đủ các đặc tính như Thầy đã mô tả:",
+    "options": {
+      "A": "Staphylococcus aureus",
+      "B": "Staphylococcus epidermidis",
+      "C": "Staphylococcus sapprophyticus",
+      "D": "Staphylococcus haemolyticus"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 198,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo trình chiếu 1 bức tranh mô phỏng về đặc tính của Tụ Cầu khuẩn như sau: Không có men Coagulase trên môi trường nuôi cấy có máu, khuẩn lạc hình dạng chữ S, màu trắng ngàTheo bạn, con Tụ cầu khuẩn nào sau đây có đầy đủ các đặc tính “Khác biệt” các đặc tính Thầy nêu ra:",
+    "options": {
+      "A": "Staphylococcus epidermidis",
+      "B": "Staphylococcus sapprophyticus",
+      "C": "Staphylococcus haemolyticus",
+      "D": "Staphylococcus interintermedius"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 199,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo trình chiếu 1 bức tranh mô phỏng về đặc tính của Cầu khuẩn như sau: có đường kính từ 0,8-1,0 m, xếp liên tiếp với nhau thành từng chuỗi, dài ngắn khác nhau và có thể dính với nhau thành từng đôi hoặc thành từng đám, bắt màu Gram (+), không có lông, không sinh nha bào Theo bạn, Cầu khuẩn nào sau đây có đầy đủ các đặc tính Thầy nêu:",
+    "options": {
+      "A": "Tụ cầu khuẩn (Staphylococcus)",
+      "B": "Liên cầu khuẩn (Streptococcus)",
+      "C": "Phế cầu (Streptococcus pneumoniae)",
+      "D": "Cầu khuẩn lậu (Neisseria gonorrhoeae)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 200,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo trình chiếu 1 bức tranh mô phỏng về đặc tính của Cầu khuẩn như sau: có đường kính từ 0,8-1,0 m và tụ với nhau thành từng đám, bắt màu Gram dương, không có lông, không sinh nha bào và có thể sống ở môi trường có nồng độ NaCl cao(9%), sinh Enzyme Coagulase Sau đó, Thầy đưa ra 1 list gồm tên 4 con cầu khuẩn và yêu cầu SV lựa chọn con cầu khuẩn có đầy đủ các đặc tính Thầy nêu:",
+    "options": {
+      "A": "Staphylococcus haemolyticus",
+      "B": "Staphylococcus aureus",
+      "C": "Staphylococcus lugdunensis",
+      "D": "Staphylococcus simulans"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 201,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về sử dụng kháng sinh trong điều trị các bệnh do tụ cầu gây nên là cần phải dựa vào kết quả kháng sinh đồ, và đồng thời Thầy cũng đưa ra khuyến cáo của các nhà Vi sinh học“Nên thực hiện Kháng sinh đồ trước khi sử dụng kháng sinh cho người bệnh” Thầy đưa ra 4 lý do& sự giải thích về khuyến cáo của các nhà Vi sinh học Thầy yêu cầu SV chọn lý do & sự giải thích phù hợp nhất cho khuyến cáo nêu trên:",
+    "options": {
+      "A": "Tụ cầu có nhiều loại hemolysin",
+      "B": "Tụ cầu thường gây nên các chứng bệnh nặng",
+      "C": "Sự nhiễm trùng tụ cầu xãy ra ở những cơ thể sức đề kháng giảm sút",
+      "D": "Nhiều chủng tụ cầu đề kháng với nhiều loại kháng sinh nhất là Penicillin"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 202,
+    "question": "Trong một buổi học lý thuyết vi sinh, Thầy giáo đưa ra một số dữ liệu về nhà bác học Đức Robert Koch (1843 - 1910) là bác sỹ thú y người Đức, là người cộng sự mật thiết với Pasteur Robert Koch có nhiều đóng góp quan trọng cho ngành vi sinh vật học Thầy đặt câu hỏi cho các SV: Năm 1884 nhà bác học Robert Koch đã phân lập được vi khuẩn nào sau đây?Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn vi khuẩn nào sau đây:",
+    "options": {
+      "A": "Phát hiện ra vi khuẩn than ( Banthracis)",
+      "B": "Phân lập được vi khuẩn lao (Mtuberculosis)",
+      "C": "Phân lập được vi khuẩn tả (Vcholerae )",
+      "D": "Phân lập tìm ta phản ứng tuberculin và hiện tượng di ứng lao"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 203,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về đặc điểm canh cấy, môi trưởng cũng như nhiệt độ của nhóm Tụ cầu khuẩn Sau đó, Thầy đưa ra 1 list gồm 4 mức nhiệt độ của nhóm Tụ cầu ưa thích và yêu cầu 1 sinh viên lựa chọn nhiệt độ môi trường nuôi cấy có máu để Staphylococcus aureus có thể tồn tại và tạo được sắc tố tốt trên môi trường đặc này:",
+    "options": {
+      "A": "Nhiệt độ 370C",
+      "B": "Nhiệt độ 200C",
+      "C": "Nhiệt độ 450C",
+      "D": "Nhiệt độ 280C"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 204,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về đặc điểm canh cấy, môi trưởng cũng như nhiệt độ của nhóm Tụ cầu khuẩn Sau đó, Thầy đưa ra 1 list gồm 4 mức nhiệt độ của nhóm Tụ cầu ưa thích và bạn lựa chọn nhiệt độ môi trường nuôi cấy có Máu để Staphylococcus epidermidis có thể tồn tại và tạo được sắc tố tốt trên môi trường đặc này Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn nhiệt độ nào sau đây:",
+    "options": {
+      "A": "Nhiệt độ 370C",
+      "B": "Nhiệt độ 200C",
+      "C": "Nhiệt độ 450C",
+      "D": "Nhiệt độ 280C"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 205,
+    "question": "Trong một buổi học lý thuyết VS-KST, Thầy giáo đưa ra một số dữ liệu về nhà bác học Đức Robert Koch (1843 - 1910) là bác sỹ thú y người Đức, là người cộng sự mật thiết với Pasteur Robert Koch có nhiều đóng góp quan trọng cho ngành vi sinh vật học Thầy đặt câu hỏi cho các SV: Năm 1876 nhà bác học Robert Koch đã phân lập được vi khuẩn nào sau đây? Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn vi khuẩn nào sau đây:",
+    "options": {
+      "A": "Phát hiện ra vi khuẩn than ( Banthracis)",
+      "B": "Phân lập được vi khuẩn lao (Mtuberculosis)",
+      "C": "Phân lập được vi khuẩn tả (Vcholerae )",
+      "D": "Phân lập tìm ta phản ứng tuberculin và hiện tượng di ứng lao"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 206,
+    "question": "Trong một buổi học lý thuyết VS-KST, Thầy giáo hướng dẫn cho sinh viên về các Enzyme điển hình thường được sử dụng để định danh vi khuẩn và phân định loài Staphylococcus Sau đó, Thầy đưa ra 1 list gồm 4 test thử có chứa các Enzyme điển hình và yêu cầu sinh lựa chọn Enzyme (test) cần thiết để dạng được con cầu khuẩn SAureus Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, bạn sẽ chọn Enzyme (test) nào sau đây:",
+    "options": {
+      "A": "Lên men Glucoza, có Catalase",
+      "B": "Có tan máu, có độc tố ruột",
+      "C": "Tạo săc tố vàng, có Penicillinaza",
+      "D": "Lên men đường Manitol"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 207,
+    "question": "Trong một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về các test sinh hóa dùng để định danh vi khuẩn và test dùng để phân định loài Liên cầu khuẩn Sau đó, Thầy đưa ra 1 list gồm 4 test thử và yêu cầu sinh lựa chọn test cần thiết để dạng được con Liên cầu khuẩn nhóm A Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn test thử nào sau đây:",
+    "options": {
+      "A": "Thử nghiệm Bacitracin",
+      "B": "Thử nghiệm Neufeld",
+      "C": "Thử nghiệm Optochin",
+      "D": "Thử nghiệm Catalase"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 208,
+    "question": "Trong một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về các test sinh hóa dùng để định danh vi khuẩn và test dùng để phân định loài Liên cầu khuẩn Sau đó, Thầy đưa ra 1 list gồm 4 test thử và yêu cầu sinh lựa chọn test cần thiết để dạng được con Liên cầu khuẩn nhóm A tan máu Beta Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn test thử nào sau đây:",
+    "options": {
+      "A": "Thử nghiệm trung hòa Enzym",
+      "B": "Thử nghiệm đồng ngưng kết",
+      "C": "Thử nghiệm Oxidase",
+      "D": "Thử nghiệm Bacitracin"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 209,
+    "question": "Trong một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về các test sinh hóa dùng để định danh vi khuẩn và test dùng để phân biệt giữa phế cầu khuẩn và Liên cầu khuẩn Sau đó, Thầy đưa ra 1 list gồm 4 thử nghiệm để nhận dạng chẩn đoán phân biệt phế cầu với Liên cầu tan máu Alpha Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn thử nghiệm nào sau đây để có thể phù hợp cho sự phân biệt này:",
+    "options": {
+      "A": "Thử nghiêm Optochin",
+      "B": "Thử nghiệm Catalase",
+      "C": "Thử nghiệm Neufeld",
+      "D": "Thử nghiệm Optochin Và Neufeld"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 210,
+    "question": "Trong một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về đặc điểm canh cấy, môi trưởng cũng như nhiệt độ của nhóm Cầu khuẩn Sau đó, Thầy đưa ra 1 list gồm 4 môi trường & nhiệt độ của nhóm Cầu khuẩn ưa thích và yêu cầu 1 sinh viên lựa chọn môi trường & nhiệt độ nuôi cấy có máu để Phế cầu mọc và phát triển trên môi trường đặc này Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn môi trường nào sau đây:",
+    "options": {
+      "A": "Môi trường có PH kiềm",
+      "B": "Môi trường có khí trường 5-10% CO2",
+      "C": "Môi trường có nhiệt độ thích hợp là 280C",
+      "D": "Môi trường có nồng độ NaCl cao( 9%)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 211,
+    "question": "Trong một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về các test thử dùng để định danh vi khuẩn và phân biệt các nhóm tụ cầu nhạy và không nhạy với kháng sinh Optochin, Sau đó, Thầy đưa ra 1 list gồm 4 kết quả của thử nghiệm Optochin Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn kết quả nào sau đây để có chứng minh rằng Streptococcus Pneumoniae dương tính (nhạy cảm) với Optochin:",
+    "options": {
+      "A": "<6mm",
+      "B": "10mm",
+      "C": "12mm",
+      "D": ">14mm"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 212,
+    "question": "Trong một buổi học lý thuyết vi sinh-ký sinh trùng, Thầy giáo đưa ra một số dữ liệu về nhà bác học Đức Robert Koch (1843 - 1910) là bác sỹ thú y người Đức, là người cộng sự mật thiết với Pasteur Robert Koch có nhiều đóng góp quan trọng cho ngành vi sinh vật học Thầy đặt câu hỏi cho các SV: Năm 1882 nhà bác học Robert Koch đã phân lập được vi khuẩn nào sau đây? Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn vi khuẩn nào sau đây:",
+    "options": {
+      "A": "Phân lập được vi khuẩn tả (Vcholerae )Phát hiện ra vi khuẩn than ( Banthracis)",
+      "B": "Phân lập được vi khuẩn tả (Vcholerae )",
+      "C": "Phân lập được vi khuẩn lao (Mtuberculosis)",
+      "D": "Tìm ta phản ứng Tuberculin và hiện tượng dị ứng lao"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 213,
+    "question": "Trong một buổi học lý thuyết vi sinh, Thầy giáo đưa ra 1 bức tranh mô phỏng về đặc tính về 1 vi khuẩn như sau: Là những trực khuẩn lớn, gram dương, đầu vuông, không di động và thường xếp thành chuỗi Trong bệnh phẩm vi khuẩn có vỏ, không có nha bào Trong môi trường nuôi cấy vi khuẩn không có vỏ, hình thành nha bào hình bầu dục nằm ở giữa thân và không làm biến dạng vi khuẩn, được phát hiện năm 1881 bởi nhà bác học LPasteur LPasteur Thầy yêu cầu SV lựa chọn vi khuẩn có đầy đủ các đặc tính thầy nêu ra trong số 4 vi khuẩn được trình bày dưới đây:",
+    "options": {
+      "A": "Cầu khuẩn lậu (Neisseria gonorrhoeae)",
+      "B": "Liên cầu khuẩn (Streptococcus)",
+      "C": "Phế cầu (Streptococcus pneumoniae)",
+      "D": "Trực khuẩn than (Bacillus anthracis)"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 214,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo hướng dẫn cho sinh viên về đặc điểm canh cấy, môi trưởng cũng như nhiệt độ của trực khuẩn Than Sau đó, Thầy đưa ra 1 list gồm 4 môi trường & nhiệt độ của nhóm vi khuẩn ưa thích và yêu cầu 1 sinh viên lựa chọn môi trường & nhiệt độ nuôi cấy có máu để trực khuẩn Than trên môi trường đặc này Nếu bạn là sinh viên được Thầy yêu cầu lựa chọn, vậy bạn sẽ chọn môi trường nào sau đây:",
+    "options": {
+      "A": "Môi trường có PH kiềm",
+      "B": "Môi trường có khí trường 5-10% CO2",
+      "C": "Môi trường có nhiệt độ thích hợp là 380C",
+      "D": "Môi trường có nồng độ NaCl cao( 9%)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 215,
+    "question": "Một buổi học lý thuyết vi sinh, Thầy giáo đưa ra 1 hình ảnh nuôi cấy, và vài nét miêu tả về đặc tính về 1 vi khuẩn như sau: Vi khuẩn hiếu kỵ khí không bắt buộc, lên men và không sinh hơi một số loại đường, làm ly giải protein, làm lỏng Gelatin và không làm tan máu cừu Vi khuẩn ở trạng thái sinh trưởng dễ bị tiêu diệt ở 38 0C/1giờ, 55 0C/40 phút, 80 0C/1 phút Vi khuẩn ở trạng thái nha bào có sức đề kháng cao và tồn tại rất lâu (ở trong đất tồn tại 20-30 năm) Thầy yêu cầu SV lựa chọn vi khuẩn có đầy đủ các đặc tính thầy nêu ra trong số 4 vi khuẩn được trình bày dưới đây:",
+    "options": {
+      "A": "Trực khuẩn uốn ván (Clostridium tetani)",
+      "B": "Cầu khuẩn lậu (Neisseria gonorrhoeae)",
+      "C": "Liên cầu khuẩn (Streptococcus)",
+      "D": "Trực khuẩn than (Bacillus anthracis)"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 216,
+    "question": "Giãn tim bệnh lý thường xảy ra do nguyên nhân nào sau đây:",
+    "options": {
+      "A": "Cao huyết áp.",
+      "B": "Hẹp van tim.",
+      "C": "Hẹp van động mạch chủ.",
+      "D": "Suy tim."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 217,
+    "question": "Xơ vữa động mạch là tình trạng thành mạch bị dày lên do lắng đọng:",
+    "options": {
+      "A": "Cholesterol, lipid và Natri",
+      "B": "Muối, lipid và canxi",
+      "C": "Cholesterol, lipid và canxi",
+      "D": "Chất xơ và canxi."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 218,
+    "question": "Xơ vữa động mạch gây hậu quả nào sau đây:",
+    "options": {
+      "A": "Chít hẹp lòng động mạch và giảm khả năng co giãn của mạch máu.",
+      "B": "Chít hẹp lòng động mạch và tăng khả năng co giãn của mạch máu.",
+      "C": "Co thắt động mạch và tăng tính đàn hồi của mạch máu",
+      "D": "Co thắt động mạch và giảm tính đàn hồi của mạch máu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 219,
+    "question": "Xơ vữa động mạch tiến triển có thể gây biến chứng nào sau đây:",
+    "options": {
+      "A": "Mạch kém bền, mạch máu dài ra",
+      "B": "Mạch tăng khả năng đàn hồi, mạch máu dài ra",
+      "C": "Mạch tăng khả năng đàn hồi, dễ vỡ mạch máu",
+      "D": "Mạch kém khả năng đàn hồi, dễ vỡ mạch máu."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 220,
+    "question": "Xơ vữa động mạch gây hậu quả nào sau đây",
+    "options": {
+      "A": "Lượng máu nuôi các mô bị giảm sút",
+      "B": "Giữ nước và muối gây phù.",
+      "C": "Tăng khả năng co giãn của mạch máu.",
+      "D": "Huyết áp hạ."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 221,
+    "question": "Xơ vữa động mạch gây hậu quả nào sau đây:",
+    "options": {
+      "A": "Tăng khả năng co giãn của mạch máu.",
+      "B": "Tạo điều kiện hình thành huyết khối",
+      "C": "Dễ gây hạ huyết áp",
+      "D": "Mạch máu bị dài ra."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 222,
+    "question": "Trong trường hợp chọc tháo nước ổ bụng quá nhanh, quá nhiều gây hậu quả nào sau đây:",
+    "options": {
+      "A": "Dãn mạch nội tạng, máu lên não ít, dễ trụy mạch",
+      "B": "Dãn mạch nội tạng, máu lên não ít, dễ gây phù",
+      "C": "Co mạch nội tạng, máu lên não nhiều, dễ tăng huyết áp",
+      "D": "Co mạch nội tạng, máu lên não ít, dễ bị phù."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 223,
+    "question": "Khi cơ thể cần tăng nhu cầu tưới máu cho các cơ quan, hệ mạch máu sẽ thích nghi bằng cách nào sau đây:",
+    "options": {
+      "A": "Hạ huyết áp",
+      "B": "Tăng bạch cầu trong máu",
+      "C": "Giảm tốc độ tuần hoàn",
+      "D": "Tăng tốc độ tuần hoàn"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 224,
+    "question": "Khi nhu cầu O2 của cơ thể tăng, cơ thể sẽ thích nghi bằng cách nào sau đây:",
+    "options": {
+      "A": "Thở nhanh, nông",
+      "B": "Thở chậm, nông",
+      "C": "Thở chậm, sâu",
+      "D": "Thở nhanh, sâu."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 225,
+    "question": "Chọc tháo dịch ổ bụng quá nhanh, quá nhiều gây hậu quả nào sau đây:",
+    "options": {
+      "A": "Giãn mạch nội tạng, máu lên não nhiều",
+      "B": "Co mạch nội tạng, máu lên não nhiều",
+      "C": "Co mạch nội tạng, máu lên não ít",
+      "D": "Giãn mạch nội tạng, máu lên não ít."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 226,
+    "question": "Bệnh nhân mất máu nặng có nguy cơ nào sau đây:",
+    "options": {
+      "A": "Tăng huyết áp",
+      "B": "Niêm mạc nhợt",
+      "C": "Sốc",
+      "D": "Da xanh."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 227,
+    "question": "Bệnh nhân nam 45 tuổi bị chấn thương mất máu có nhịp tim dao động trong khoảng 120 -130 lần/phút, da xanh, niêm mạc nhợt, huyết áp 100/60 mmHg. Nếu bệnh nhân này không được xử trí kịp thời sẽ gây nguy cơ nào sau đây:",
+    "options": {
+      "A": "Tăng huyết áp",
+      "B": "Giãn mạch nuôi tim",
+      "C": "Hẹp hở van tim",
+      "D": "Suy tim."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 228,
+    "question": "Trong trường hợp tràn khí màng phổi sẽ xảy ra hậu quả nào sau đây:",
+    "options": {
+      "A": "Phổi bị xẹp lại, diện tích hô hấp bị thu hẹp, do vậy thông khí bị giảm",
+      "B": "Phổi bị nở to, diện tích hô hấp bị thu hẹp, do vậy thông khí bị giảm",
+      "C": "Phổi bị nở to, diện tích hô hấp bị thu hẹp, do vậy thông khí tăng",
+      "D": "Phổi bị xẹp lại, diện tích hô hấp tăng, do vậy thông khí bị giảm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 229,
+    "question": "Tràn dịch màng phổi làm cho",
+    "options": {
+      "A": "Làm cho nhu mô phổi nở ra, gây khó thở và dẫn tới thiếu oxy.",
+      "B": "Ngăn cản nhu mô phổi nở ra, gây khó thở và dẫn tới thiếu oxy.",
+      "C": "Phổi bị nở to, diện tích hô hấp bị thu hẹp, do vậy thông khí bị giảm",
+      "D": "Phổi bị nở to, diện tích hô hấp bị thu hẹp, do vậy thông khí tăng."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 230,
+    "question": "Nguyên nhân nào sau đây hay gây tràn khí màng phổi:",
+    "options": {
+      "A": "Viêm phổi",
+      "B": "Viêm phế quản",
+      "C": "Viêm màng phổi.",
+      "D": "Lao phổi"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 231,
+    "question": "Nguyên nhân nào sau đây hay gây tràn dịch màng phổi",
+    "options": {
+      "A": "Lao phổi",
+      "B": "Hen phế quản",
+      "C": "Viêm phế quản",
+      "D": "Rách nhu mô phổi ."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 232,
+    "question": "Nguyên nhân nào sau đây hay gây tràn dịch màng phổi:",
+    "options": {
+      "A": "Hen phế quản",
+      "B": "Viêm phế quản",
+      "C": "Viêm màng phổi.",
+      "D": "Rách nhu mô phổi"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 233,
+    "question": "Nguyên nhân nào sau đây gây tràn dịch màng phổi:",
+    "options": {
+      "A": "Suy tim",
+      "B": "Tăng huyết áp",
+      "C": "Hen phế quản",
+      "D": "Viêm phế quản."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 234,
+    "question": "Nguyên nhân nào sau đây gây tràn dịch màng phổi:",
+    "options": {
+      "A": "Sỏi mật",
+      "B": "Hen phế quản",
+      "C": "Viêm gan",
+      "D": "Xơ gan."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 235,
+    "question": "Nguyên nhân nào sau đây gây tràn dịch màng phổi:",
+    "options": {
+      "A": "Hen phế quản",
+      "B": "Hôi chứng thận hư",
+      "C": "Viêm phế quản",
+      "D": "Tăng huyết áp."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 236,
+    "question": "Khí phế là bệnh có tổn thương nào sau đây:",
+    "options": {
+      "A": "Giãn phế nang toàn bộ hay cục bộ.",
+      "B": "Giãn cơ trơn phế quản toàn bộ hay cục bộ.",
+      "C": "Co phế nang toàn bộ",
+      "D": "Co màng phổi toàn bộ."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 237,
+    "question": "Trong bệnh phù phổi cấp, các phế nang trong tình trạng nào sau đây:",
+    "options": {
+      "A": "Tràn ngập huyết tương, hồng cầu",
+      "B": "Viêm nhiễm nên tăng tiết dịch",
+      "C": "Chứa nhiều nước, chất tiết",
+      "D": "Chứa nhiều dịch, bạch cầu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 238,
+    "question": "Trong trường hợp nhiễm độc oxytcacbon (CO) có hiện tượng nào sau đây:",
+    "options": {
+      "A": "HbCO bền vững, ít phân ly hơn HbO2 nhiều lần.",
+      "B": "HbCO ít bền vững, dễ phân ly hơn HbO2 nhiều lần.",
+      "C": "HbO2 bền vững, dễ phân ly hơn HbCO nhiều lần.",
+      "D": "HbO2 bền vững, ít phân ly hơn HbCO nhiều lần."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 239,
+    "question": "Trong trường hợp nhiễm độc oxytcacbon (CO) có hiện tượng nào sau đây:",
+    "options": {
+      "A": "HbCO bền vững, dễ phân ly hơn HbO2 nhiều lần.",
+      "B": "CO bền vững, ít phân ly hơn HbO2 nhiều lần.",
+      "C": "HbCO bền vững, ít phân ly hơn HbO2 nhiều lần.",
+      "D": "CO bền vững, dễ phân ly hơn HbO2 nhiều lần."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 240,
+    "question": "Trong trường hợp nhiễm độc oxytcacbon (CO) có hiện tượng nào sau đây:",
+    "options": {
+      "A": "CO có ái lực kết hợp với Hb yếu hơn nhiều lần ái lực của oxy kết hợp với Hb.",
+      "B": "CO bền vững, ít phân ly hơn HbO2 nhiều lần.",
+      "C": "CO có ái lực kết hợp với Hb mạnh hơn nhiều lần ái lực của oxy kết hợp với Hb.",
+      "D": "CO bền vững, dễ phân ly hơn HbO2 nhiều lần."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 241,
+    "question": "Suy hô hấp trong bệnh bại liệt do cơ chế chính nào sau đây:",
+    "options": {
+      "A": "Liệt cơ hô hấp.",
+      "B": "Co thắt cơ trơn phế quản",
+      "C": "Giãn các cơ trơn phế quản",
+      "D": "Viêm đường hô hấp"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 242,
+    "question": "Bệnh nhân nam 50 tuổi, sau tai nạn lao động bị chấn thương tủy sống đoạn cổ có biểu hiện khó thở. Cơ chế gây khó thở ở bệnh nhân này nhiều khả năng là do tổn thương nào sau đây",
+    "options": {
+      "A": "Tổn thương thần kinh chi phối cơ liên sườn",
+      "B": "Viêm nhiễm ở đường hô hấp",
+      "C": "Viêm nhiễm gây ức chế trung tâm hô hấp",
+      "D": "Tổn thương trung tâm hô hấp ở não"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 243,
+    "question": "Bệnh nhân nam 23 tuổi, sau tai nạn sinh hoạt bị vết thương lồng ngực hở. Ngay sau đó, bệnh nhân được đưa vào viện trong tình trạng khó thở, tím môi và đầu chi, nhịp thở 34 lần/phút. Theo em, bệnh nhân này nhiều khả năng bị tổn thương nào sau đây:",
+    "options": {
+      "A": "Viêm phổi cấp tính",
+      "B": "Tràn khí màng phổi",
+      "C": "Tràn mủ màng phổi",
+      "D": "Viêm phế quản cấp tính."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 244,
+    "question": "Rối loạn tiết dịch mật sẽ gây rối loạn hấp thu chất nào sau đây:",
+    "options": {
+      "A": "Đường",
+      "B": "Mỡ",
+      "C": "Đạm",
+      "D": "Khoáng chất ."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 245,
+    "question": "Dịch mật giúp hấp thu các vitamin nào sau đây:",
+    "options": {
+      "A": "A, C, K, E",
+      "B": "B1, B6, B12, D",
+      "C": "A, B1, B6, B12.",
+      "D": "A, D, K, E"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 246,
+    "question": "Giảm tiết mật gây hậu quả nào sau đây:",
+    "options": {
+      "A": "Thừa vitamin tan trong nước",
+      "B": "Thiếu vitamin tan trong nước",
+      "C": "Thừa vitamin tan trong mỡ",
+      "D": "Thiếu vitamin tan trong mỡ."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 247,
+    "question": "Trong bệnh viêm tụy cấp có hiện tượng nào sau đây:",
+    "options": {
+      "A": "Tiêu hủy dịch tụy",
+      "B": "Tiêu hủy nhu mô tụy",
+      "C": "Giảm áp lực trong ống tụy",
+      "D": "Giảm áp lực trong nhu mô tụy."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 248,
+    "question": "Viêm tụy cấp thường xảy ra trong hoàn cảnh nào sau đây:",
+    "options": {
+      "A": "Sau những hoạt động gắng sức",
+      "B": "Sau khi bị stress, lạnh đột ngột",
+      "C": "Sau bữa ăn nhiều đường và protein",
+      "D": "Sau bữa ăn nhiều mỡ và protein."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 249,
+    "question": "Bệnh lý của cơ quan nào sau đây hay gây giảm yếu tố đông máu giảm dẫn đến hiện tượng chảy máu:",
+    "options": {
+      "A": "Lách",
+      "B": "Gan",
+      "C": "Tụy",
+      "D": "Đại tràng."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 250,
+    "question": "Phát biểu nào sau đây về thực quản là đúng:",
+    "options": {
+      "A": "Có hấp thu lipid",
+      "B": "Có hấp thu đường",
+      "C": "Không hấp thu protid",
+      "D": "Không có sự hấp thu"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 251,
+    "question": "Thiếu protein gây hậu quả nào sau đây:",
+    "options": {
+      "A": "Tăng áp lực tĩnh mạch cửa",
+      "B": "Giảm áp lực tĩnh mạch cửa",
+      "C": "Tăng áp lực keo trong máu",
+      "D": "Giảm áp lực keo trong máu."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 252,
+    "question": "Rối loạn chức năng gan gây hậu quả nào sau đây:",
+    "options": {
+      "A": "Tăng protein máu",
+      "B": "Giảm protein máu",
+      "C": "Tăng glucose máu",
+      "D": "Giảm glucose máu."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 253,
+    "question": "Khi theo dõi bệnh nhân mất máu cấp, cần phải chú ý nhất đến là dấu hiệu nào sau đây:",
+    "options": {
+      "A": "Nhiệt độ",
+      "B": "Dấu hiệu thần kinh",
+      "C": "Nước tiểu",
+      "D": "Huyết áp."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 254,
+    "question": "Quá trình hấp thu chủ yếu diễn ra ở vị trí nào sau đây của ống tiêu hóa:",
+    "options": {
+      "A": "Thực quản",
+      "B": "Dạ dày",
+      "C": "Ruột non",
+      "D": "Ruột già."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 255,
+    "question": "Chế độ ăn đúng cho bệnh nhân thiếu máu huyết tán là:",
+    "options": {
+      "A": "Hạn chế hoa quả có kali",
+      "B": "Hạn chế đạm",
+      "C": "Ăn uống tăng cường những chất có nhiều sắt",
+      "D": "Không dùng chất có nhiều sắt."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 256,
+    "question": "Giun sán có thể tới gan gây tắc mật hoặc tạo thành các ổ mủ ở gan theo đường nào sau đây:",
+    "options": {
+      "A": "Đường mật",
+      "B": "Đường ống tụy",
+      "C": "Đường tiêu hóa",
+      "D": "Đường máu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 257,
+    "question": "Các vi khuẩn, độc tố vi khuẩn, chất độc từ ống tiêu hoá tới gan bằng con đường chính nào sau đây:",
+    "options": {
+      "A": "Đường ống tụy",
+      "B": "Đường mật",
+      "C": "Đường tĩnh mạch cửa",
+      "D": "Đường tĩnh mạch lách."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 258,
+    "question": "Vi rút viêm gan B đến gan gây tổn thương gan theo con đường nào sau đây:",
+    "options": {
+      "A": "Đường bạch huyết",
+      "B": "Đường tiêu hóa",
+      "C": "Đường máu",
+      "D": "Đường mật."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 259,
+    "question": "Bệnh nhân làm xét nghiệm máu thường được dặn phải nhịn ăn sáng. Xét nghiệm máu cần được tiến hành vào buổi sáng, trước khi ăn để tránh hiện tượng nào sau đây:",
+    "options": {
+      "A": "Tăng bạch cầu bệnh lý",
+      "B": "Tăng bạch cầu sinh lý",
+      "C": "Giảm bạch cầu sinh lý",
+      "D": "Giảm bạch cầu bệnh lý"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 260,
+    "question": "Bệnh nhân xơ gan giai đoạn nặng có biểu hiện nào sau đây:",
+    "options": {
+      "A": "Tăng can xi máu",
+      "B": "Hạ can xi máu",
+      "C": "Tăng albumin máu",
+      "D": "Giảm albumin máu"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 261,
+    "question": "Sắc tố mật được tạo thành do giáng hoá chất nào sau đây:",
+    "options": {
+      "A": "Hemoglobin",
+      "B": "Lipid",
+      "C": "Glucid",
+      "D": "Protein"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 262,
+    "question": "Trong trường hợp mất máu, biểu hiện sớm nhất là",
+    "options": {
+      "A": "Huyết áp tăng",
+      "B": "Huyết áp giảm",
+      "C": "Mạch chậm.",
+      "D": "Mạch nhanh"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 263,
+    "question": "Bệnh nhân nam 45 tuổi, có biểu hiện: đau bụng vùng hạ sườn phải, vàng da, siêu âm có sỏi đường mật, được chẩn đoán tắc mật do sỏi. Bệnh nhân này nếu không được điều trị đúng sễ có nguy cơ rối loạn hấp thu các vitamin nào sau đây:",
+    "options": {
+      "A": "A, C, K, E",
+      "B": "A, D, K, E",
+      "C": "B1, B6, B12, D",
+      "D": "A, B1, B6, B12."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 264,
+    "question": "Bệnh nhân nam, thể trạng béo, sau bữa ăn liên hoan có uống rượu về có biểu hiện đau bụng dữ dội vùng thượng vị, huyết áp 80/40 mmHg. Theo em, bệnh nhân này nhiều khả năng bị bệnh nào sau đây:",
+    "options": {
+      "A": "Viêm tụy cấp",
+      "B": "Viêm dạ dày cấp",
+      "C": "Xơ gan",
+      "D": "Tắc mật."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 265,
+    "question": "Bệnh nhân nam 56 tuổi, được chẩn đoán hội chứng thận hư, có biểu hiện phù, dấu hiệu sinh tồn: mạch 80 lần/phút, nhiệt độ 37oC, huyết áp 110/70 mmHg, nhịp thở 16 lần/phút; xét nghiệm protein máu 40 G/L (chỉ số protein máu bình thường: 65-82 G/L). Cơ chế gây phù ở bệnh nhân này nhiều khả năng do:",
+    "options": {
+      "A": "Tăng huyết áp",
+      "B": "Hạ huyết áp",
+      "C": "Tăng áp lực keo máu",
+      "D": "Giảm áp lực keo máu."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 266,
+    "question": "Bệnh nhân nữ 52 tuổi, được suy tim phải, có phù, gan to, xơ gan, xét nghiệm không bị nhiễm virus viêm gan. Nguyên nhân gây xơ gan trong trường hợp này là:",
+    "options": {
+      "A": "Ứ nước trong gan",
+      "B": "Viêm gan",
+      "C": "Ứ mật trong gan",
+      "D": "Ứ máu gan."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 267,
+    "question": "Bệnh nhân nam 48 tuổi, bị xơ gan, có biểu hiện xuất huyết dưới da, tuần hoàn bàng hệ. Cơ chế gây xuất huyết dưới da ở bệnh nhân này là do:",
+    "options": {
+      "A": "Yếu tố đông máu giảm",
+      "B": "Albumin máu giảm",
+      "C": "Tuần hoàn bàng hệ",
+      "D": "Tăng áp lực tĩnh mạch cửa."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 268,
+    "question": "Bệnh nhân nam 53 tuổi, tiền sử có uống rượu nhiều năm, được chẩn đoán xơ gan do rượu, có biểu hiện chán ăn, sợ mỡ. Bệnh nhân này hay bị chán ăn, sợ mỡ là do cơ chế nào sau đây",
+    "options": {
+      "A": "Tăng áp lực tĩnh mạch cửa",
+      "B": "Thiếu muối mật",
+      "C": "Giảm albumin máu",
+      "D": "Thiếu máu"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 269,
+    "question": "Bệnh nhân nam 56 tuổi, đã bị xơ gan 9 năm và vào viện điều rị xơ gan nhiều lần. Lần này bệnh nhân uống rượu, sau đó có biểu hiện lơ mơ, vào viện được chẩn đoán hạ đường huyêt/xơ gan. Bệnh nhân này bị hạ đường máu là do cơ chế nào sau đây:",
+    "options": {
+      "A": "Tăng áp lực tĩnh mạch cửa",
+      "B": "Thiếu muối mật",
+      "C": "Giảm albumin máu",
+      "D": "Giảm khả năng dự trữ glucose"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 270,
+    "question": "Bệnh nhân nam 49 tuổi, được chẩn đoán xơ gan. Hiện tại bệnh nhân có biểu hiện: phù và cổ trướng. Biểu hiện phù và cổ trướng ở bệnh nhân này do cơ chế nào sau đây:",
+    "options": {
+      "A": "Protein huyết tương giảm, tăng áp lực tĩnh mạch cửa",
+      "B": "Protein huyết tương giảm, thiếu muối mật",
+      "C": "Thiếu muối mật, tăng áp lực tĩnh mạch cửa",
+      "D": "Giảm albumin máu, thiếu muối mật."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 271,
+    "question": "Bệnh nhân nữ 52 tuổi, được chẩn đoán suy tim phải, đã nằm viện điều trị được 2 tuần. Hôm đầu vào viện, bệnh nhân có gan to. Hiện tại sau 2 tuần điều trị, gan trở về bình thường. Hiện tượng gan của bệnh nhân lúc to, lúc nhỏ lại như vậy gọi là:",
+    "options": {
+      "A": "Gan đàn xếp",
+      "B": "Gan xơ",
+      "C": "Viêm gan",
+      "D": "Gan nhiễm mỡ."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 272,
+    "question": "Bệnh nhân nam 56 tuổi, được chẩn đoán tăng áp lực tĩnh mạch cửa/xơ gan. Bệnh nhân này có nguy cơ nào sau đây:",
+    "options": {
+      "A": "Xuất huyết tiêu hóa",
+      "B": "Viêm gan",
+      "C": "Viêm tụy cấp",
+      "D": "Cô đặc máu."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 273,
+    "question": "Bệnh nhân nam 56 tuổi được chẩn đoán tăng áp lực tĩnh mạch cửa/xơ gan. Bệnh nhân này có nguy cơ nào sau đây",
+    "options": {
+      "A": "Viêm gan",
+      "B": "Gan to ra",
+      "C": "Trĩ",
+      "D": "Cô đặc máu"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 274,
+    "question": "Bệnh nhân được chẩn đoán tăng áp lực tĩnh mạch cửa/xơ gan. Trên bụng bệnh nhân này xuất hiện những chùm tĩnh mạch ngoằn ngoèo nổi dưới da bụng gọi là hiện tượng:",
+    "options": {
+      "A": "Tuần hoàn bàng hệ.",
+      "B": "Tăng áp lực vòng nối quanh bụng",
+      "C": "Giãn tĩnh mạch bụng",
+      "D": "Cổ trướng."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 275,
+    "question": "Bệnh nhân nam 60 tuổi được chẩn đoán xơ gan, có biểu hiện: cổ trướng to, tuần hoàn bàng hệ, khó thở, siêu âm có giãn tĩnh mạch cửa. Dấu hiệu khó thở ở bệnh nhân này là do cơ chế nào sau đây:",
+    "options": {
+      "A": "Chèn ép cơ hoành",
+      "B": "Chèn ép gan",
+      "C": "Tăng áp lực tĩnh mạch cửa",
+      "D": "Tuần hoàn bàng hệ."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 276,
+    "question": "Bệnh nhân bị xơ gan giai đoạn nặng, có biểu hiện thiếu máu. Thiếu máu ở bệnh nhân do cơ chế nào sau đây:",
+    "options": {
+      "A": "Hủy hoại hồng cầu quá nhiều",
+      "B": "Thiếu chất tạo hồng cầu",
+      "C": "Rối loạn cơ quan tạo máu",
+      "D": "Tăng áp lực tĩnh mạch cửa."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 277,
+    "question": "Bệnh nhân nam 34 tuổi bị viêm gan, có những dấu hiệu nặng ngay từ đầu: nôn, mệt lả, ngủ gà, nói lẫn… xuất huyết dưới da, xuất huyết tiêu hóa và đi nhanh vào hôn mê sau 1 tuần bị bệnh. Theo em, bệnh nhân này thuộc trường hợp nào sau đây:",
+    "options": {
+      "A": "Tăng áp lực tĩnh mạch cửa",
+      "B": "Giãn tĩnh mạch thực quản",
+      "C": "Suy gan cấp",
+      "D": "Suy gan mạn."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 278,
+    "question": "Bệnh nhân nam 36 tuổi được chẩn đoán viêm gan cấp, có biểu hiện hôn mê gan. Bệnh nhân này bị hôn mê do cơ chế nào sau đây:",
+    "options": {
+      "A": "Tăng NH3 máu",
+      "B": "Tăng áp lực tĩnh mạch cửa",
+      "C": "Giảm protein máu",
+      "D": "Giãn tĩnh mạch thực quản."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 279,
+    "question": "Trường hợp lưu lượng máu đến thận giảm gây giảm bài tiết nước tiểu gặp trong bệnh lý nào sau đây:",
+    "options": {
+      "A": "Đái tháo đường",
+      "B": "Bệnh đái nhạt",
+      "C": "Basedow",
+      "D": "Sốc."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 280,
+    "question": "Trường hợp lưu lượng máu đến thận giảm gây giảm bài tiết nước tiểu gặp trong bệnh lý nào sau đây:",
+    "options": {
+      "A": "Basedow",
+      "B": "Mất nước",
+      "C": "Viêm gan",
+      "D": "Bệnh đái nhạt."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 281,
+    "question": "Trường hợp lưu lượng máu đến thận giảm gây giảm bài tiết nước tiểu gặp trong bệnh lý nào sau đây:",
+    "options": {
+      "A": "Basedow",
+      "B": "Suy tim",
+      "C": "Protein máu giảm",
+      "D": "Đái tháo đường."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 282,
+    "question": "Nguyên nhân nào sau đây hay gây viêm cầu thận cấp:",
+    "options": {
+      "A": "Salmonella typhi B",
+      "B": "Salmonella typhi A",
+      "C": "Liên cầu nhóm D",
+      "D": "Liên cầu nhóm A."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 283,
+    "question": "Bệnh viêm cầu thận cấp thường do cơ chế nào sau đây:",
+    "options": {
+      "A": "Do tăng u rê, creatinin trong máu",
+      "B": "Do thận bị thiếu máu nuôi dưỡng",
+      "C": "Do tế bào ống thận bị thiếu oxy",
+      "D": "Do phức hợp kháng nguyên - kháng thể."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 284,
+    "question": "Trong bệnh viêm cầu thận cấp, trong nước tiểu có thành phần nào sau đây:",
+    "options": {
+      "A": "Ure, creatinin, hồng cầu",
+      "B": "Ure, creatinin, acid uric",
+      "C": "Protein, hồng cầu, bạch cầu",
+      "D": "Protein, acid uric, bạch cầu"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 285,
+    "question": "Viêm cầu thận mạn nếu không được điều trị tốt sẽ dẫn đến hậu quả nào sau đây:",
+    "options": {
+      "A": "Sỏi thận",
+      "B": "Viêm đường tiết niệu",
+      "C": "Hạ huyết áp",
+      "D": "Suy thận mạn."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 286,
+    "question": "Dấu hiệu phù trong hội chứng thận hư có đặc điểm nào sau đây:",
+    "options": {
+      "A": "Ăn nhạt thấy giảm phù",
+      "B": "Phù ở vùng mặt, nặng 2 mi mắt",
+      "C": "Phù kín đáo ở 2 chân",
+      "D": "Phù to, phù nhanh, phù toàn thân."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 287,
+    "question": "Dấu hiệu phù trong hội chứng thận hư có đặc điểm nào sau đây:",
+    "options": {
+      "A": "Ăn nhạt thấy giảm phù",
+      "B": "Ăn nhạt cũng không giảm phù",
+      "C": "Phù ở vùng mặt, nặng 2 mi mắt",
+      "D": "Phù kín đáo ở 2 chân."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 288,
+    "question": "Bệnh nhân hội chứng thận hư bị phù do cơ chế nào sau đây:",
+    "options": {
+      "A": "Giảm natri máu",
+      "B": "Tăng cholesterol máu",
+      "C": "Tăng áp lực keo trong máu",
+      "D": "Giảm áp lực keo trong máu."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 289,
+    "question": "Trong nước tiểu của bệnh nhân hội chứng thận hư có nhiều thành phần nào sau đây:",
+    "options": {
+      "A": "Hồng cầu",
+      "B": "Bạch cầu",
+      "C": "Glucose",
+      "D": "Protein."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 290,
+    "question": "Dấu hiệu phù to, phù nhanh do giảm áp lực keo máu gặp trong bệnh nào sau đây:",
+    "options": {
+      "A": "Hội chứng thận hư.",
+      "B": "Viêm cầu thận cấp.",
+      "C": "Viêm thận mạn.",
+      "D": "Viêm ống thận cấp."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 291,
+    "question": "Urê là sản phẩm chuyển hoá của chất nào sau đây:",
+    "options": {
+      "A": "Glucose",
+      "B": "Protein",
+      "C": "Lipid",
+      "D": "Vitamin."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 292,
+    "question": "Khi thận bị tổn thương sẽ có biểu hiện nào sau đây",
+    "options": {
+      "A": "Tăng urê máu",
+      "B": "Tăng protein máu",
+      "C": "Hạ creatinin máu",
+      "D": "Hạ kali máu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 293,
+    "question": "Hội chứng ure huyết cao gây ra các biểu hiện nào sau đây:",
+    "options": {
+      "A": "Cổ trướng, tuần hoàn bàng hệ",
+      "B": "Thiếu máu",
+      "C": "Tăng huyết áp",
+      "D": "Chán ăn, mệt mỏi, lú lẫn."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 294,
+    "question": "Bệnh nhân suy thận thường có triệu chứng nào sau đây:",
+    "options": {
+      "A": "Hạ huyết áp",
+      "B": "Tăng huyết áp",
+      "C": "Hạ kali máu",
+      "D": "Tăng protein máu."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 295,
+    "question": "Hôn mê do nguyên nhân nào sau đây:",
+    "options": {
+      "A": "Viêm cầu thận cấp",
+      "B": "Viêm đường tiết niệu",
+      "C": "Sỏi thận",
+      "D": "Suy thận."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 296,
+    "question": "Bệnh nhân nam 45 tuổi, sau uống mật cá trắm có biểu hiện: vô niệu, ure huyết cao, hôn mê. Theo em, nhiều khả năng bệnh nhân này bị bệnh lý nào sau đây:",
+    "options": {
+      "A": "Tăng áp lực tĩnh mạch cửa",
+      "B": "Viêm ống thận cấp",
+      "C": "Viêm gan cấp",
+      "D": "Hôn mê đái tháo đường."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 297,
+    "question": "Bệnh nhân nữ 18 tuổi, bị bỏng, sau đó xuất hiện các triệu chứng: vô niệu, u rê máu cao, lú lẫn, mất ý thức. Theo em, nhiều khả năng bệnh nhân này bị bệnh lý nào sau đây:",
+    "options": {
+      "A": "Viêm ống thận cấp",
+      "B": "Viêm tụy",
+      "C": "Hôn mê đái tháo đường",
+      "D": "Đái tháo nhạt."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 298,
+    "question": "Bệnh nhân bị chấn thương gây mất máu cấp, mạch 120 lần/phút, huyết áp 80/40 mmHg. Trường hợp này bệnh nhân thường có nguy cơ nào sau đây:",
+    "options": {
+      "A": "Đái máu",
+      "B": "Cầu bàng quang (+)",
+      "C": "Đái nhiều",
+      "D": "Đái ít ."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 299,
+    "question": "Bệnh nhân nữ 60 tuổi, được chẩn đoán suy thận mạn, có biểu hiện thiếu máu. Hiện tượng thiếu máu ở bệnh nhân này do cơ chế nào sau đây:",
+    "options": {
+      "A": "Giảm ure niệu",
+      "B": "Giảm erythropoietin",
+      "C": "Tăng creatinin máu",
+      "D": "Tăng urê máu."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 300,
+    "question": "Bệnh nhân nữ 43 tuổi, được chẩn đoán hội chứng thận hư. Hiện tại bệnh nhân có phù to toàn thân. Để làm góp phần làm giảm phù, cần hướng dẫn bệnh nhân này chế độ ăn nào sau đây:",
+    "options": {
+      "A": "Ăn nhiều đường",
+      "B": "Ăn ít đường",
+      "C": "Ăn ít protein",
+      "D": "Ăn nhiều protein."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 301,
+    "question": "Bệnh nhân nam 23 tuổi, được chẩn đoán suy thận cấp. Người điều dưỡng khi theo dõi bệnh nhân này cần lưu ý phát hiện dấu hiệu nào sau đây:",
+    "options": {
+      "A": "Đái nhiều, protein máu cao",
+      "B": "Cầu bàng quang (+), hạ kali máu",
+      "C": "Đái máu, tăng lipid máu",
+      "D": "Thiểu niệu, urê máu cao."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 302,
+    "question": "Bệnh nhân được chẩn đoán suy thận. Người điều dưỡng khi theo dõi bệnh nhân này cần lưu ý đề phòng dấu hiệu nào sau đây:",
+    "options": {
+      "A": "Cầu bàng quang (+)",
+      "B": "Hôn mê",
+      "C": "Hạ đường máu",
+      "D": "Tăng đường máu."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 303,
+    "question": "Bệnh nhân được chẩn đoán suy thận, hôm nay có biểu hiện lú lẫn, mất ý thức, da xanh, niêm mạc nhợt, huyết áp 140/100 mmHg. Cơ chế nào sau đây gây biểu hiện lú lẫn, mất ý thức ở bệnh nhân này:",
+    "options": {
+      "A": "Tăng huyết áp",
+      "B": "Da xanh, niêm mạc nhợt",
+      "C": "Urê máu cao gây nhiễm độc thần kinh",
+      "D": "Chất độc của cơ thể không được đào thải."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 304,
+    "question": "Bệnh nhân nam 56 tuổi, bị bệnh thận đã nhiều năm, được chẩn đoán suy thận giai đoạn nặng. Biện pháp tốt nhất để điều trị cho bệnh nhân này là:",
+    "options": {
+      "A": "Chạy thận nhân tạo",
+      "B": "Ghép thận",
+      "C": "Thuốc hạ huyết áp",
+      "D": "Thuốc lợi tiểu."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 305,
+    "question": "Bệnh lý của tủy xương gây hậu quả nào sau đây:",
+    "options": {
+      "A": "Giảm sinh hồng cầu",
+      "B": "Tăng sinh hồng cầu",
+      "C": "Giảm tiết erythropoietin",
+      "D": "Tăng tiết erythropoietin."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 306,
+    "question": "Erythropoietin là chất có tác dụng nào sau đây:",
+    "options": {
+      "A": "Kích thích cơ thể tăng sản xuất tế bào máu",
+      "B": "Kích thích tuỷ xương gây tăng sinh tiểu cầu.",
+      "C": "Kích thích tuỷ xương gây tăng sinh bạch cầu.",
+      "D": "Kích thích tuỷ xương gây tăng sinh hồng cầu."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 307,
+    "question": "Erythropoietin do bộ phận nào sau đây tiết ra:",
+    "options": {
+      "A": "Tế bào bê ta của đảo tụy",
+      "B": "Các tế bào gan",
+      "C": "Tổ chức lympho",
+      "D": "Tổ chức cận cầu thận."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 308,
+    "question": "Khi mất máu mức độ ít, trước hết cơ thể sẽ phản ứng bằng cách nào sau đây:",
+    "options": {
+      "A": "Giảm nhịp tim",
+      "B": "Tăng nhịp tim",
+      "C": "Giảm huyết áp",
+      "D": "Tăng huyết áp."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 309,
+    "question": "Bệnh nhân bị mất máu nhiều có nguy cơ nào sau đây:",
+    "options": {
+      "A": "Tăng huyết áp",
+      "B": "Giảm nhịp tim",
+      "C": "Sốt",
+      "D": "Sốc."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 310,
+    "question": "Loại giun sán nào sau đây hay gây thiếu máu mạn tính:",
+    "options": {
+      "A": "Giun đũa",
+      "B": "Giun móc",
+      "C": "Giun kim",
+      "D": "Sán dây."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 311,
+    "question": "Sắt trong huyết thanh giảm trong bệnh lý nào sau đây:",
+    "options": {
+      "A": "Thiếu máu do chảy máu",
+      "B": "Thiếu máu huyết tán",
+      "C": "Truyền nhầm nhóm máu",
+      "D": "Thiếu máu do tan máu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 312,
+    "question": "Thiếu máu do huyết tán có đặc điểm nào sau đây:",
+    "options": {
+      "A": "Protein máu giảm",
+      "B": "Protein máu tăng",
+      "C": "Sắt huyết thanh giảm",
+      "D": "Sắt huyết thanh tăng."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 313,
+    "question": "Thiếu máu do thiếu sắt thuộc nhóm nguyên nhân thiếu máu nào sau đây:",
+    "options": {
+      "A": "Thiếu máu huyết tán",
+      "B": "Tăng sinh hồng cầu",
+      "C": "Rối loạn hoạt động của tủy xương",
+      "D": "Thiếu nguyên liệu tạo máu."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 314,
+    "question": "Nguyên nhân nào sau đây gây thiếu máu:",
+    "options": {
+      "A": "Tăng lipid máu",
+      "B": "Giảm lipid máu",
+      "C": "Giảm protein máu",
+      "D": "Tăng protein máu ."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 315,
+    "question": "Khi thiếu máu, cơ thể sẽ phản ứng bằng cách nào sau đây:",
+    "options": {
+      "A": "Mạch chậm",
+      "B": "Huyết áp tăng",
+      "C": "Thở nhanh, sâu",
+      "D": "Sốt hoặc hạ nhiệt độ."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 316,
+    "question": "Bệnh thận mạn tính làm giảm tiết chất nào sau đây:",
+    "options": {
+      "A": "Erythropoietin",
+      "B": "Renin",
+      "C": "Creatinin",
+      "D": "Ure."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 317,
+    "question": "Bệnh nhân thiếu máu nặng sẽ thường có biểu hiện nào sau đây",
+    "options": {
+      "A": "Cổ trướng",
+      "B": "Khó thở",
+      "C": "Mạch chậm",
+      "D": "Phù to."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 318,
+    "question": "Tăng bạch cầu sinh lý gặp trong trường hợp nào sau đây:",
+    "options": {
+      "A": "Nhiễm khuẩn",
+      "B": "Sau ăn",
+      "C": "Bạch cầu cấp",
+      "D": "Dị ứng."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 319,
+    "question": "Nguyên nhân nào sau đây gây tăng bạch cầu trung tính:",
+    "options": {
+      "A": "Nhiễm virus cúm",
+      "B": "Nhiễm ký sinh trùng",
+      "C": "Dị ứng",
+      "D": "Nhiễm khuẩn."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 320,
+    "question": "Gọi là tăng bạch cầu trong trường hợp số lượng bạch cầu:",
+    "options": {
+      "A": "Trên 4 G/l máu",
+      "B": "Trên 7 G/l máu",
+      "C": "Trên 10 G/l máu",
+      "D": "Trên 14 G/l máu."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 321,
+    "question": "Trường hợp thay đổi chất lượng bạch cầu rõ rệt, nặng nhất và hay gặp là bệnh nào sau đây:",
+    "options": {
+      "A": "Nhiễm trùng",
+      "B": "Ung thư máu",
+      "C": "Thương hàn",
+      "D": "Dị ứng."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 322,
+    "question": "Nguyên nhân nào sau đây gây chảy máu (xuất huyết dưới da, niêm mạc…):",
+    "options": {
+      "A": "Giảm bạch cầu",
+      "B": "Tăng bạch cầu",
+      "C": "Tăng tiểu cầu",
+      "D": "Giảm tiểu cầu"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 323,
+    "question": "Trong trường hợp mất máu cấp, biểu hiện ở giai đoạn đầu là:",
+    "options": {
+      "A": "Mạch nhanh, huyết áp tăng",
+      "B": "Mạch chậm, huyết áp tăng",
+      "C": "Mạch nhanh, huyết áp bình thường",
+      "D": "Mạch chậm, huyết áp bình thường."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 324,
+    "question": "Trong trường hợp mất máu cấp, nếu không được cấp cứu kịp thời hoặc ở giai đoạn nặng bệnh nhân sẽ có biểu hiện:",
+    "options": {
+      "A": "Mạch nhanh, huyết áp giảm",
+      "B": "Mạch chậm, huyết áp giảm",
+      "C": "Mạch nhanh, huyết áp tăng",
+      "D": "Mạch chậm, huyết áp tăng."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 325,
+    "question": "Bệnh nhân ngay sau chấn thương vào viện trong tình trạng tính thần vật vã kích thích, mạch 120 lần/phút, huyết áp 80/40 mmHg, niêm mạc nhợt. Trường hợp này nhiều khả năng thuộc loại bệnh lý nào sau đây",
+    "options": {
+      "A": "Mạch nhanh",
+      "B": "Tăng huyết áp",
+      "C": "Mất máu mạn",
+      "D": "Mất máu cấp."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 326,
+    "question": "Bệnh nhân nam 56 tuổi bị xơ gan, vào viện trong tình trạng: nôn ra máu, mạch 80 lần/phút, nhiệt độ 370C. huyết áp 110/70 mmHg, nhịp thở 18 lần/phút. Trường hợp này cần theo dõi phát hiện sớm thay đổi nào sau đây",
+    "options": {
+      "A": "Tinh thần, nhịp thở",
+      "B": "Mạch, huyết áp",
+      "C": "Nước tiểu, phân",
+      "D": "Chất nôn, nhiệt độ."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 327,
+    "question": "Bệnh nhân nam 52 tuổi, được chẩn đoán xuất huyết tiêu hóa/xơ gan. Hiện tại bệnh nhân vẫn nôn ra máu nhiều. Cán bộ y tế cần giải thích với người nhà bệnh nhân này việc điều trị cho bệnh nhân rất khó khăn vì lí do nào sau đây",
+    "options": {
+      "A": "Cố trướng, phù",
+      "B": "Tăng bilirubin máu",
+      "C": "Rối loạn yếu tố đông máu",
+      "D": "Tăng men gan."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 328,
+    "question": "Tuyến nội tiết tăng cường hoạt động và tiết ra một lượng hormon nhiều hơn bình thường mà cơ thể không điều khiển được gọi là hiện tượng:",
+    "options": {
+      "A": "Ưu năng tuyến nội tiết",
+      "B": "Nhược năng tuyến nội tiết",
+      "C": "Viêm tuyến nội tiết",
+      "D": "Suy tuyến nội tiết."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 329,
+    "question": "Tuyến nội tiết giảm hoặc không tiết đủ lượng hormon cho cơ thể hoạt động bình thường gọi là hiện tượng:",
+    "options": {
+      "A": "Ưu năng tuyến nội tiết",
+      "B": "Nhược năng tuyến nội tiết",
+      "C": "Viêm tuyến nội tiết",
+      "D": "Suy tuyến nội tiết."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 330,
+    "question": "Nguyên nhân nào sau đây gây ưu năng tuyến nội tiết:",
+    "options": {
+      "A": "Tắc mạch nuôi tuyến",
+      "B": "Chấn thương tuyến",
+      "C": "Viêm tuyến",
+      "D": "U tuyến."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 331,
+    "question": "Nguyên nhân nào sau đây hay gây nhược năng tuyến nội tiết:",
+    "options": {
+      "A": "Phì đại tuyến",
+      "B": "Kích thích từ ngoài tuyến",
+      "C": "Viêm tuyến",
+      "D": "U tuyến."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 332,
+    "question": "Ưu năng tuyến nội tiết có đặc điểm nào sau đây:",
+    "options": {
+      "A": "Tuyến teo nhỏ",
+      "B": "Tuyến to ra nhưng lượng hormon bình thường",
+      "C": "Giảm tiết hormon",
+      "D": "Tăng tiết hormon."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 333,
+    "question": "Bệnh nhân được chẩn đoán basedow, có các triệu chứng: bướu cổ, mạch 120 lần/phút, mắt lồi, tay run, gầy sút nhanh, xét nghiệm nồng độ hormon tuyến giáp trong máu tăng. Bệnh nhân này thuộc loại rối loạn nào sau đây:",
+    "options": {
+      "A": "Ưu năng tuyến giáp",
+      "B": "Nhược năng tuyến giáp",
+      "C": "Bướu giáp đơn thuần",
+      "D": "Viêm tuyến giáp."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 334,
+    "question": "Trong cơ thể, quá trình tạo nên tổ chức mới gọi là:",
+    "options": {
+      "A": "Biến đổi",
+      "B": "Thoái hóa",
+      "C": "Dị hóa",
+      "D": "Đồng hóa."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 335,
+    "question": "Trong cơ thể, quá trình teo, hủy tổ chức gọi là:",
+    "options": {
+      "A": "Dị hóa",
+      "B": "Đồng hóa",
+      "C": "Biến đổi",
+      "D": "Thoái hóa."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 336,
+    "question": "Cơ thể trẻ (cơ thể đang phát triển) có đặc điểm nào sau đây:",
+    "options": {
+      "A": "Quá trình thoái hoá là chủ yếu",
+      "B": "Quá trình đồng hóa mạnh hơn dị hóa",
+      "C": "Quá trình dị hóa cân bằng với đồng hóa",
+      "D": "Quá trình dị hóa mạnh hơn đồng hóa."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 337,
+    "question": "Cơ thể người già có đặc điểm nào sau đây:",
+    "options": {
+      "A": "Quá trình thay đổi tăng sinh",
+      "B": "Quá trình đồng hóa mạnh hơn dị hóa",
+      "C": "Quá trình dị hóa cân bằng với đồng hóa",
+      "D": "Quá trình dị hóa mạnh hơn đồng hóa."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 338,
+    "question": "Quá trình phì đại của tổ chức trong cơ thể có biểu hiện nào sau đây:",
+    "options": {
+      "A": "Tế bào tái sinh",
+      "B": "Tế bào to ra",
+      "C": "Tế bào bị chết đi",
+      "D": "Tế bào ứ đọng nhiều hạt mỡ."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 339,
+    "question": "Khi tổ chức nào đó không tuân theo sự điều hoà phát triển mà phát triển quá mức thì sẽ hình thành:",
+    "options": {
+      "A": "Nốt vôi hóa",
+      "B": "Hang",
+      "C": "Nang",
+      "D": "U bướu."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 340,
+    "question": "Khối u có tế bào phát triển chậm, tổ chức xung quanh không bị huỷ hoại, có lớp vỏ bọc xơ thường là u loại nào:",
+    "options": {
+      "A": "U không biệt hóa",
+      "B": "U biến hình",
+      "C": "U ác tính",
+      "D": "U lành tính."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 341,
+    "question": "Khối u phát triển nhanh, không có vỏ bọc, xâm lấn tổ chức xung quanh thường là u loại nào:",
+    "options": {
+      "A": "U không biệt hóa",
+      "B": "U biến hình",
+      "C": "U ác tính",
+      "D": "U lành tính."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 342,
+    "question": "Ở người, virut HPV có mặt trong loại ung thư nào sau đây:",
+    "options": {
+      "A": "Ung thư xương",
+      "B": "Ung thư biểu mô tế bào gan",
+      "C": "Ung thư dạ dày",
+      "D": "Ung thư cổ tử cung."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 343,
+    "question": "Chế độ sữa không áp dụng trong trường hợp:",
+    "options": {
+      "A": "Bệnh nhân loét dạ dày tá tràng có tăng HCl",
+      "B": "Trường hợp bị nhiễm trùng nặng",
+      "C": "Bệnh nhân bị suy tim có kèm theo phù",
+      "D": "Các bệnh về đường ruột như táo bón, ỉa chảy"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 344,
+    "question": "Chế độ sữa áp dụng trong trường hợp:",
+    "options": {
+      "A": "Bệnh nhân loét dạ dày tá tràng có tăng HCl",
+      "B": "Bệnh viêm túi mật, sỏi mật.",
+      "C": "Bệnh nhân dị ứng sữa.",
+      "D": "Các bệnh về đường ruột như táo bón, ỉa chảy."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 345,
+    "question": "Bình thường trong chế độ ăn hàng ngày có:",
+    "options": {
+      "A": "3- 6 g NaCl",
+      "B": "6 - 9g NaCl",
+      "C": "10 - 15g NaCl",
+      "D": "15 - 20 g NaCl"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 346,
+    "question": "Chế độ ăn Kempner còn gọi là chế độ ăn",
+    "options": {
+      "A": "Hạn chế năng lượng.",
+      "B": "Hạn chế muối tương đối",
+      "C": "Hạn chế muối tuyệt đối",
+      "D": "Giảm ít Protein"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 347,
+    "question": "Chế độ ăn giảm ít protein tức là trong chế độ ăn hàng ngày còn:",
+    "options": {
+      "A": "0,4 - 0,5g/kg",
+      "B": "0,6 - 0,7g/kg",
+      "C": "0,7 - 0,8g/kg",
+      "D": "0,8 - 0,9g/kg"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 348,
+    "question": "Chế độ ăn giảm trung bình protein nghĩa là còn:",
+    "options": {
+      "A": "0,2 – 0,4 g/ kg/ ngày",
+      "B": "0,4 – 0,5 g/ kg/ ngày",
+      "C": "0,6 – 0,8 g/ kg/ ngày",
+      "D": "0,8 – 0,9 g/ kg/ ngày"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 349,
+    "question": "Chế độ ăn giảm nhiều protein nghĩa là còn:",
+    "options": {
+      "A": "0,2 – 0,4 g/ kg/ ngày",
+      "B": "0,4 – 0,5 g/ kg/ ngày",
+      "C": "0,6 – 0,8 g/ kg/ ngày",
+      "D": "0,8 – 0,9 g/ kg/ ngày"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 350,
+    "question": "Chế độ ăn giảm ít protein không dùng loại thực phẩm sau:",
+    "options": {
+      "A": "Rau quả",
+      "B": "Thịt cá",
+      "C": "Trứng sữa",
+      "D": "Ngũ cốc"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 351,
+    "question": "Chế độ ăn giảm ít protein là ăn ít các loại thực phẩm:",
+    "options": {
+      "A": "Thịt cá",
+      "B": "Rau quả và vitamin",
+      "C": "Trứng, sữa, ngũ cốc",
+      "D": "Cơm, quả, đường"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 352,
+    "question": "Bình thường trong khẩu phần ăn cần cung cấp trên:",
+    "options": {
+      "A": "0,5g Pr/ kg cân nặng/ ngày",
+      "B": "1g Pr/ kg cân nặng/ ngày",
+      "C": "2g Pr/ kg cân nặng/ ngày",
+      "D": "4g Pr/ kg cân nặng/ ngày"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 353,
+    "question": "Chế độ ăn tăng Protein là chế độ trong khẩu phần ăn có:",
+    "options": {
+      "A": "Trên 3g Pr/kg/ngày",
+      "B": "Trên 2,5g Pr/kg/ngày",
+      "C": "Trên 2g Pr/kg/ngày",
+      "D": "Trên 1,5g Pr/kg/ngày"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 354,
+    "question": "Muốn Protein được sử dụng tốt thì cần phải:",
+    "options": {
+      "A": "Phối hợp với các thức ăn mang lại nhiều canxi",
+      "B": "Phối hợp với các thức ăn mang lại nhiều axit amin",
+      "C": "Phối hợp với các thức ăn mang lại nhiều Calo (Lipid, glucid).",
+      "D": "Phối hợp với các thức ăn mang lại nhiều chất xơ."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 355,
+    "question": "Thực phẩm chứa nhiều Protein gồm:",
+    "options": {
+      "A": "Các loại rau có màu xanh đậm",
+      "B": "Các loại quả có màu vàng, đỏ.",
+      "C": "Thịt, cá, trứng, váng sữa, đậu phụ…",
+      "D": "Các loại đậu đỗ nguyên cám"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 356,
+    "question": "Chế độ ăn tăng Protein không áp dụng trong:",
+    "options": {
+      "A": "Xơ gan giai đoạn gan to",
+      "B": "Viêm gan mạn tính",
+      "C": "Thiếu máu do thiếu huyết sắc tố",
+      "D": "Suy thận có urê máu cao."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 357,
+    "question": "Trường hợp bệnh nhân mắc bệnh gout nên áp dụng chế độ ăn:",
+    "options": {
+      "A": "Hạn chế muối tương đối",
+      "B": "Hạn chế năng lượng",
+      "C": "Hạn chế purin",
+      "D": "Tăng Protein"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 358,
+    "question": "Bệnh nhân bị bệnh Gout nên hạn chế thực phẩm:",
+    "options": {
+      "A": "Sữa không béo.",
+      "B": "Đậu đỗ.",
+      "C": "Nước ngọt.",
+      "D": "Bánh mì."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 359,
+    "question": "Bệnh nhân bị bệnh Gout nên ăn thực phẩm:",
+    "options": {
+      "A": "Phomat trắng",
+      "B": "Thịt nạc",
+      "C": "Cá và hải sản",
+      "D": "Thịt gia cầm"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 360,
+    "question": "Chế độ ăn cho bệnh nhân tăng huyết áp cần phải :",
+    "options": {
+      "A": "Hạn chế muối, rượu, cà phê.",
+      "B": "Hạn chế calci, kali, chất xơ.",
+      "C": "Hạn chế rượu, cà phê, tỏi.",
+      "D": "Hạn chế các loại hạt, sữa."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 361,
+    "question": "Thực phẩm nào sau đây tốt cho bệnh nhân tăng huyết áp:",
+    "options": {
+      "A": "Cà phê.",
+      "B": "Tỏi.",
+      "C": "Muối.",
+      "D": "Rượu."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 362,
+    "question": "Trong chế độ ăn của bệnh nhân đái tháo đường nên:",
+    "options": {
+      "A": "Tăng lượng Protein.",
+      "B": "Tăng lượng Lipid.",
+      "C": "Tăng lượng Glucid.",
+      "D": "Tăng nhiều thức ăn có sợi xơ."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 363,
+    "question": "Loại thức ăn bệnh nhân viêm loét dạ dày tá tràng không nên dùng:",
+    "options": {
+      "A": "Rau củ non luộc, hấp.",
+      "B": "Thức ăn xào rán nhiều dầu mỡ.",
+      "C": "Cơm nếp nát, bánh mì.",
+      "D": "Các loại khoai củ, cháo."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 364,
+    "question": "Cơ sở lý thuyết để giải thích quan điểm: “Cả thiếu và thừa dinh dưỡng đều có thể gây ra bệnh”",
+    "options": {
+      "A": "Dinh dưỡng, đáp ứng miễn dịch và các bệnh nhiễm khuẩn",
+      "B": "Dinh dưỡng, đáp ứng miễn dịch",
+      "C": "Đáp ứng miễn dịch và các bệnh nhiễm khuẩn",
+      "D": "Dinh dưỡng, điều trị và các bệnh nhiễm khuẩn"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 365,
+    "question": "Các bệnh có thể liên quan đến quan điểm: “Cả thiếu và thừa dinh dưỡng đều có thể gây ra bệnh”.",
+    "options": {
+      "A": "Thiếu máu do thiếu sắt, khô mắt do thiếu vitamin A, bướu cổ do thiếu iod.",
+      "B": "Thiếu máu do thiếu sắt, khô mắt do thiếu vitamin A, béo phì, bướu cổ do thiếu iod.",
+      "C": "Thiếu máu do thiếu sắt, béo phì, bướu cổ do thiếu iod.",
+      "D": "Thiếu máu do thiếu sắt, khô mắt do thiếu vitamin A, béo phì."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 366,
+    "question": "Người bệnh nữ, 45 tuổi, cân nặng 50kg tại khoa Tim mạch vào viện với lý do: Khó thở và nặng 2 chân. Chẩn đoán y khoa: Suy tim mạn, y lệnh dinh dưỡng (TM05- cơm). Chế độ dinh dưỡng cho bệnh nhân có vai trò như thế nào trong quá trình điều trị",
+    "options": {
+      "A": "Có vai trò điều trị",
+      "B": "Có vai trò dự phòng",
+      "C": "Có vai trò phối hợp",
+      "D": "Có vai trò phối hợp và điều trị."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 367,
+    "question": "Người bệnh nữ, 45 tuổi, cân nặng 50kg tại khoa Tim mạch vào viện với lý do: Khó thở và nặng 2 chân. Chẩn đoán y khoa: Suy tim mạn. Trong y lệnh dinh dưỡng có (TM05- cơm). Năng lượng: 25 Kcal/kg cân nặng lý tưởng/ngày. - Protid: 0,8- 1 g/kg cân nặng lý tưởng/ngày. - Lipid: 15- 20 % tổng năng lượng. Axid béo chưa no một nối đôi chiếm 1/3, nhiều nối đôi chiếm 1/3 và axid béo no chiếm 1/3 trong tổng số lipid. - ăn nhạt tương đối - Kali: 4000-5000 mg/ngày. - Hạn chế nước ăn và uống So với nhu cầu bình thường bệnh nhân nữ 50kg thì nhu cầu các chất dinh dưỡng sinh năng lượng của bệnh nhân Lan là:",
+    "options": {
+      "A": "Lớn hơn",
+      "B": "Nhỏ hơn",
+      "C": "Bằng nhau",
+      "D": "Bình thường"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 368,
+    "question": "Người bệnh nữ, 45 tuổi, cân nặng 50kg tại khoa Tim mạch vào viện với lý do: Khó thở và nặng 2 chân. Chẩn đoán y khoa: Suy tim mạn. Trong y lệnh dinh dưỡng có (TM05- cơm) - Kali: 4000-5000 mg/ngày. + Sử dụng các thực phẩm giàu kali, thức ăn mềm, dễ tiêu hoá, ít xơ sợi. So với nhu cầu bình thường bệnh nhân nữ 50kg thì nhu cầu các chất dinh dưỡng không sinh năng lượng (kali) của bệnh nhân Lan là:",
+    "options": {
+      "A": "Lớn hơn",
+      "B": "Nhỏ hơn",
+      "C": "Bằng nhau",
+      "D": "Bình thường"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 369,
+    "question": "Người bệnh nữ, 45 tuổi, cân nặng 50kg tại khoa Tim mạch vào viện với lý do: Khó thở và nặng 2 chân. Chẩn đoán y khoa: Suy tim mạn. Trong y lệnh dinh dưỡng có (TM05- cơm). Bệnh nhân Lan phải thực hiện y lệnh chế độ ăn nhạt tương đối và uống ít nước nhằm mục đích:",
+    "options": {
+      "A": "Giảm tích nước ở tế bào và lòng mạch",
+      "B": "Giảm tích nước ở tế bào và lòng mạch từ đó giảm khối lượng tuần hoàn",
+      "C": "Giảm tích nước ở lòng mạch",
+      "D": "Giảm tích nước ở tế bào và lòng mạch từ đó giảm khối lượng tuần hoàn giảm gánh nặng cho tim"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 370,
+    "question": "Người bệnh nữ, 45 tuổi, cân nặng 50kg tại khoa Tim mạch vào viện với lý do: Khó thở và nặng 2 chân. Chẩn đoán y khoa: Suy tim mạn. Trong y lệnh dinh dưỡng có (TM05- cơm), ăn nhạt tương đối. Trong chế độ ăn nhạt tương đối của bệnh nhân Lan, nghĩa là trong khẩu phần ăn còn NaCl là:",
+    "options": {
+      "A": "3,5g – 4,5g",
+      "B": "1,25g - 2,5g",
+      "C": "3,5g – 5,7g",
+      "D": "4.5g – 5,5g"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 371,
+    "question": "Ngoài bệnh Suy tim mạn còn một số bệnh cảnh cần phải thực hiện chế độ ăn nhạt là:",
+    "options": {
+      "A": "Huyết áp cao, bệnh thận, xơ gan kèm cổ chướng và phù, phụ nữ có thai 3 - 6 tuần lễ cuối",
+      "B": "Huyết áp cao, xơ gan kèm cổ chướng và phù, phụ nữ có thai 3 - 6 tuần lễ cuối",
+      "C": "Huyết áp cao, bệnh thận, phụ nữ có thai 3 - 6 tuần lễ cuối",
+      "D": "Huyết áp cao, bệnh thận, xơ gan kèm cổ chướng và phù."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 372,
+    "question": "Bệnh nhân Nguyễn Văn 45 tuổi, cân nặng 55kg tại khoa Nội Tổng hợp với ly do: gầy sút cân, tiểu nhiều. Chẩn đoán y khoa: ĐTĐ typ 2. Em hãy chọn chế độ dinh dưỡng phù hợp nhất cho bệnh nhân:",
+    "options": {
+      "A": "Chế độ ăn hạn chế năng lượng",
+      "B": "Chế độ ăn hạn chế mỡ",
+      "C": "Chế độ ăn hạn chế đạm",
+      "D": "Chế độ ăn hạn chế vitamin và khoáng chất"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 373,
+    "question": "Bệnh nhân Nguyễn Văn 45 tuổi, cân nặng 55kg tại khoa Nội Tổng hợp với ly do: gầy sút cân, tiểu nhiều. Chẩn đoán y khoa: ĐTĐ typ 2. Theo em, chế độ dinh dưỡng cho bệnh nhân có vai trò như thế nào trong quá trình điều trị",
+    "options": {
+      "A": "Có vai trò điều trị",
+      "B": "Có vai trò dự phòng",
+      "C": "Có vai trò phối hợp",
+      "D": "Có vai trò phối hợp và điều trị."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 374,
+    "question": "Bệnh nhân Nguyễn Văn 45 tuổi, cân nặng 55kg tại khoa Nội Tổng hợp với ly do: gầy sút cân, tiểu nhiều. Chẩn đoán y khoa: ĐTĐ typ 2. Khi tư vấn cho bệnh nhân Văn về chế độ hạn chế năng lượng cần đảm bảo nguyên tắc là:",
+    "options": {
+      "A": "Giảm năng lượng của khẩu phần ăn từng bước một",
+      "B": "Giảm năng lượng của khẩu phần ăn từng bước một, mỗi tuần giảm khoảng 300 Kcal so với khẩu phần ăn hiện tại của bệnh nhân cho đến khi đạt năng lượng tương ứng BMI.",
+      "C": "Giảm năng lượng của khẩu phần ăn từng bước một, mỗi tuần giảm khoảng 300 Kcal so với khẩu phần ăn hiện tại của bệnh nhân",
+      "D": "Cả 3 đáp án đều đúng"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 375,
+    "question": "Ngoài bệnh ĐTĐ typ 2còn một số bệnh cảnh cần phải thực hiện chế độ ăn hạn chế năng lượng là:",
+    "options": {
+      "A": "Đái tháo đường typ 1",
+      "B": "Đái tháo đường typ 1, béo phì",
+      "C": "Đái tháo đường typ 1, typ 2",
+      "D": "Đái tháo đường typ 1, typ 2, xơ gan."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 376,
+    "question": "Bệnh nhân Đỗ Văn Anh 55 tuổi, cân nặng 50kg. Chẩn đoán: Viên cầu thận cấp Trong y lệnh dinh dưỡng có: (TN01- cơm). Năng lượng: 35 Kcal/kg cân nặng lý tưởng/ngày.So với nhu cầu bình thường bệnh nhân nam 50kg thì nhu cầu năng lượng của bệnh nhân Anh là:",
+    "options": {
+      "A": "Lớn hơn",
+      "B": "Nhỏ hơn",
+      "C": "Bằng nhau",
+      "D": "Bình thường"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 377,
+    "question": "Bệnh nhân Đỗ Văn Anh 55 tuổi, cân nặng 50kg. Chẩn đoán: Viên cầu thận cấp Trong y lệnh dinh dưỡng có: (TN01- cơm), Protid: 0,6 g/kg cân nặng lý tưởng/ngày. So với nhu cầu bình thường bệnh nhân nam 50kg thì nhu cầu chất dinh dưỡng sinh năng lượng Protit của bệnh nhân Anh là:",
+    "options": {
+      "A": "Lớn hơn",
+      "B": "Nhỏ hơn",
+      "C": "Bằng nhau",
+      "D": "Bình thường"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 378,
+    "question": "Bệnh nhân Đỗ Văn Anh 55 tuổi, cân nặng 50kg. Chẩn đoán: Viên cầu thận cấp Trong y lệnh dinh dưỡng có: (TN01- cơm). Bệnh nhân Anh phải thực hiện y lệnh chế độ ăn giảm Protit nhằm mục đích:",
+    "options": {
+      "A": "Giảm tích nước ở tế bào và lòng mạch",
+      "B": "Giảm tích trữ năng lượng",
+      "C": "Giảm tích nước ở tế bào và lòng mạch, giảm tích trữ năng lượng",
+      "D": "Giảm ứ đọng ure huyết"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 379,
+    "question": "Bệnh nhân Đỗ Văn Anh 55 tuổi, cân nặng 50kg. Chẩn đoán: Viên cầu thận cấp Trong y lệnh dinh dưỡng có: (TN01- cơm), ăn nhạt tương đối: Natri < 2000 mg/ngày, Hạn chế kali: < 2000 mg/ngày. So với nhu cầu bình thường bệnh nhân nam 50kg thì nhu cầu các chất dinh dưỡng không sinh năng lượng (Natri, kali) của bệnh nhân Anh là:",
+    "options": {
+      "A": "Lớn hơn",
+      "B": "Nhỏ hơn",
+      "C": "Bằng nhau",
+      "D": "Bình thường"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 380,
+    "question": "Người bệnh nữ, 45 tuổi, Chẩn đoán y khoa: Suy tim mạn. Trong y lệnh dinh dưỡng có (TM05- cơm). Khi tư vấn cho bệnh nhân về chế độ ăn nhạt tương đối cần đảm bảo nguyên tắc là:",
+    "options": {
+      "A": "Nấu các thức ăn bằng muối (kể cả nước mắm).",
+      "B": "Được dùng cà muối, cá muối, thịt muối...",
+      "C": "Được dùng: các thức ăn có rất ít muối như thịt, cá nước ngọt, khoai, rau quả tươi và các thức ăn bản chất có khá nhiều muối như trứng, sữa, cua",
+      "D": "Không cho mắm muối khi nấu thức ăn, không ăn các thức ăn muối, các thức ăn bản chất có ít nhiều muối."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 381,
+    "question": "Khi uống thuốc, thuốc được hấp thu nhiều nhất ở:",
+    "options": {
+      "A": "Miệng",
+      "B": "Dạ dày.",
+      "C": "Ruột non.",
+      "D": "Ruột già."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 382,
+    "question": "Ưu điểm của thuốc hấp thu qua niêm mạc miệng là:",
+    "options": {
+      "A": "Bị phá hủy bởi dịch tiêu hóa",
+      "B": "Không bị chuyển hóa ở gan.",
+      "C": "Không bị phá hủy bởi dịch tiêu hóa",
+      "D": "Không bị chuyển hóa ở gan, không bị phá hủy bởi dịch tiêu hóa"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 383,
+    "question": "Chuyển hóa thuốc xảy ra chủ yếu ở tổ chức:",
+    "options": {
+      "A": "Gan.",
+      "B": "Thận.",
+      "C": "Lá lách.",
+      "D": "Máu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 384,
+    "question": "Trong các đường thải trừ, thuốc được thải trừ nhiều nhất qua:",
+    "options": {
+      "A": "Đường tiêu hóa",
+      "B": "Thận.",
+      "C": "Phổi.",
+      "D": "Da"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 385,
+    "question": "Tác dụng gây tê tại chỗ của Procain là tác dụng:",
+    "options": {
+      "A": "Tác dụng chọn lọc",
+      "B": "Tác dụng đặc hiệu.",
+      "C": "Tác dụng hồi phục",
+      "D": "Tác dụng không hồi phục"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 386,
+    "question": "Các thuốc gây kích ứng niêm mạc dạ dày nên uống:",
+    "options": {
+      "A": "Xa bữa ăn.",
+      "B": "Trước bữa ăn.",
+      "C": "Sau bữa ăn.",
+      "D": "Lúc nào cũng được"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 387,
+    "question": "Gây ảnh hưởng trên xương, răng của Tetracyclin là tác dụng:",
+    "options": {
+      "A": "Chọn lọc",
+      "B": "Tác dụng chính.",
+      "C": "Tác dụng hồi phục",
+      "D": "Tác dụng không hồi phục"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 388,
+    "question": "Một trong những tác dụng chung của glucocorticoid trong điều trị là:",
+    "options": {
+      "A": "Tăng thải trừ natri.",
+      "B": "Giúp vết thương nhanh liền sẹo.",
+      "C": "Tăng hấp thu calci ở ruột.",
+      "D": "Chống dị ứng."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 389,
+    "question": "Một trong những tác dụng không mong muốn của glucocorticoid là:",
+    "options": {
+      "A": "Gây viêm loét hoặc tái phát viêm loét ở dạ dày tá tràng.",
+      "B": "Rối loạn tuần hoàn.",
+      "C": "Gây thiếu máu, vàng da.",
+      "D": "Kìm hãm vi khuẩn, tạo điều kiện để thực bào tiêu diệt."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 390,
+    "question": "Một trong những chỉ định của Depersolon là:",
+    "options": {
+      "A": "Cấp cứu sốc do bỏng, chấn thương, dị ứng thuốc.",
+      "B": "Băng huyết, kinh kéo dài.",
+      "C": "Ung thư vú.",
+      "D": "Hôn mê do đái tháo đường."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 391,
+    "question": "Một trong những chỉ định của Depersolon là:",
+    "options": {
+      "A": "Rối loạn tâm thần.",
+      "B": "Cầm máu tử cung sau đẻ.",
+      "C": "Bướu cổ.",
+      "D": "Nhiễm độc, hen phế quản nặng."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 392,
+    "question": "Một trong những chỉ định của Depersolon là:",
+    "options": {
+      "A": "Ung thư vú.",
+      "B": "Sau phẫu thuật tuyến giáp.",
+      "C": "Suy tuyến thượng thận, hôn mê gan, nhồi máu cơ tim.",
+      "D": "Rối loạn tâm thần."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 393,
+    "question": "Một trong những tác dụng không mong muốn khi dùng testosteron liều cao trong thời gian dài là:",
+    "options": {
+      "A": "Liều cao: gây mạch nhanh, mất ngủ.",
+      "B": "Ức chế chức năng của tinh hoàn.",
+      "C": "Loạn công thức máu, thời gian đông máu kéo dài.",
+      "D": "Giảm bạch cầu, tiểu cầu."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 394,
+    "question": "Một trong những tác dụng không mong muốn khi dùng testosteron liều cao trong thời gian dài là:",
+    "options": {
+      "A": "Loạn công thức máu, thời gian đông máu kéo dài.",
+      "B": "Kết tinh ở nước tiểu làm suy giảm chức năng thận.",
+      "C": "Giảm bạch cầu, tiểu cầu.",
+      "D": "Tăng giữ muối, nước gây phù."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 395,
+    "question": "Một trong những tác dụng không mong muốn khi dùng testosteron liều cao trong thời gian dài là:",
+    "options": {
+      "A": "Gây nam tính hoá ở nữ giới.",
+      "B": "Dùng quá liều gây hạ glucose máu.",
+      "C": "Liều cao: gây mạch nhanh, mất ngủ.",
+      "D": "Kích ứng đường tiêu hoá và bàng quang gây nôn nao, khó chịu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 396,
+    "question": "Một trong những chỉ định của testosteron là:",
+    "options": {
+      "A": "Rối loạn kinh nguyệt (hành kinh kéo dài, kinh nhiều)",
+      "B": "Suy tim, loạn nhịp tim.",
+      "C": "Cường tuyến giáp.",
+      "D": "Khung chậu bé so với thai nhi."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 397,
+    "question": "Chống chỉ định của Clopheniramin là:",
+    "options": {
+      "A": "Tiêm tĩnh mạch.",
+      "B": "Tiêm bắp.",
+      "C": "Người điều khiển máy móc, phương tiện giao thông.",
+      "D": "Người bị bệnh gan, thận."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 398,
+    "question": "Tác dụng của Progesteron:",
+    "options": {
+      "A": "Kích thích quá trình rụng trứng",
+      "B": "Tăng co bóp tử cung",
+      "C": "Tăng trương lực cơ tử cung",
+      "D": "Làm cho niêm mạc tử cung dày thêm"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 399,
+    "question": "Lựa chọn đường dùng đúng nhất của acid folic:",
+    "options": {
+      "A": "Uống, tiêm dưới da, tiêm bắp.",
+      "B": "Uống, tiêm bắp, tiêm tĩnh mạch chậm.",
+      "C": "Tiêm bắp, tiêm dưới da, tiêm tĩnh mạch chậm.",
+      "D": "Uống hoặc tiêm bắp."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 400,
+    "question": "Kháng sinh chống nấm có hoạt phổ rộng, là :",
+    "options": {
+      "A": "Aminazin.",
+      "B": "Primaricin.",
+      "C": "Amphotericin .",
+      "D": "Nistatin ."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 401,
+    "question": "Cơ chế tác dụng của kháng sinh nhóm Quinolon, là:",
+    "options": {
+      "A": "Ức chế sự tạo vách của vi khuẩn.",
+      "B": "Ức chế tổng hợp ADN của vi khuẩn.",
+      "C": "Ức chế tổng hợp glucose của vi khuẩn.",
+      "D": "Ức chế quá trình tổng hợp protein của vi khuẩn."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 402,
+    "question": "Kháng sinh chống nấm có hoạt phổ hẹp, là :",
+    "options": {
+      "A": "Aminazin.",
+      "B": "Primaricin.",
+      "C": "Amphotericin .",
+      "D": "Nistatin ."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 403,
+    "question": "Chỉ sử dụng kháng sinh dự phòng trong trường hợp, là :",
+    "options": {
+      "A": "Nhiễm vi rút.",
+      "B": "Phòng bội nhiễm do phẫu thuật.",
+      "C": "Phòng loét dạ dày – tá tràng .",
+      "D": "Nhiễm nấm âm đạo"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 404,
+    "question": "Penicilin G có tác dụng chủ yếu với",
+    "options": {
+      "A": "Vi khuẩn gram (-).",
+      "B": "Vi rút.",
+      "C": "Vi khuẩn gram (+).",
+      "D": "Vi nấm ."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 405,
+    "question": "Penicilin G được chỉ định trong trường hợp, là",
+    "options": {
+      "A": "Viêm nội tâm mạc cấp, bệnh lậu, giang mai.",
+      "B": "Viêm nội tâm mạc cấp .",
+      "C": "Bệnh lậu, giang mai",
+      "D": "Dị ứng ngoài da, bệnh lậu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 406,
+    "question": "Tác dụng không mong muốn của Ampicilin, là :",
+    "options": {
+      "A": "Viêm nội tâm mạc cấp.",
+      "B": "Rối loạn tiêu hóa .",
+      "C": "Viêm loét giác mạc.",
+      "D": "Ho khan."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 407,
+    "question": "Ampicilin được chỉ định dùng trong trường hợp, là :",
+    "options": {
+      "A": "Nhiễm khuẩn do tụ cầu đã nhờn với Penicilin.",
+      "B": "Nhiễm vi rút .",
+      "C": "Nhiễm khuẩn đường hô hấp.",
+      "D": "Nấm ngoài da."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 408,
+    "question": "Cephalexin có tác dụng chủ yếu với :",
+    "options": {
+      "A": "Liên cầu khuẩn beta tan huyết.",
+      "B": "Vi rút .",
+      "C": "Nấm âm đạo.",
+      "D": "Nấm ngoài da."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 409,
+    "question": "Biệt dược của Cefotaxim, là :",
+    "options": {
+      "A": "Cephalexin.",
+      "B": "Claforan.",
+      "C": "Penicilin.",
+      "D": "Ampicilin."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 410,
+    "question": "Cefotaxim được chỉ định dùng trong trường hợp, là :",
+    "options": {
+      "A": "Cao huyết áp.",
+      "B": "Đái đường.",
+      "C": "Viêm màng não, bệnh thương hàn.",
+      "D": "Bệnh thương hàn."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 411,
+    "question": "Khi dùng Gentamycin liều cao và kéo dài sẽ :",
+    "options": {
+      "A": "Gây tăng huyết áp.",
+      "B": "Đái đường.",
+      "C": "Viêm màng não.",
+      "D": "Độc với thính giác."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 412,
+    "question": "Gentamycin được chỉ định dùng trong trường hợp, là :",
+    "options": {
+      "A": "Viêm màng bụng, bỏng, nhiễm khuẩn huyết.",
+      "B": "Tổn thương chức năng thận.",
+      "C": "Viêm màng não, tổn thương chức năng thận.",
+      "D": "Bỏng, tổn thương chức năng thận."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 413,
+    "question": "Gentamycin chống chỉ định dùng trong trường hợp, là :",
+    "options": {
+      "A": "Viêm màng bụng, bỏng, nhiễm khuẩn huyết.",
+      "B": "Tổn thương chức năng thận.",
+      "C": "Viêm màng não, tổn thương chức năng thận.",
+      "D": "Bỏng, tổn thương chức năng thận."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 414,
+    "question": "Biệt dược của Spiramycin, là:",
+    "options": {
+      "A": "Paracetamol.",
+      "B": "Rovamycin.",
+      "C": "Furocemid.",
+      "D": "Diazepam."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 415,
+    "question": "Tác dụng không mong muốn của Lincomycin, là:",
+    "options": {
+      "A": "Gây điếc.",
+      "B": "Gây suy tủy.",
+      "C": "Gây nôn.",
+      "D": "Loét dạ dày."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 416,
+    "question": "Lincomycin được chỉ định dùng trong trường hợp, là:",
+    "options": {
+      "A": "Đau dây thần kinh.",
+      "B": "Viêm xương tủy.",
+      "C": "Táo bón.",
+      "D": "Nấm ngoài da."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 417,
+    "question": "Lincomycin chống chỉ định dùng trong trường hợp, là:",
+    "options": {
+      "A": "Đau dây thần kinh.",
+      "B": "Viêm xương tủy.",
+      "C": "Táo bón.",
+      "D": "Nhiễm khuẩn kèm nhiễm nấm Candida albicans."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 418,
+    "question": "Thận trọng khi dùng Lincomycin trong trường hợp, là:",
+    "options": {
+      "A": "Đau dây thần kinh.",
+      "B": "Viêm xương tủy.",
+      "C": "Người có tiền sử hen.",
+      "D": "Nhiễm khuẩn kèm nhiễm nấm Candida albicans."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 419,
+    "question": "Cơ chế tác dụng của kháng sinh nhóm Phenicol, là:",
+    "options": {
+      "A": "Ức chế sự tạo vách của vi khuẩn.",
+      "B": "Ức chế ADN của vi khuẩn.",
+      "C": "Ức chế tổng hợp glucose của vi khuẩn.",
+      "D": "Ức chế quá trình tổng hợp protein của vi khuẩn"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 420,
+    "question": "Khi dùng Nofloxacin cần giảm liều trong trường hợp:",
+    "options": {
+      "A": "Người bị suy giảm chức năng gan,thận.",
+      "B": "Người bị suy giảm chức năng thính giác",
+      "C": "Người bị suy giảm chức năng thị giác.",
+      "D": "Người bị viêm phổi"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 421,
+    "question": "Khi dùng Cloramphenicol gây ra tai biến:",
+    "options": {
+      "A": "Loét đường tiêu hóa.",
+      "B": "Giảm bạch cầu, thiếu máu bất sản.",
+      "C": "Điếc .",
+      "D": "Hen phế quản"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 422,
+    "question": "Cloramphenicol được chỉ định dùng trong trường hợp, là:",
+    "options": {
+      "A": "Loét đường tiêu hóa.",
+      "B": "Cao huyết áp.",
+      "C": "Viêm phổi nặng, áp xe phổi .",
+      "D": "Mất ngủ, động kinh."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 423,
+    "question": "Cloramphenicol chống chỉ định dùng trong trường hợp, là:",
+    "options": {
+      "A": "Trẻ sơ sinh.",
+      "B": "Cao huyết áp.",
+      "C": "Viêm phổi nặng, áp xe phổi .",
+      "D": "Mất ngủ, động kinh."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 424,
+    "question": "Khi dùng Tetracyclin có thể gây:",
+    "options": {
+      "A": "Rối loạn tiêu hóa.",
+      "B": "Tăng huyết áp.",
+      "C": "Viêm phổi nặng, áp xe phổi .",
+      "D": "Mất ngủ, động kinh."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 425,
+    "question": "Tetracyclin được chỉ định dùng trong trường hợp, là:",
+    "options": {
+      "A": "Nấm ngoài da.",
+      "B": "Ghẻ ngứa.",
+      "C": "Bệnh tả, dịch hạch .",
+      "D": "Buồn nôn, táo bón."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 426,
+    "question": "Tetracyclin chống chỉ định dùng trong trường hợp, là:",
+    "options": {
+      "A": "Đau mắt hột.",
+      "B": "Dịch hạch",
+      "C": "Bệnh tả, dịch hạch .",
+      "D": "Suy gan, thận."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 427,
+    "question": "Bé A, 5 tuổi, nhập viện vì bị sốt cao 400C, lơ mơ, nôn, kèm mất nước độ II. Chẩn đoán: Viêm phổi. Chỉ định: Efferalgan 80mg( Viên đạn) x 2viên (8h, 14h) Natri clorid 0,9% chai 500ml truyền nhỏ giọt tĩnh mạch Theo em, bé A sẽ được sử dụng thuốc efferalgan qua :",
+    "options": {
+      "A": "Đường tiêm",
+      "B": "Đường uống",
+      "C": "Đường đặt trực tràng",
+      "D": "Đường hô hấp"
+    },
+    "answer": "C"
+  },
+  {
+    "id": 428,
+    "question": "Bé A, 5 tuổi, nhập viện vì bị sốt cao 400C, lơ mơ, nôn, kèm mất nước độ II. Chẩn đoán: Viêm phổi. Chỉ định: Efferalgan 80mg( Viên đạn) x 2viên (8h, 14h). Khi dùng efferalgan cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Độc với gan, thận khi dùng liều cao kéo dài.",
+      "B": "Chóng mặt, nhức đầu.",
+      "C": "Rối loạn tiêu hóa, viêm loét dạ dày- tá tràng .",
+      "D": "Rối loạn đông máu (nguy cơ chảy máu kéo dài ở ổ loét ống tiêu hóa)"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 429,
+    "question": "Bé A, 5 tuổi, nhập viện vì bị sốt cao 400C, lơ mơ, nôn, kèm mất nước độ II. Chẩn đoán: Viêm phổi. Chỉ định: Efferalgan 80mg( Viên đạn) x 2viên (8h, 14h). Trong trường hợp này dùng efferalgan để điều trị triệu chứng:",
+    "options": {
+      "A": "Hạ sốt, giảm đau.",
+      "B": "Giảm đau, chống viêm",
+      "C": "Hạ sốt, chống viêm.",
+      "D": "Nôn, kèm mất nước độ II"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 430,
+    "question": "Triệu chứng: Đau vùng thượng vị, ợ hơi, ợ chua, Chẩn đoán: Viêm dạ dày Clarithromycin 250mg SL: 28 viên. Ngày dùng 4 viên chia 2 lần Amoxilin 500mg SL: 28 viên. 2 viên/ lần 2 lần/ ngày - Losec 20 mg SL: 28 viên. Ngày dùng 1 lần, mỗi lần 1 viên Số lượng Clarithromycin 250mg, Amoxilin: 28 viên là liều dùng của:",
+    "options": {
+      "A": "Liều 1 đợt điều trị",
+      "B": "Liều 1 lần",
+      "C": "Liều 1 ngày",
+      "D": "Liều 24h."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 431,
+    "question": "Triệu chứng: Đau vùng thượng vị, ợ hơi, ợ chua, Chẩn đoán: Viêm dạ dày - Clarithromycin 250mg SL: 28 viên. Ngày dùng 4 viên chia 2 lần - Amoxilin 500mg SL: 28 viên. 2 viên/ lần 2 lần/ ngày - Losec 20 mg SL: 28 viên. Ngày dùng 1 lần, mỗi lần 1 viên Dùng amoxilin trong trường hợp này để điều trị:",
+    "options": {
+      "A": "Diệt vi khuẩn HP.",
+      "B": "Nhiễm khuẩn huyết.",
+      "C": "Viêm màng bụng, màng não.",
+      "D": "Viêm màng trong tim."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 432,
+    "question": "Triệu chứng: Đau vùng thượng vị, ợ hơi, ợ chua. Chẩn đoán: Viêm dạ dày - Clarithromycin 250mg SL: 28 viên. Ngày dùng 4 viên chia 2 lần - Amoxilin 500mg SL: 28 viên. 2 viên/ lần 2 lần/ ngày - Losec 20 mg SL: 28 viên. Ngày dùng 1 lần, mỗi lần 1 viên Chỉ định của amoxilin là:",
+    "options": {
+      "A": "Nhiễm khuẩn huyết.",
+      "B": "Nhiễm khuẩn đường tiêu hóa, đường mật.",
+      "C": "Viêm màng bụng, màng não.",
+      "D": "Viêm màng trong tim."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 433,
+    "question": "Triệu chứng: Đau vùng thượng vị, ợ hơi, ợ chua. Chẩn đoán: Viêm dạ dày - Clarithromycin 250mg SL: 28 viên. Ngày dùng 4 viên chia 2 lần - Amoxilin 500mg SL: 28 viên. 2 viên/ lần 2 lần/ ngày - Losec 20 mg SL: 28 viên. Ngày dùng 1 lần, mỗi lần 1 viên Chỉ định của amoxilin là:",
+    "options": {
+      "A": "Nhiễm khuẩn huyết.",
+      "B": "Viêm màng bụng, màng não.",
+      "C": "Nhiễm khuẩn đường tiết niệu.",
+      "D": "Viêm màng trong tim."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 434,
+    "question": "Triệu chứng: Đau vùng thượng vị, ợ hơi, ợ chua. Chẩn đoán: Viêm dạ dày - Clarithromycin 250mg SL: 28 viên. Ngày dùng 4 viên chia 2 lần - Amoxilin 500mg SL: 28 viên. 2 viên/ lần 2 lần/ ngày - Losec 20 mg SL: 28 viên. Ngày dùng 1 lần, mỗi lần 1 viên Khi dùng Amoxilin cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Đau đầu chóng mặt",
+      "B": "Rối loạn tiêu hóa: buồn nôn, ỉa lỏng",
+      "C": "Rối loạn nhịp tim",
+      "D": "Rối loạn điện giải, giảm kali huyết."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 435,
+    "question": "Triệu chứng: Đau vùng thượng vị, ợ hơi, ợ chua. Chẩn đoán: Viêm dạ dày - Clarithromycin 250mg SL: 28 viên. Ngày dùng 4 viên chia 2 lần - Amoxilin 500mg SL: 28 viên. 2 viên/ lần 2 lần/ ngày - Losec 20 mg SL: 28 viên. Ngày dùng 1 lần, mỗi lần 1 viên Khi dùng Amoxilin cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Có thể gây dị ứng thuốc",
+      "B": "Đau đầu chóng mặt",
+      "C": "Rối loạn nhịp tim",
+      "D": "Rối loạn điện giải, giảm kali huyết."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 436,
+    "question": "Triệu chứng: Đau vùng thượng vị, ợ hơi, ợ chua. Chẩn đoán: Viêm dạ dày - Clarithromycin 250mg SL: 28 viên. Ngày dùng 4 viên chia 2 lần - Amoxilin 500mg SL: 28 viên. 2 viên/ lần 2 lần/ ngày - Losec 20 mg SL: 28 viên. Ngày dùng 1 lần, mỗi lần 1 viên Không dùng Clarithromycin trong trường hợp",
+    "options": {
+      "A": "Dị ứng với nhóm Lincosamid.",
+      "B": "Dị ứng với nhóm Macrolid",
+      "C": "Dị ứng với nhóm Aminosid.",
+      "D": "Dị ứng với nhóm Phenicol."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 437,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Lựa chọn thuốc điều trị viêm đường tiết niệu:",
+    "options": {
+      "A": "Nofloxacin",
+      "B": "Clarithromycin",
+      "C": "Vitamin C",
+      "D": "Furocemid"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 438,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Trong trường hợp này Nofloxacin dùng để điều trị:",
+    "options": {
+      "A": "Nhiễm khuẩn đường tiêu hóa, đường mật.",
+      "B": "Nhiễm khuẩn đường tiêt niệu, sinh dục",
+      "C": "Viêm màng bụng, màng não.",
+      "D": "Viêm màng trong tim."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 439,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Không dùng Nofloxacin trong trường hợp:",
+    "options": {
+      "A": "Mẫn cảm với thuốc",
+      "B": "Trẻ em < 9 tuổi",
+      "C": "Bệnh ở cơ quan tạo máu.",
+      "D": "Chóng mặt, nhức đầu"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 440,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Không dùng Nofloxacin trong trường hợp:",
+    "options": {
+      "A": "Trẻ em < 9 tuổi",
+      "B": "Bệnh ở cơ quan tạo máu.",
+      "C": "Chóng mặt, nhức đầu.",
+      "D": "Phụ nữ có thai hoặc đang cho con bú"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 441,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Tác dụng của Vitamin C là:",
+    "options": {
+      "A": "Tham gia vào các phản ứng oxy hoá khử trong cơ thể",
+      "B": "Giúp cơ thể dung nạp dễ dàng các thuốc kháng sinh tổng hợp.",
+      "C": "Giãn mạch ngoại vi.",
+      "D": "Tham gia tạo máu và tái tạo nhu mô gan"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 442,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Tác dụng của Vitamin C là:",
+    "options": {
+      "A": "Tăng sức đề kháng và tăng khả năng chống độc cho cơ thể",
+      "B": "Giúp cơ thể dung nạp dễ dàng các thuốc kháng sinh tổng hợp.",
+      "C": "Giãn mạch ngoại vi.",
+      "D": "Tham gia tạo máu và tái tạo nhu mô gan."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 443,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Tác dụng của Vitamin C là:",
+    "options": {
+      "A": "Tham gia vào quá trình hấp thu calci và phospho của cơ thể",
+      "B": "Tham gia trong quá trình tái tạo da, niêm mạc.",
+      "C": "Tham gia chuyển hoá glucid, acid folic",
+      "D": "Cần thiết cho hoạt động của mô thần kinh."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 444,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Tác dụng của Vitamin C là:",
+    "options": {
+      "A": "Giúp cơ thể dung nạp dễ dàng các thuốc kháng sinh tổng hợp.",
+      "B": "Tham gia tổng hợp chất tạo keo, điều hoà tính thấm mạch máu ngoại vi",
+      "C": "Tham gia tạo các mô liên kết ( mô cơ, mạch máu).",
+      "D": "Tham gia tạo máu và tái tạo nhu mô gan."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 445,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Tác dụng của Vitamin C là:",
+    "options": {
+      "A": "Làm vết thương chóng lành.",
+      "B": "Cần thiết cho hoạt động của mô thần kinh.",
+      "C": "Giúp cho quá trình phát triển xương, răng.",
+      "D": "Kích thích dinh dưỡng hệ thần kinh cơ."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 446,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Khi dùng Vitamin C cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Có thể gây buồn nôn, nôn.",
+      "B": "Nóng rát dạ dày.",
+      "C": "Rối loạn tiêu hóa, viêm loét dạ dày- tá tràng .",
+      "D": "Gây đỏ bừng mặt và cổ, ngứa, buồn nôn, cảm giác nóng buốt, đau nhói ở da."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 447,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Khi dùng Vitamin C cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Sỏi thận.",
+      "B": "Có thể gây buồn nôn, nôn.",
+      "C": "Mệt mỏi, chán ăn, ỉa chảy",
+      "D": "Gây đỏ bừng mặt và cổ, ngứa, buồn nôn, cảm giác nóng buốt, đau nhói ở da."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 448,
+    "question": "Bệnh nhân nữ 22 tuổi đau bụng, đái buốt, đái rắt. Chẩn đoán viêm đường tiết niệu. Chỉ định: Nofloxacin 200mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Acid nalidixic 500mg: 28 viên. Uống 2 viên/ lần x 2 lần/ ngày - Vitamin C 500mg: 10 viên. Uống 1 viên/ lần/ ngày Khi dùng Vitamin C cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Trứng cá, mày đay, ngứa, đỏ da.",
+      "B": "Rối loạn tiêu hóa, viêm loét dạ dày- tá tràng .",
+      "C": "Chóng mặt, nhức đầu, mệt mỏi",
+      "D": "Gây đỏ bừng mặt và cổ, ngứa, buồn nôn, cảm giác nóng buốt, đau nhói ở da."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 449,
+    "question": "Bệnh nhân Nguyễn văn T, 20 tuổi, đi nhổ răng sâu. Tại phòng khám, bác sỹ khai thác tiền sử bệnh nhân có dùng tetracyclin lúc 10 tuổi trong 1 thời gian dài nên bị hỏng men răng. Để thực hiện thủ thuật, bác sỹ đã tiêm 1 ống Lidocain 1% để gây tê. Tác dụng gây tê của Lidocain 1% là tác dụng:",
+    "options": {
+      "A": "Tác dụng hồi phục",
+      "B": "Tác dụng không hồi phục",
+      "C": "Tác dụng chọn lọc",
+      "D": "Tác dụng đặc hiệu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 450,
+    "question": "Bệnh nhân Nguyễn văn T, 20 tuổi, đi nhổ răng sâu. Tại phòng khám, bác sỹ khai thác tiền sử bệnh nhân có dùng tetracyclin lúc 10 tuổi trong 1 thời gian dài nên bị hỏng men răng. Để thực hiện thủ thuật, bác sỹ đã tiêm 1 ống Lidocain 1% để gây tê. Tác dụng làm hỏng men răng của Tetracyclin là tác dụng:",
+    "options": {
+      "A": "Tác dụng chọn lọc",
+      "B": "Tác dụng đặc hiệu.",
+      "C": "Tác dụng hồi phục",
+      "D": "Tác dụng không hồi phục"
+    },
+    "answer": "D"
+  },
+  {
+    "id": 451,
+    "question": "Bệnh nhân Nguyễn văn T, 20 tuổi, đi nhổ răng sâu. Tại phòng khám, bác sỹ khai thác tiền sử bệnh nhân có dùng tetracyclin lúc 10 tuổi trong 1 thời gian dài nên bị hỏng men răng. Để thực hiện thủ thuật, bác sỹ đã tiêm 1 ống Lidocain 1% để gây tê. Chống chỉ định của Tetracyclin là:",
+    "options": {
+      "A": "Trẻ em < 8 tuổi",
+      "B": "Trẻ em < 9 tuổi",
+      "C": "Trẻ em < 10 tuổi",
+      "D": "Trẻ em < 12 tuổi"
+    },
+    "answer": "A"
+  },
+  {
+    "id": 452,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. - Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Lựa chọn thuốc điều trị viêm khớp dạng thấp:",
+    "options": {
+      "A": "Paracetamol",
+      "B": "Prednisolon",
+      "C": "Vitamin C",
+      "D": "Ampicllin"
+    },
+    "answer": "B"
+  },
+  {
+    "id": 453,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Không dùng Prednisolon trong trường hợp:",
+    "options": {
+      "A": "Đái tháo đường, tăng huyết áp, phù.",
+      "B": "Trẻ em dưới 15 tuổi",
+      "C": "Phụ nữ có thai.",
+      "D": "Rối loạn đông máu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 454,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Không dùng Prednisolon trong trường hợp:",
+    "options": {
+      "A": "Dị ứng với thuốc.",
+      "B": "Bệnh ở cơ quan tạo máu.",
+      "C": "Loét dạ dày tá tràng.",
+      "D": "Tăng lipid máu."
+    },
+    "answer": "C"
+  },
+  {
+    "id": 455,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Khi dùng Prednisolon cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Gây phù.",
+      "B": "Có thể gây buồn nôn, nôn.",
+      "C": "Dị ứng ngoài da, giảm bạch cầu hạt.",
+      "D": "Dùng quá liều gây hạ glucose máu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 456,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Khi dùng Prednisolon cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Dễ bị nhiễm khuẩn, nhiễm nấm.",
+      "B": "Có thể gây buồn nôn, nôn.",
+      "C": "Mệt mỏi, chán ăn, ỉa chảy",
+      "D": "Liều cao: gây mạch nhanh, mất ngủ."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 457,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Khi dùng Prednisolon cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Trứng cá, mày đay, ngứa, đỏ da.",
+      "B": "Rối loạn tiêu hóa, viêm loét dạ dày- tá tràng .",
+      "C": "Khô miệng, chóng mặt, nôn nao.",
+      "D": "Tăng huyết áp, tăng đường huyết, có thể gây đái đường."
+    },
+    "answer": "D"
+  },
+  {
+    "id": 458,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Khi dùng Prednisolon cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Loãng xương, teo cơ, rối loạn phân bố mỡ.",
+      "B": "Co thắt phế quản gây hen..",
+      "C": "Rối loạn tiêu hóa, viêm loét dạ dày- tá tràng .",
+      "D": "Chóng mặt, nhức đầu."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 459,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Khi dùng Prednisolon cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Trứng cá, mày đay, ngứa, đỏ da.",
+      "B": "Nhược cơ, mệt mỏi do giảm kali.",
+      "C": "Co thắt phế quản gây hen .",
+      "D": "Ngủ gà, khô miệng, táo bón."
+    },
+    "answer": "B"
+  },
+  {
+    "id": 460,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Khi dùng Mefloxicam cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Đau đầu, chóng mặt, buồn nôn, khó tiêu..",
+      "B": "Trứng cá, mày đay, ngứa, đỏ da.",
+      "C": "Co thắt phế quản gây hen .",
+      "D": "Ngủ gà, khô miệng, táo bón."
+    },
+    "answer": "A"
+  },
+  {
+    "id": 461,
+    "question": "Bệnh nhân nữ 63 tuổi chẩn đoán viêm khớp dạng thấp. Chỉ định: Mefloxicam 7,5mg: 20 viên. Uống 2 viên/ lần x 2 lần/ ngày Vitamin C 500mg: 10 viên. Uống 1 viên/ lần x 2 lần / ngày Prednisolon 5mg: 20 viên. Uống 1 viên/ lần x 2 lần/ ngày Khi dùng Mefloxicam cần theo dõi tác dụng không mong muốn:",
+    "options": {
+      "A": "Khô miệng, táo bón, loét tá tràng – dạ dày",
+      "B": "Trứng cá, mày đay, ngứa, đỏ da.",
+      "C": "Co thắt phế quản gây hen .",
+      "D": "Ngủ gà, khô miệng, táo bón."
+    },
+    "answer": "A"
+  }
+]
