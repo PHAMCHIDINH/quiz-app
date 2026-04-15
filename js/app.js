@@ -423,14 +423,6 @@ function renderHome() {
 
   app.innerHTML = `
     <div class="home-grid">
-      <section class="hero-panel">
-        <h2>✨ Chọn cách học</h2>
-        <p>
-          App sẽ lưu tiến độ mỗi lần bạn chọn đáp án. Bạn có thể bắt đầu mới, tiếp tục bài đang làm,
-          hoặc ôn lại các câu đã làm sai ở lần trước.
-        </p>
-      </section>
-
       <section class="stats-grid">
         <article class="stat-card">
           <p class="stat-label">Tổng câu hỏi</p>
@@ -517,12 +509,12 @@ function renderHome() {
       </section>
 
       ${session
-        ? `<p class="subtle-text">
+      ? `<p class="subtle-text">
               Trạng thái lưu hiện tại:
               <strong>${session.submitted ? "Đã nộp bài" : "Đang làm"}</strong>.
             </p>`
-        : ""
-      }
+      : ""
+    }
 
       ${renderDashboard(history, topWrong)}
     </div>
@@ -540,9 +532,9 @@ function renderDashboard(history, topWrong) {
 
   const chartBars = history.length > 0
     ? history.map((h, i) => {
-        const label = h.date.slice(5); // MM-DD
-        const colorClass = h.percent >= 75 ? "bar--good" : h.percent >= 50 ? "bar--ok" : "bar--bad";
-        return `
+      const label = h.date.slice(5); // MM-DD
+      const colorClass = h.percent >= 75 ? "bar--good" : h.percent >= 50 ? "bar--ok" : "bar--bad";
+      return `
           <div class="chart-column">
             <div class="bar-wrapper">
               <span class="bar-value">${h.percent}%</span>
@@ -551,7 +543,7 @@ function renderDashboard(history, topWrong) {
             <span class="bar-label">#${i + 1}</span>
           </div>
         `;
-      }).join("")
+    }).join("")
     : "";
 
   const wrongList = topWrong.length > 0
@@ -699,19 +691,19 @@ function renderQuiz(session) {
       </article>
 
       ${feedback
-        ? `
+      ? `
             <div class="feedback-banner ${feedback.isCorrect ? "is-correct" : "is-wrong"}">
               <strong>${feedback.isCorrect ? "✅ Chính xác" : "❌ Sai rồi"}</strong>
               <p>
                 ${feedback.isCorrect
-                  ? "Bạn đã trả lời đúng. Bấm Câu sau để tiếp tục."
-                  : `Đáp án đúng là <strong>${feedback.correct}</strong>. Bấm Câu sau để tiếp tục.`
-                }
+        ? "Bạn đã trả lời đúng. Bấm Câu sau để tiếp tục."
+        : `Đáp án đúng là <strong>${feedback.correct}</strong>. Bấm Câu sau để tiếp tục.`
+      }
               </p>
             </div>
           `
-        : ""
-      }
+      : ""
+    }
 
       <div class="options-list">
         ${selectionButtons}
@@ -791,18 +783,18 @@ function renderResults(session) {
       </div>
 
       ${wrongReview.length
-        ? `
+      ? `
             <div class="review-list">
               <h3 style="margin: 16px 0 0; color: var(--muted); font-size: 1.1rem;">Nội dung cần ôn tập</h3>
               ${wrongReview.map(renderWrongItem).join("")}
             </div>
           `
-        : `
+      : `
             <div class="empty-state">
               <p>🎉 Tuyệt vời! Không có câu sai để ôn lại.</p>
             </div>
           `
-      }
+    }
     </section>
   `;
 }
