@@ -62,6 +62,18 @@ test("createSession can limit the number of questions", () => {
   assert.deepEqual(session.order, [1, 2]);
 });
 
+test("createSession keeps selected range metadata on normal sessions", () => {
+  const session = createSession(questions, {
+    sourceQuestionIds: [2, 3],
+    rangeStart: 2,
+    rangeEnd: 3
+  });
+
+  assert.deepEqual(session.order, [2, 3]);
+  assert.equal(session.rangeStart, 2);
+  assert.equal(session.rangeEnd, 3);
+});
+
 test("createSession can shuffle answer order once per question", () => {
   const session = createSession(questions, {
     shuffleOptions: true,

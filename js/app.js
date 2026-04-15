@@ -8,6 +8,13 @@ import {
   scoreSession,
   selectAnswer
 } from "./quiz.js";
+import {
+  buildRangePresets,
+  formatRangeLabel,
+  getQuestionIdsForRange,
+  hydrateRangeSettings,
+  normalizeRangeSelection
+} from "./range.js";
 import { buildWrongAnswerReview } from "./review.js";
 import { createQuizStorage } from "./storage.js";
 import { resolvePageView } from "./page-routing.js";
@@ -217,6 +224,9 @@ const state = {
   questionsById: new Map(),
   loading: true,
   error: "",
+  ui: {
+    setupError: ""
+  },
   persisted: {
     version: 1,
     settings: {
@@ -224,7 +234,8 @@ const state = {
       shuffleOptions: false,
       immediateFeedback: false,
       fastMode: false,
-      customQuestionCount: "50"
+      rangeStart: "1",
+      rangeEnd: "1"
     },
     session: null,
     lastResult: null,
@@ -267,6 +278,10 @@ async function init() {
 
     state.questions = questions;
     state.questionsById = new Map(questions.map((question) => [question.id, question]));
+    state.persisted.settings = {
+      ...state.persisted.settings,
+      ...hydrateRangeSettings(state.persisted.settings, state.questions.length)
+    };
     sanitizePersistedSession();
   } catch (error) {
     state.error = buildLoadErrorMessage(error);
@@ -281,14 +296,28 @@ function hydratePersistedState() {
   const savedStats = statsStorage.load();
 
   if (saved && typeof saved === "object") {
+    const savedSettings = saved.settings ?? {};
+    const hasExplicitRangeStart = savedSettings.rangeStart != null;
+    const hasExplicitRangeEnd = savedSettings.rangeEnd != null;
+    const legacyCustomQuestionCount = savedSettings.customQuestionCount;
+    const derivedRangeStart =
+      !hasExplicitRangeStart && !hasExplicitRangeEnd && legacyCustomQuestionCount != null
+        ? "1"
+        : savedSettings.rangeStart ?? "1";
+    const derivedRangeEnd =
+      !hasExplicitRangeStart && !hasExplicitRangeEnd && legacyCustomQuestionCount != null
+        ? String(legacyCustomQuestionCount)
+        : savedSettings.rangeEnd ?? "1";
+
     state.persisted = {
       version: 1,
       settings: {
-        shuffleQuestions: saved.settings?.shuffleQuestions ?? true,
-        shuffleOptions: saved.settings?.shuffleOptions ?? false,
-        immediateFeedback: saved.settings?.immediateFeedback ?? false,
-        fastMode: saved.settings?.fastMode ?? false,
-        customQuestionCount: saved.settings?.customQuestionCount ?? "50"
+        shuffleQuestions: savedSettings.shuffleQuestions ?? true,
+        shuffleOptions: savedSettings.shuffleOptions ?? false,
+        immediateFeedback: savedSettings.immediateFeedback ?? false,
+        fastMode: savedSettings.fastMode ?? false,
+        rangeStart: derivedRangeStart,
+        rangeEnd: derivedRangeEnd
       },
       session: saved.session ?? null,
       lastResult: saved.lastResult ?? null,
@@ -360,6 +389,8 @@ function sanitizePersistedSession() {
     currentIndex: clampIndex(session.currentIndex ?? 0, validOrder.length),
     submitted: Boolean(session.submitted),
     mode: session.mode === "wrong-only" ? "wrong-only" : session.mode === "bookmark" ? "bookmark" : "all",
+    rangeStart: Number.isInteger(session.rangeStart) ? session.rangeStart : null,
+    rangeEnd: Number.isInteger(session.rangeEnd) ? session.rangeEnd : null,
     fastMode: Boolean(session.fastMode),
     immediateFeedback: hasImmediateFeedback,
     feedbackByQuestion: safeFeedback,
@@ -438,7 +469,10 @@ function renderHome() {
   const canReviewWrong = wrongCount > 0;
   const bookmarkCount = state.persisted.bookmarks.length;
   const answeredCount = session ? countAnswered(session) : 0;
-  const customQuestionCount = state.persisted.settings.customQuestionCount;
+  const rangePresets = buildRangePresets(state.questions.length);
+  const sessionRangeLabel = session?.rangeStart && session?.rangeEnd
+    ? formatRangeLabel(session.rangeStart, session.rangeEnd)
+    : "";
 
   // Stats
   const { history, wrongFrequency, streak } = state.stats;
@@ -499,33 +533,57 @@ function renderHome() {
 
       <section class="setup-card">
         <div>
-          <h3>🚀 Bắt đầu theo số câu</h3>
+          <h3>🚀 Bắt đầu theo khoảng câu</h3>
           <p class="subtle-text">
-            Chọn nhanh 50, 100 câu hoặc nhập số bất kỳ từ 1 đến ${state.questions.length}.
+            Chọn khoảng câu muốn luyện, nhập trực tiếp hoặc bấm preset để bắt đầu nhanh.
           </p>
         </div>
 
-        <div class="button-row">
-          <button class="button" data-action="start-new" data-count="all">Làm toàn bộ đề</button>
-          <button class="ghost-button" data-action="start-new" data-count="50">50 câu</button>
-          <button class="ghost-button" data-action="start-new" data-count="100">100 câu</button>
-        </div>
-
-        <div class="custom-count-row">
-          <label class="input-stack" for="custom-question-count">
-            <span>Số câu tùy chỉnh</span>
+        <div class="range-input-row">
+          <label class="input-stack" for="range-start-input">
+            <span>Từ câu</span>
             <input
-              id="custom-question-count"
+              id="range-start-input"
               class="number-input"
               type="number"
               min="1"
               max="${state.questions.length}"
               step="1"
-              value="${escapeHtml(customQuestionCount)}"
-              data-role="custom-question-count"
+              value="${escapeHtml(state.persisted.settings.rangeStart)}"
+              data-role="range-start"
             />
           </label>
-          <button class="secondary-button" data-action="start-custom">Bắt đầu theo số nhập</button>
+          <label class="input-stack" for="range-end-input">
+            <span>Đến câu</span>
+            <input
+              id="range-end-input"
+              class="number-input"
+              type="number"
+              min="1"
+              max="${state.questions.length}"
+              step="1"
+              value="${escapeHtml(state.persisted.settings.rangeEnd)}"
+              data-role="range-end"
+            />
+          </label>
+          <button class="secondary-button" data-action="start-range">Bắt đầu</button>
+        </div>
+
+        ${state.ui.setupError
+      ? `<p class="setup-inline-error" role="alert">${escapeHtml(state.ui.setupError)}</p>`
+      : ""}
+
+        <div class="range-preset-row">
+          ${rangePresets.map((preset) => `
+            <button
+              class="ghost-button"
+              data-action="start-range-preset"
+              data-range-start="${preset.start}"
+              data-range-end="${preset.end}"
+            >
+              ${escapeHtml(preset.label)}
+            </button>
+          `).join("")}
         </div>
       </section>
 
@@ -547,7 +605,7 @@ function renderHome() {
       ${session
       ? `<p class="subtle-text">
               Trạng thái lưu hiện tại:
-              <strong>${session.submitted ? "Đã nộp bài" : "Đang làm"}</strong>.
+              <strong>${session.submitted ? "Đã nộp bài" : "Đang làm"}</strong>${sessionRangeLabel ? ` · Khoảng ${escapeHtml(sessionRangeLabel)}` : ""}.
             </p>`
       : ""
     }
@@ -635,6 +693,9 @@ function renderQuiz(session) {
   const correctDisplay = feedback
     ? mapOriginalChoiceToDisplay(session, currentQuestionId, feedback.correct)
     : "";
+  const rangeLabel = session.rangeStart && session.rangeEnd
+    ? formatRangeLabel(session.rangeStart, session.rangeEnd)
+    : "";
 
   const selectionButtons = displayedOptions
     .map(({ label, text }) => {
@@ -678,6 +739,7 @@ function renderQuiz(session) {
           <p class="quiz-meta">
             Câu ${session.currentIndex + 1}/${session.order.length} · Đã trả lời ${answeredCount}/${session.order.length}
           </p>
+          ${rangeLabel ? `<p class="quiz-range-label">Khoảng học: ${escapeHtml(rangeLabel)}</p>` : ""}
         </div>
         <div class="quiz-header-actions">
           <button class="map-toggle-btn ${showQuestionMap ? "active" : ""}" data-action="toggle-map" title="Bản đồ câu hỏi">
@@ -786,6 +848,17 @@ function renderResults(session) {
   const total = session.order.length;
   const scorePercent = total > 0 ? Math.round((summary.correctCount / total) * 100) : 0;
   const ev = getResultEvaluation(scorePercent);
+  const hasRangeContext = session.mode === "all" && session.rangeStart && session.rangeEnd;
+  const modeLabel = session.mode === "wrong-only"
+    ? "Ôn câu sai"
+    : session.mode === "bookmark"
+      ? "Câu đánh dấu"
+      : hasRangeContext
+        ? `Khoảng ${formatRangeLabel(session.rangeStart, session.rangeEnd)}`
+        : "Toàn bộ đề";
+  const restartRangeAttrs = hasRangeContext
+    ? ` data-range-start="${session.rangeStart}" data-range-end="${session.rangeEnd}"`
+    : "";
 
   app.innerHTML = `
     <section class="result-panel">
@@ -813,12 +886,12 @@ function renderResults(session) {
         </article>
         <article class="score-card">
           <span class="stat-label">Chế độ</span>
-          <strong>${session.mode === "wrong-only" ? "Ôn câu sai" : session.mode === "bookmark" ? "Câu đánh dấu" : "Toàn bộ đề"}</strong>
+          <strong>${modeLabel}</strong>
         </article>
       </div>
 
       <div class="button-row">
-        <button class="button" data-action="start-new">🔄 Làm lại từ đầu</button>
+        <button class="button" data-action="start-new"${restartRangeAttrs}>🔄 Làm lại từ đầu</button>
         <button class="secondary-button" data-action="review-wrong" ${wrongReview.length ? "" : "disabled"}>
           🎯 Ôn lại câu sai
         </button>
@@ -879,12 +952,32 @@ function handleClick(event) {
   const { action } = button.dataset;
 
   if (action === "start-new") {
-    startNewSession("all", button.dataset.count);
+    if (button.dataset.rangeStart && button.dataset.rangeEnd) {
+      startRangeSession(button.dataset.rangeStart, button.dataset.rangeEnd);
+      return;
+    }
+
+    if (button.dataset.count === "all" || !button.dataset.count) {
+      startRangeSession("1", String(state.questions.length));
+      return;
+    }
+
+    startRangeSession("1", String(button.dataset.count));
     return;
   }
 
   if (action === "start-custom") {
-    startNewSession("all", state.persisted.settings.customQuestionCount);
+    startRangeSession("1", String(state.persisted.settings.rangeEnd));
+    return;
+  }
+
+  if (action === "start-range") {
+    startRangeSession();
+    return;
+  }
+
+  if (action === "start-range-preset") {
+    startRangeSession(button.dataset.rangeStart, button.dataset.rangeEnd);
     return;
   }
 
@@ -983,6 +1076,8 @@ function handleChange(event) {
   const shuffleOptionsToggle = event.target.closest("[data-role='shuffle-options-toggle']");
   const fastModeToggle = event.target.closest("[data-role='fast-mode-toggle']");
   const instantFeedbackToggle = event.target.closest("[data-role='instant-feedback-toggle']");
+  const rangeStartInput = event.target.closest("[data-role='range-start']");
+  const rangeEndInput = event.target.closest("[data-role='range-end']");
   const customQuestionCountInput = event.target.closest("[data-role='custom-question-count']");
 
   if (toggle) {
@@ -1019,8 +1114,24 @@ function handleChange(event) {
     if (currentView === "home") renderHome();
   }
 
+  if (rangeStartInput) {
+    state.persisted.settings.rangeStart = rangeStartInput.value;
+    state.ui.setupError = "";
+    persistState();
+    if (currentView === "home") renderHome();
+  }
+
+  if (rangeEndInput) {
+    state.persisted.settings.rangeEnd = rangeEndInput.value;
+    state.ui.setupError = "";
+    persistState();
+    if (currentView === "home") renderHome();
+  }
+
   if (customQuestionCountInput) {
-    state.persisted.settings.customQuestionCount = customQuestionCountInput.value;
+    state.persisted.settings.rangeStart = "1";
+    state.persisted.settings.rangeEnd = customQuestionCountInput.value;
+    state.ui.setupError = "";
     persistState();
   }
 }
@@ -1121,14 +1232,34 @@ function handleAnswerSelection(session, questionId, displayChoice) {
 }
 
 // ── Session Management ────────────────────────────────────────────────────────
-function startNewSession(mode, requestedCount = "all") {
+function startRangeSession(
+  rangeStartValue = state.persisted.settings.rangeStart,
+  rangeEndValue = state.persisted.settings.rangeEnd
+) {
   showQuestionMap = false;
-  const questionLimit = normalizeQuestionCount(requestedCount, state.questions.length);
+
+  const normalized = normalizeRangeSelection(rangeStartValue, rangeEndValue, state.questions.length);
+  const sourceQuestionIds = normalized.isValid
+    ? getQuestionIdsForRange(state.questions, normalized.rangeStart, normalized.rangeEnd)
+    : [];
+
+  if (!normalized.isValid || sourceQuestionIds.length === 0) {
+    state.ui.setupError =
+      normalized.error || "Khoảng câu không hợp lệ. Vui lòng kiểm tra lại từ câu và đến câu.";
+    renderHome();
+    return;
+  }
+
+  state.ui.setupError = "";
+  state.persisted.settings.rangeStart = String(normalized.rangeStart);
+  state.persisted.settings.rangeEnd = String(normalized.rangeEnd);
   state.persisted.session = createSession(state.questions, {
     shuffleQuestions: state.persisted.settings.shuffleQuestions,
     shuffleOptions: state.persisted.settings.shuffleOptions,
-    mode,
-    questionLimit,
+    mode: "all",
+    sourceQuestionIds,
+    rangeStart: normalized.rangeStart,
+    rangeEnd: normalized.rangeEnd,
     immediateFeedback: state.persisted.settings.immediateFeedback,
     fastMode: state.persisted.settings.fastMode
   });
@@ -1151,6 +1282,7 @@ function startReviewWrongSession() {
   }
 
   showQuestionMap = false;
+  state.ui.setupError = "";
   state.persisted.session = createSession(state.questions, {
     shuffleQuestions: state.persisted.settings.shuffleQuestions,
     shuffleOptions: state.persisted.settings.shuffleOptions,
@@ -1177,6 +1309,7 @@ function startBookmarkSession() {
   }
 
   showQuestionMap = false;
+  state.ui.setupError = "";
   state.persisted.session = createSession(state.questions, {
     shuffleQuestions: state.persisted.settings.shuffleQuestions,
     shuffleOptions: state.persisted.settings.shuffleOptions,
@@ -1219,6 +1352,7 @@ function submitSession(session) {
 }
 
 function resetAllState() {
+  state.ui.setupError = "";
   state.persisted.session = null;
   state.persisted.lastResult = null;
   state.persisted.bookmarks = [];
@@ -1264,13 +1398,6 @@ function isValidOptionOrder(order) {
     && order.length === 4
     && order.every((choice) => ["A", "B", "C", "D"].includes(choice))
     && new Set(order).size === 4;
-}
-
-function normalizeQuestionCount(value, max) {
-  if (value === "all" || value === "" || value == null) return null;
-  const parsed = Number.parseInt(value, 10);
-  if (!Number.isFinite(parsed) || parsed <= 0) return null;
-  return Math.min(parsed, max);
 }
 
 function escapeHtml(value) {

@@ -347,11 +347,31 @@ button, input { font-family: 'Inter', sans-serif; }
 
 .button-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
-.custom-count-row {
+.range-input-row,
+.range-preset-row {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.range-input-row {
   align-items: flex-end;
+}
+
+.setup-inline-error {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--danger-border);
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  font-weight: 600;
+}
+
+.quiz-range-label {
+  margin: 8px 0 0;
+  color: var(--primary);
+  font-weight: 600;
 }
 .input-stack { display: grid; gap: 8px; min-width: 200px; }
 .input-stack span { font-size: .95rem; font-weight: 500; color: var(--ink); }
@@ -1208,7 +1228,11 @@ mark.keyword-danger {
     gap: 10px;
   }
 
-  .custom-count-row { flex-direction: column; align-items: stretch; }
+  .range-input-row,
+  .range-preset-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
   .button, .secondary-button, .ghost-button, .danger-button, .bookmark-button { width: 100%; }
 

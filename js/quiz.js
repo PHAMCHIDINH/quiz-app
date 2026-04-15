@@ -11,7 +11,9 @@ export function createSession(questions, options = {}) {
     sourceQuestionIds = null,
     questionLimit = null,
     immediateFeedback = false,
-    fastMode = false
+    fastMode = false,
+    rangeStart = null,
+    rangeEnd = null
   } = options;
 
   const selectedQuestions = sourceQuestionIds
@@ -35,6 +37,8 @@ export function createSession(questions, options = {}) {
     currentIndex: 0,
     submitted: false,
     mode,
+    rangeStart,
+    rangeEnd,
     fastMode,
     immediateFeedback: fastMode ? false : immediateFeedback,
     feedbackByQuestion: {}
