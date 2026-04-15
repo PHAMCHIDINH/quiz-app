@@ -697,7 +697,7 @@ function renderQuiz(session) {
               <p>
                 ${feedback.isCorrect
         ? "Bạn đã trả lời đúng. Bấm Câu sau để tiếp tục."
-        : `Đáp án đúng là <strong>${feedback.correct}</strong>. Bấm Câu sau để tiếp tục.`
+        : `Đáp án đúng là <strong>${feedback.correct}</strong>`
       }
               </p>
             </div>
