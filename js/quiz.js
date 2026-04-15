@@ -1,8 +1,11 @@
 import { byQuestionId, clamp, shuffleArray } from "./utils.js";
 
+const DISPLAY_CHOICES = ["A", "B", "C", "D"];
+
 export function createSession(questions, options = {}) {
   const {
     shuffleQuestions = false,
+    shuffleOptions = false,
     randomFn = Math.random,
     mode = "all",
     sourceQuestionIds = null,
@@ -23,12 +26,72 @@ export function createSession(questions, options = {}) {
   return {
     order: nextOrder.slice(0, normalizedLimit),
     answers: {},
+    optionOrderByQuestion: buildOptionOrderByQuestion(
+      nextOrder.slice(0, normalizedLimit),
+      shuffleOptions,
+      randomFn
+    ),
     currentIndex: 0,
     submitted: false,
     mode,
     immediateFeedback,
     feedbackByQuestion: {}
   };
+}
+
+export function buildOptionOrderByQuestion(questionIds, shuffleOptions = false, randomFn = Math.random) {
+  return Object.fromEntries(
+    questionIds.map((questionId) => [
+      questionId,
+      shuffleOptions ? shuffleArray(DISPLAY_CHOICES, randomFn) : [...DISPLAY_CHOICES]
+    ])
+  );
+}
+
+export function getOptionOrderForQuestion(session, questionId) {
+  const optionOrder = session.optionOrderByQuestion?.[questionId];
+
+  if (!Array.isArray(optionOrder) || optionOrder.length !== DISPLAY_CHOICES.length) {
+    return [...DISPLAY_CHOICES];
+  }
+
+  return optionOrder;
+}
+
+export function getDisplayedOptions(question, session, questionId) {
+  const optionOrder = getOptionOrderForQuestion(session, questionId);
+
+  return DISPLAY_CHOICES.map((label, index) => {
+    const originalKey = optionOrder[index] ?? label;
+
+    return {
+      label,
+      originalKey,
+      text: question.options[originalKey]
+    };
+  });
+}
+
+export function mapDisplayChoiceToOriginal(session, questionId, displayChoice) {
+  const optionOrder = getOptionOrderForQuestion(session, questionId);
+  const displayIndex = DISPLAY_CHOICES.indexOf(displayChoice);
+
+  if (displayIndex === -1) {
+    return displayChoice;
+  }
+
+  return optionOrder[displayIndex] ?? displayChoice;
+}
+
+export function mapOriginalChoiceToDisplay(session, questionId, originalChoice) {
+  const optionOrder = getOptionOrderForQuestion(session, questionId);
+  const displayIndex = optionOrder.indexOf(originalChoice);
+
+  if (displayIndex === -1) {
+    return originalChoice;
+  }
+
+  return DISPLAY_CHOICES[displayIndex];
 }
 
 export function selectAnswer(session, questionId, choice, correctAnswer = null) {
@@ -39,13 +102,13 @@ export function selectAnswer(session, questionId, choice, correctAnswer = null) 
   const nextFeedback =
     session.immediateFeedback && correctAnswer
       ? {
-          ...session.feedbackByQuestion,
-          [questionId]: {
-            selected: choice,
-            correct: correctAnswer,
-            isCorrect: choice === correctAnswer
-          }
+        ...session.feedbackByQuestion,
+        [questionId]: {
+          selected: choice,
+          correct: correctAnswer,
+          isCorrect: choice === correctAnswer
         }
+      }
       : session.feedbackByQuestion ?? {};
 
   return {

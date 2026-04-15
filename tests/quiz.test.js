@@ -3,6 +3,9 @@ import assert from "node:assert/strict";
 
 import {
   createSession,
+  getDisplayedOptions,
+  mapDisplayChoiceToOriginal,
+  mapOriginalChoiceToDisplay,
   selectAnswer,
   goToQuestion,
   scoreSession
@@ -58,6 +61,19 @@ test("createSession can limit the number of questions", () => {
   assert.deepEqual(session.order, [1, 2]);
 });
 
+test("createSession can shuffle answer order once per question", () => {
+  const session = createSession(questions, {
+    shuffleOptions: true,
+    randomFn: () => 0
+  });
+
+  assert.deepEqual(session.optionOrderByQuestion, {
+    1: ["B", "C", "D", "A"],
+    2: ["B", "C", "D", "A"],
+    3: ["B", "C", "D", "A"]
+  });
+});
+
 test("selectAnswer records a choice by question id", () => {
   const session = createSession(questions);
   const updated = selectAnswer(session, 2, "D");
@@ -83,6 +99,23 @@ test("selectAnswer stores immediate feedback and locks the question after the fi
   });
   assert.deepEqual(secondAttempt.answers, { 1: "B" });
   assert.deepEqual(secondAttempt.feedbackByQuestion, answered.feedbackByQuestion);
+});
+
+test("display choice mapping uses shuffled answer order", () => {
+  const session = createSession(questions, {
+    shuffleOptions: true,
+    randomFn: () => 0
+  });
+
+  assert.equal(mapDisplayChoiceToOriginal(session, 1, "A"), "B");
+  assert.equal(mapDisplayChoiceToOriginal(session, 1, "D"), "A");
+  assert.equal(mapOriginalChoiceToDisplay(session, 1, "A"), "D");
+  assert.deepEqual(getDisplayedOptions(questions[0], session, 1), [
+    { label: "A", originalKey: "B", text: "B1" },
+    { label: "B", originalKey: "C", text: "C1" },
+    { label: "C", originalKey: "D", text: "D1" },
+    { label: "D", originalKey: "A", text: "A1" }
+  ]);
 });
 
 test("goToQuestion moves the active question safely", () => {
@@ -126,8 +159,35 @@ test("buildWrongAnswerReview returns the wrong questions with selected and corre
       id: 1,
       question: "Cau 1",
       options: { A: "A1", B: "B1", C: "C1", D: "D1" },
+      displayOptions: [
+        { label: "A", originalKey: "A", text: "A1" },
+        { label: "B", originalKey: "B", text: "B1" },
+        { label: "C", originalKey: "C", text: "C1" },
+        { label: "D", originalKey: "D", text: "D1" }
+      ],
       selected: "B",
-      correct: "A"
+      correct: "A",
+      selectedDisplay: "B",
+      correctDisplay: "A"
     }
+  ]);
+});
+
+test("buildWrongAnswerReview keeps shuffled display labels for review mode", () => {
+  let session = createSession(questions, {
+    shuffleOptions: true,
+    randomFn: () => 0
+  });
+  session = selectAnswer(session, 1, "B");
+
+  const [reviewItem] = buildWrongAnswerReview(questions, session);
+
+  assert.equal(reviewItem.selectedDisplay, "A");
+  assert.equal(reviewItem.correctDisplay, "D");
+  assert.deepEqual(reviewItem.displayOptions, [
+    { label: "A", originalKey: "B", text: "B1" },
+    { label: "B", originalKey: "C", text: "C1" },
+    { label: "C", originalKey: "D", text: "D1" },
+    { label: "D", originalKey: "A", text: "A1" }
   ]);
 });

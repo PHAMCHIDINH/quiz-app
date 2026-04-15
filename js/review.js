@@ -1,5 +1,9 @@
 import { byQuestionId } from "./utils.js";
-import { scoreSession } from "./quiz.js";
+import {
+  getDisplayedOptions,
+  mapOriginalChoiceToDisplay,
+  scoreSession
+} from "./quiz.js";
 
 export function buildWrongAnswerReview(questions, session) {
   const questionMap = byQuestionId(questions);
@@ -12,8 +16,11 @@ export function buildWrongAnswerReview(questions, session) {
       id: question.id,
       question: question.question,
       options: question.options,
+      displayOptions: getDisplayedOptions(question, session, question.id),
       selected: item.selected,
-      correct: item.correct
+      correct: item.correct,
+      selectedDisplay: mapOriginalChoiceToDisplay(session, question.id, item.selected),
+      correctDisplay: mapOriginalChoiceToDisplay(session, question.id, item.correct)
     };
   });
 }

@@ -1,6 +1,9 @@
 import {
   createSession,
+  getDisplayedOptions,
   goToQuestion,
+  mapDisplayChoiceToOriginal,
+  mapOriginalChoiceToDisplay,
   scoreSession,
   selectAnswer
 } from "./quiz.js";
@@ -213,6 +216,7 @@ const state = {
     version: 1,
     settings: {
       shuffleQuestions: true,
+      shuffleOptions: false,
       immediateFeedback: false,
       customQuestionCount: "50"
     },
@@ -275,6 +279,7 @@ function hydratePersistedState() {
       version: 1,
       settings: {
         shuffleQuestions: saved.settings?.shuffleQuestions ?? true,
+        shuffleOptions: saved.settings?.shuffleOptions ?? false,
         immediateFeedback: saved.settings?.immediateFeedback ?? false,
         customQuestionCount: saved.settings?.customQuestionCount ?? "50"
       },
@@ -313,9 +318,15 @@ function sanitizePersistedSession() {
   const safeAnswers = {};
   const rawAnswers = session.answers ?? {};
   const safeFeedback = {};
+  const safeOptionOrderByQuestion = {};
 
   for (const id of validOrder) {
     const savedAnswer = rawAnswers[id];
+    const rawOptionOrder = session.optionOrderByQuestion?.[id];
+
+    safeOptionOrderByQuestion[id] = isValidOptionOrder(rawOptionOrder)
+      ? [...rawOptionOrder]
+      : ["A", "B", "C", "D"];
 
     if (["A", "B", "C", "D"].includes(savedAnswer)) {
       safeAnswers[id] = savedAnswer;
@@ -341,7 +352,8 @@ function sanitizePersistedSession() {
     submitted: Boolean(session.submitted),
     mode: session.mode === "wrong-only" ? "wrong-only" : session.mode === "bookmark" ? "bookmark" : "all",
     immediateFeedback: Boolean(session.immediateFeedback),
-    feedbackByQuestion: safeFeedback
+    feedbackByQuestion: safeFeedback,
+    optionOrderByQuestion: safeOptionOrderByQuestion
   };
 }
 
@@ -454,6 +466,10 @@ function renderHome() {
         <label class="toggle-card">
           <input type="checkbox" data-role="shuffle-toggle" ${state.persisted.settings.shuffleQuestions ? "checked" : ""} />
           <span>🔀 Trộn thứ tự câu hỏi lúc bắt đầu</span>
+        </label>
+        <label class="toggle-card">
+          <input type="checkbox" data-role="shuffle-options-toggle" ${state.persisted.settings.shuffleOptions ? "checked" : ""} />
+          <span>🔤 Đảo đáp án A/B/C/D lúc bắt đầu</span>
         </label>
         <label class="toggle-card">
           <input type="checkbox" data-role="instant-feedback-toggle" ${state.persisted.settings.immediateFeedback ? "checked" : ""} />
@@ -592,22 +608,29 @@ function renderQuiz(session) {
   const progressPercent = Math.round(((session.currentIndex + 1) / session.order.length) * 100);
   const isBookmarked = state.persisted.bookmarks.includes(currentQuestionId);
   const isClinical = isClinicalQuestion(question.question);
+  const displayedOptions = getDisplayedOptions(question, session, currentQuestionId);
+  const selectedDisplay = selected
+    ? mapOriginalChoiceToDisplay(session, currentQuestionId, selected)
+    : "";
+  const correctDisplay = feedback
+    ? mapOriginalChoiceToDisplay(session, currentQuestionId, feedback.correct)
+    : "";
 
-  const selectionButtons = ["A", "B", "C", "D"]
-    .map((choice) => {
-      const isSelected = selected === choice;
-      const isCorrectChoice = feedback && feedback.correct === choice;
-      const isWrongSelected = feedback && feedback.selected === choice && !feedback.isCorrect;
+  const selectionButtons = displayedOptions
+    .map(({ label, text }) => {
+      const isSelected = selectedDisplay === label;
+      const isCorrectChoice = feedback && correctDisplay === label;
+      const isWrongSelected = feedback && selectedDisplay === label && !feedback.isCorrect;
       return `
         <button
           class="option-button ${isSelected ? "is-selected" : ""} ${isCorrectChoice ? "is-correct" : isWrongSelected ? "is-wrong" : ""}"
           data-action="select-answer"
-          data-choice="${choice}"
+          data-choice="${label}"
           data-question-id="${question.id}"
           ${isLocked ? "disabled" : ""}
         >
-          <span class="option-letter">${choice}</span>
-          <span class="option-copy">${highlightKeywords(question.options[choice])}</span>
+          <span class="option-letter">${label}</span>
+          <span class="option-copy">${highlightKeywords(text)}</span>
         </button>
       `;
     })
@@ -697,7 +720,7 @@ function renderQuiz(session) {
               <p>
                 ${feedback.isCorrect
         ? "Bạn đã trả lời đúng. Bấm Câu sau để tiếp tục."
-        : `Đáp án đúng là <strong>${feedback.correct}</strong>`
+        : `Đáp án đúng là <strong>${correctDisplay}</strong>`
       }
               </p>
             </div>
@@ -802,11 +825,12 @@ function renderResults(session) {
 function renderWrongItem(item) {
   const optionList = ["A", "B", "C", "D"]
     .map((choice) => {
-      const value = highlightKeywords(item.options[choice]);
-      const prefix = choice === item.correct ? "Đúng" : choice === item.selected ? "Bạn chọn" : "";
+      const option = item.displayOptions.find((entry) => entry.label === choice);
+      const value = highlightKeywords(option?.text ?? "");
+      const prefix = choice === item.correctDisplay ? "Đúng" : choice === item.selectedDisplay ? "Bạn chọn" : "";
 
       return `
-        <p class="answer-note ${choice === item.correct ? "is-correct" : choice === item.selected ? "is-wrong" : ""}">
+        <p class="answer-note ${choice === item.correctDisplay ? "is-correct" : choice === item.selectedDisplay ? "is-wrong" : ""}">
           <strong>${choice}.</strong> ${value} ${prefix ? `· <em>${prefix}</em>` : ""}
         </p>
       `;
@@ -912,7 +936,7 @@ function handleClick(event) {
   if (action === "select-answer") {
     const questionId = Number(button.dataset.questionId);
     const correctAnswer = state.questionsById.get(questionId)?.answer ?? null;
-    const chosenAnswer = button.dataset.choice;
+    const chosenAnswer = mapDisplayChoiceToOriginal(session, questionId, button.dataset.choice);
     state.persisted.session = selectAnswer(
       session,
       questionId,
@@ -956,11 +980,17 @@ function handleClick(event) {
 
 function handleChange(event) {
   const toggle = event.target.closest("[data-role='shuffle-toggle']");
+  const shuffleOptionsToggle = event.target.closest("[data-role='shuffle-options-toggle']");
   const instantFeedbackToggle = event.target.closest("[data-role='instant-feedback-toggle']");
   const customQuestionCountInput = event.target.closest("[data-role='custom-question-count']");
 
   if (toggle) {
     state.persisted.settings.shuffleQuestions = toggle.checked;
+    persistState();
+  }
+
+  if (shuffleOptionsToggle) {
+    state.persisted.settings.shuffleOptions = shuffleOptionsToggle.checked;
     persistState();
   }
 
@@ -1036,11 +1066,12 @@ function handleKeydown(event) {
 
 function selectAnswerByKey(session, questionId, choice) {
   const correctAnswer = state.questionsById.get(questionId)?.answer ?? null;
-  state.persisted.session = selectAnswer(session, questionId, choice, correctAnswer);
+  const chosenAnswer = mapDisplayChoiceToOriginal(session, questionId, choice);
+  state.persisted.session = selectAnswer(session, questionId, chosenAnswer, correctAnswer);
   persistState();
 
   if (state.persisted.settings.immediateFeedback && correctAnswer) {
-    const isCorrect = choice === correctAnswer;
+    const isCorrect = chosenAnswer === correctAnswer;
     showReactionToast(isCorrect);
     if (isCorrect) launchConfetti();
     else shakeCard();
@@ -1055,6 +1086,7 @@ function startNewSession(mode, requestedCount = "all") {
   const questionLimit = normalizeQuestionCount(requestedCount, state.questions.length);
   state.persisted.session = createSession(state.questions, {
     shuffleQuestions: state.persisted.settings.shuffleQuestions,
+    shuffleOptions: state.persisted.settings.shuffleOptions,
     mode,
     questionLimit,
     immediateFeedback: state.persisted.settings.immediateFeedback
@@ -1075,6 +1107,7 @@ function startReviewWrongSession() {
   showQuestionMap = false;
   state.persisted.session = createSession(state.questions, {
     shuffleQuestions: state.persisted.settings.shuffleQuestions,
+    shuffleOptions: state.persisted.settings.shuffleOptions,
     mode: "wrong-only",
     sourceQuestionIds: wrongIds,
     immediateFeedback: state.persisted.settings.immediateFeedback
@@ -1094,6 +1127,7 @@ function startBookmarkSession() {
   showQuestionMap = false;
   state.persisted.session = createSession(state.questions, {
     shuffleQuestions: state.persisted.settings.shuffleQuestions,
+    shuffleOptions: state.persisted.settings.shuffleOptions,
     mode: "bookmark",
     sourceQuestionIds: bookmarkIds,
     immediateFeedback: state.persisted.settings.immediateFeedback
@@ -1143,6 +1177,13 @@ function countAnswered(session) {
 function clampIndex(index, length) {
   if (length <= 0) return 0;
   return Math.min(Math.max(index, 0), length - 1);
+}
+
+function isValidOptionOrder(order) {
+  return Array.isArray(order)
+    && order.length === 4
+    && order.every((choice) => ["A", "B", "C", "D"].includes(choice))
+    && new Set(order).size === 4;
 }
 
 function normalizeQuestionCount(value, max) {
