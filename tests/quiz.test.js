@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 
 import {
   createSession,
+  getAnswerFlowAction,
   getDisplayedOptions,
   mapDisplayChoiceToOriginal,
   mapOriginalChoiceToDisplay,
@@ -74,6 +75,16 @@ test("createSession can shuffle answer order once per question", () => {
   });
 });
 
+test("createSession turns off immediate feedback when fast mode is enabled", () => {
+  const session = createSession(questions, {
+    fastMode: true,
+    immediateFeedback: true
+  });
+
+  assert.equal(session.fastMode, true);
+  assert.equal(session.immediateFeedback, false);
+});
+
 test("selectAnswer records a choice by question id", () => {
   const session = createSession(questions);
   const updated = selectAnswer(session, 2, "D");
@@ -125,6 +136,22 @@ test("goToQuestion moves the active question safely", () => {
 
   assert.equal(updated.currentIndex, 2);
   assert.equal(clamped.currentIndex, 2);
+});
+
+test("getAnswerFlowAction stays on the same question outside fast mode", () => {
+  const session = createSession(questions);
+
+  assert.equal(getAnswerFlowAction(session), "stay");
+});
+
+test("getAnswerFlowAction advances in fast mode until the last question", () => {
+  const session = createSession(questions, {
+    fastMode: true
+  });
+  const lastQuestionSession = goToQuestion(session, 2);
+
+  assert.equal(getAnswerFlowAction(session), "next");
+  assert.equal(getAnswerFlowAction(lastQuestionSession), "submit");
 });
 
 test("scoreSession counts correct, wrong, and unanswered questions", () => {

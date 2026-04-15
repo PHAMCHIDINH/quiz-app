@@ -10,7 +10,8 @@ export function createSession(questions, options = {}) {
     mode = "all",
     sourceQuestionIds = null,
     questionLimit = null,
-    immediateFeedback = false
+    immediateFeedback = false,
+    fastMode = false
   } = options;
 
   const selectedQuestions = sourceQuestionIds
@@ -34,7 +35,8 @@ export function createSession(questions, options = {}) {
     currentIndex: 0,
     submitted: false,
     mode,
-    immediateFeedback,
+    fastMode,
+    immediateFeedback: fastMode ? false : immediateFeedback,
     feedbackByQuestion: {}
   };
 }
@@ -126,6 +128,14 @@ export function goToQuestion(session, nextIndex) {
     ...session,
     currentIndex: clamp(nextIndex, 0, Math.max(session.order.length - 1, 0))
   };
+}
+
+export function getAnswerFlowAction(session) {
+  if (!session.fastMode) {
+    return "stay";
+  }
+
+  return session.currentIndex >= session.order.length - 1 ? "submit" : "next";
 }
 
 export function scoreSession(session, questions) {

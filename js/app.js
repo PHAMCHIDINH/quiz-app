@@ -1,5 +1,6 @@
 import {
   createSession,
+  getAnswerFlowAction,
   getDisplayedOptions,
   goToQuestion,
   mapDisplayChoiceToOriginal,
@@ -218,6 +219,7 @@ const state = {
       shuffleQuestions: true,
       shuffleOptions: false,
       immediateFeedback: false,
+      fastMode: false,
       customQuestionCount: "50"
     },
     session: null,
@@ -281,6 +283,7 @@ function hydratePersistedState() {
         shuffleQuestions: saved.settings?.shuffleQuestions ?? true,
         shuffleOptions: saved.settings?.shuffleOptions ?? false,
         immediateFeedback: saved.settings?.immediateFeedback ?? false,
+        fastMode: saved.settings?.fastMode ?? false,
         customQuestionCount: saved.settings?.customQuestionCount ?? "50"
       },
       session: saved.session ?? null,
@@ -304,6 +307,8 @@ function sanitizePersistedSession() {
   const session = state.persisted.session;
 
   if (!session) return;
+
+  const hasImmediateFeedback = !session.fastMode && Boolean(session.immediateFeedback);
 
   const validOrder = Array.isArray(session.order)
     ? session.order.filter((id) => state.questionsById.has(id))
@@ -331,7 +336,7 @@ function sanitizePersistedSession() {
     if (["A", "B", "C", "D"].includes(savedAnswer)) {
       safeAnswers[id] = savedAnswer;
 
-      if (session.immediateFeedback) {
+      if (hasImmediateFeedback) {
         const correctAnswer = state.questionsById.get(id)?.answer;
 
         if (correctAnswer) {
@@ -351,7 +356,8 @@ function sanitizePersistedSession() {
     currentIndex: clampIndex(session.currentIndex ?? 0, validOrder.length),
     submitted: Boolean(session.submitted),
     mode: session.mode === "wrong-only" ? "wrong-only" : session.mode === "bookmark" ? "bookmark" : "all",
-    immediateFeedback: Boolean(session.immediateFeedback),
+    fastMode: Boolean(session.fastMode),
+    immediateFeedback: hasImmediateFeedback,
     feedbackByQuestion: safeFeedback,
     optionOrderByQuestion: safeOptionOrderByQuestion
   };
@@ -470,6 +476,10 @@ function renderHome() {
         <label class="toggle-card">
           <input type="checkbox" data-role="shuffle-options-toggle" ${state.persisted.settings.shuffleOptions ? "checked" : ""} />
           <span>🔤 Đảo đáp án A/B/C/D lúc bắt đầu</span>
+        </label>
+        <label class="toggle-card">
+          <input type="checkbox" data-role="fast-mode-toggle" ${state.persisted.settings.fastMode ? "checked" : ""} />
+          <span>⏩ Làm nhanh: chọn đáp án là qua câu tiếp</span>
         </label>
         <label class="toggle-card">
           <input type="checkbox" data-role="instant-feedback-toggle" ${state.persisted.settings.immediateFeedback ? "checked" : ""} />
@@ -935,27 +945,7 @@ function handleClick(event) {
 
   if (action === "select-answer") {
     const questionId = Number(button.dataset.questionId);
-    const correctAnswer = state.questionsById.get(questionId)?.answer ?? null;
-    const chosenAnswer = mapDisplayChoiceToOriginal(session, questionId, button.dataset.choice);
-    state.persisted.session = selectAnswer(
-      session,
-      questionId,
-      chosenAnswer,
-      correctAnswer
-    );
-    persistState();
-
-    if (state.persisted.settings.immediateFeedback && correctAnswer) {
-      const isCorrect = chosenAnswer === correctAnswer;
-      showReactionToast(isCorrect);
-      if (isCorrect) {
-        launchConfetti();
-      } else {
-        shakeCard();
-      }
-    }
-
-    renderQuiz(state.persisted.session);
+    handleAnswerSelection(session, questionId, button.dataset.choice);
     return;
   }
 
@@ -981,22 +971,42 @@ function handleClick(event) {
 function handleChange(event) {
   const toggle = event.target.closest("[data-role='shuffle-toggle']");
   const shuffleOptionsToggle = event.target.closest("[data-role='shuffle-options-toggle']");
+  const fastModeToggle = event.target.closest("[data-role='fast-mode-toggle']");
   const instantFeedbackToggle = event.target.closest("[data-role='instant-feedback-toggle']");
   const customQuestionCountInput = event.target.closest("[data-role='custom-question-count']");
 
   if (toggle) {
     state.persisted.settings.shuffleQuestions = toggle.checked;
     persistState();
+    if (currentView === "home") renderHome();
   }
 
   if (shuffleOptionsToggle) {
     state.persisted.settings.shuffleOptions = shuffleOptionsToggle.checked;
     persistState();
+    if (currentView === "home") renderHome();
+  }
+
+  if (fastModeToggle) {
+    state.persisted.settings.fastMode = fastModeToggle.checked;
+
+    if (fastModeToggle.checked) {
+      state.persisted.settings.immediateFeedback = false;
+    }
+
+    persistState();
+    if (currentView === "home") renderHome();
   }
 
   if (instantFeedbackToggle) {
     state.persisted.settings.immediateFeedback = instantFeedbackToggle.checked;
+
+    if (instantFeedbackToggle.checked) {
+      state.persisted.settings.fastMode = false;
+    }
+
     persistState();
+    if (currentView === "home") renderHome();
   }
 
   if (customQuestionCountInput) {
@@ -1065,12 +1075,32 @@ function handleKeydown(event) {
 }
 
 function selectAnswerByKey(session, questionId, choice) {
+  handleAnswerSelection(session, questionId, choice);
+}
+
+function handleAnswerSelection(session, questionId, displayChoice) {
   const correctAnswer = state.questionsById.get(questionId)?.answer ?? null;
-  const chosenAnswer = mapDisplayChoiceToOriginal(session, questionId, choice);
-  state.persisted.session = selectAnswer(session, questionId, chosenAnswer, correctAnswer);
+  const chosenAnswer = mapDisplayChoiceToOriginal(session, questionId, displayChoice);
+  const updatedSession = selectAnswer(session, questionId, chosenAnswer, correctAnswer);
+
+  state.persisted.session = updatedSession;
   persistState();
 
-  if (state.persisted.settings.immediateFeedback && correctAnswer) {
+  const nextStep = getAnswerFlowAction(updatedSession);
+
+  if (nextStep === "submit") {
+    submitSession(updatedSession);
+    return;
+  }
+
+  if (nextStep === "next") {
+    state.persisted.session = goToQuestion(updatedSession, updatedSession.currentIndex + 1);
+    persistState();
+    renderQuiz(state.persisted.session);
+    return;
+  }
+
+  if (updatedSession.immediateFeedback && correctAnswer) {
     const isCorrect = chosenAnswer === correctAnswer;
     showReactionToast(isCorrect);
     if (isCorrect) launchConfetti();
@@ -1089,7 +1119,8 @@ function startNewSession(mode, requestedCount = "all") {
     shuffleOptions: state.persisted.settings.shuffleOptions,
     mode,
     questionLimit,
-    immediateFeedback: state.persisted.settings.immediateFeedback
+    immediateFeedback: state.persisted.settings.immediateFeedback,
+    fastMode: state.persisted.settings.fastMode
   });
   state.persisted.lastResult = null;
   persistState();
@@ -1110,7 +1141,8 @@ function startReviewWrongSession() {
     shuffleOptions: state.persisted.settings.shuffleOptions,
     mode: "wrong-only",
     sourceQuestionIds: wrongIds,
-    immediateFeedback: state.persisted.settings.immediateFeedback
+    immediateFeedback: state.persisted.settings.immediateFeedback,
+    fastMode: state.persisted.settings.fastMode
   });
   persistState();
   renderQuiz(state.persisted.session);
@@ -1130,7 +1162,8 @@ function startBookmarkSession() {
     shuffleOptions: state.persisted.settings.shuffleOptions,
     mode: "bookmark",
     sourceQuestionIds: bookmarkIds,
-    immediateFeedback: state.persisted.settings.immediateFeedback
+    immediateFeedback: state.persisted.settings.immediateFeedback,
+    fastMode: state.persisted.settings.fastMode
   });
   persistState();
   renderQuiz(state.persisted.session);
