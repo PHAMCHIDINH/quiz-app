@@ -155,6 +155,11 @@ export function scoreSession(session, questions) {
 
     if (!selected) {
       unansweredCount += 1;
+      wrongAnswers.push({
+        id: questionId,
+        selected: null,
+        correct: question.answer
+      });
       continue;
     }
 
