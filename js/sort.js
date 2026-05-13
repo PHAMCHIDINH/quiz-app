@@ -1,10 +1,13 @@
 const BUCKETS = [
-  { id: 'white', label: 'Trắng', color: '#ffffff', match: (c) => c.toLowerCase().includes('trắng') },
-  { id: 'yellow', label: 'Vàng', color: '#fde047', match: (c) => c.toLowerCase().includes('vàng') },
-  { id: 'red', label: 'Đỏ', color: '#ef4444', match: (c) => c.toLowerCase().includes('đỏ') },
-  { id: 'blue', label: 'Xanh', color: '#3b82f6', match: (c) => c.toLowerCase().includes('xanh') },
+  { id: 'white', label: 'Trắng', color: '#ffffff', match: (c) => c.toLowerCase().includes('trắng') || c.toLowerCase().includes('keo') },
+  { id: 'yellow', label: 'Vàng', color: '#fde047', match: (c) => c.toLowerCase().includes('vàng') || c.toLowerCase().includes('cam') },
+  { id: 'red', label: 'Đỏ', color: '#ef4444', match: (c) => c.toLowerCase().includes('đỏ') || c.toLowerCase().includes('gạch') || c.toLowerCase().includes('máu') },
+  { id: 'blue', label: 'Xanh Dương', color: '#3b82f6', match: (c) => (c.toLowerCase().includes('xanh') && (c.toLowerCase().includes('thẫm') || c.toLowerCase().includes('đậm') || c.toLowerCase().includes('lơ'))) },
+  { id: 'green', label: 'Xanh Lục', color: '#22c55e', match: (c) => (c.toLowerCase().includes('xanh lục') || (c.toLowerCase().includes('trắng xanh') && !c.toLowerCase().includes('thẫm'))) },
   { id: 'black', label: 'Đen', color: '#1f2937', match: (c) => c.toLowerCase().includes('đen') },
-  { id: 'other', label: 'Khác', color: '#a855f7', match: (c) => !['trắng', 'vàng', 'đỏ', 'xanh', 'đen'].some(base => c.toLowerCase().includes(base)) }
+  { id: 'pink', label: 'Hồng', color: '#ec4899', match: (c) => c.toLowerCase().includes('hồng') },
+  { id: 'purple', label: 'Tím', color: '#a855f7', match: (c) => c.toLowerCase().includes('tím') },
+  { id: 'brown', label: 'Nâu', color: '#92400e', match: (c) => c.toLowerCase().includes('nâu') }
 ];
 
 let allData = [];
@@ -46,7 +49,7 @@ function nextQuestion() {
   const randomIndex = Math.floor(Math.random() * allData.length);
   currentReaction = allData[randomIndex];
   reactionText.textContent = currentReaction.reaction;
-  
+
   // Reset bucket states
   document.querySelectorAll('.color-bucket').forEach(el => {
     el.classList.remove('is-correct', 'is-wrong');
@@ -60,7 +63,7 @@ function checkAnswer(selectedBucket) {
     score.correct++;
     const el = Array.from(document.querySelectorAll('.color-bucket')).find(e => e.innerText.includes(selectedBucket.label));
     el.classList.add('is-correct');
-    
+
     setTimeout(() => {
       nextQuestion();
       updateScore();
@@ -69,7 +72,7 @@ function checkAnswer(selectedBucket) {
     score.wrong++;
     const el = Array.from(document.querySelectorAll('.color-bucket')).find(e => e.innerText.includes(selectedBucket.label));
     el.classList.add('is-wrong');
-    
+
     // Find correct bucket to show user
     const correctBucket = BUCKETS.find(b => b.match(currentReaction.color));
     const correctEl = Array.from(document.querySelectorAll('.color-bucket')).find(e => e.innerText.includes(correctBucket.label));
