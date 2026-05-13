@@ -156,10 +156,57 @@ function isClinicalQuestion(questionText) {
 
 const app = document.querySelector("#app");
 const STORAGE_KEY = "htbt-quiz-app-state";
+const HISTORY_KEY = "htbt-quiz-history";
 const HOME_PAGE_URL = "./index.html";
 const QUIZ_PAGE_URL = "./quiz.html";
 const pageMode = document.body.dataset.page === "quiz" ? "quiz" : "home";
 const storage = createQuizStorage(window.localStorage, STORAGE_KEY);
+const historyStorage = createQuizStorage(window.localStorage, HISTORY_KEY);
+
+// ── History helpers ───────────────────────────────────────────────────────────
+const MAX_HISTORY = 30;
+
+function loadHistory() {
+  const data = historyStorage.load();
+  return Array.isArray(data) ? data : [];
+}
+
+function saveHistory(summary, session) {
+  const history = loadHistory();
+  const modeLabel =
+    session.mode === "wrong-only" ? "Ôn câu sai" :
+      session.mode === "bookmark" ? "Câu đánh dấu" :
+        (session.rangeStart && session.rangeEnd)
+          ? `Câu ${session.rangeStart}–${session.rangeEnd}`
+          : "Toàn bộ đề";
+
+  const entry = {
+    ts: Date.now(),
+    mode: modeLabel,
+    total: session.order.length,
+    correct: summary.correctCount,
+    incorrect: summary.incorrectCount,
+    unanswered: summary.unansweredCount,
+    percent: session.order.length > 0
+      ? Math.round((summary.correctCount / session.order.length) * 100)
+      : 0
+  };
+
+  history.unshift(entry);
+  if (history.length > MAX_HISTORY) history.splice(MAX_HISTORY);
+  historyStorage.save(history);
+}
+
+function deleteHistoryEntry(index) {
+  const history = loadHistory();
+  history.splice(index, 1);
+  historyStorage.save(history);
+}
+
+function clearHistory() {
+  historyStorage.save([]);
+}
+// ── Kết thúc History helpers ──────────────────────────────────────────────────
 
 const state = {
   questions: [],
@@ -189,6 +236,8 @@ const state = {
 let currentView = "home"; // "home" | "quiz" | "results"
 // Show/hide question map
 let showQuestionMap = false;
+// Show/hide history section
+let showHistory = false;
 
 document.addEventListener("click", handleClick);
 document.addEventListener("change", handleChange);
@@ -514,7 +563,52 @@ function renderHome() {
       : ""
     }
 
+      ${renderHistorySection(loadHistory())}
     </div>
+  `;
+}
+
+function renderHistorySection(history) {
+  const hasHistory = history.length > 0;
+
+  const entriesHtml = hasHistory
+    ? history.map((h, i) => {
+      const d = new Date(h.ts);
+      const dateStr = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+      const scoreClass = h.percent >= 75 ? 'history-score--good' : h.percent >= 50 ? 'history-score--ok' : 'history-score--bad';
+      return `
+          <div class="history-entry">
+            <div class="history-entry__info">
+              <span class="history-entry__date">${escapeHtml(dateStr)}</span>
+              <span class="history-entry__mode">${escapeHtml(h.mode)}</span>
+            </div>
+            <div class="history-entry__right">
+              <span class="history-score ${scoreClass}">${h.correct}/${h.total} · ${h.percent}%</span>
+              <button class="history-delete-btn" data-action="delete-history-entry" data-index="${i}" title="Xóa lần này">🗑️</button>
+            </div>
+          </div>
+        `;
+    }).join("")
+    : `<p class="history-empty">Chưa có lịch sử. Hoàn thành một bài thi để bắt đầu!</p>`;
+
+  return `
+    <section class="history-section">
+      <div class="history-header">
+        <h3 class="history-title">📋 Lịch sử làm bài ${hasHistory ? `<span class="history-count">(${history.length})</span>` : ""}</h3>
+        <button class="history-toggle-btn" data-action="history-toggle">
+          ${showHistory ? '▲ Thu lại' : '▼ Mở ra'}
+        </button>
+      </div>
+
+      ${showHistory ? `
+        <div class="history-list">
+          ${entriesHtml}
+          ${hasHistory ? `
+            <button class="danger-button history-clear-btn" data-action="clear-all-history">🗑️ Xóa tất cả lịch sử</button>
+          ` : ""}
+        </div>
+      ` : ""}
+    </section>
   `;
 }
 
@@ -842,6 +936,27 @@ function handleClick(event) {
 
   if (action === "reset-state") {
     resetAllState();
+    return;
+  }
+
+  if (action === "history-toggle") {
+    showHistory = !showHistory;
+    renderHome();
+    return;
+  }
+
+  if (action === "delete-history-entry") {
+    const idx = parseInt(button.dataset.index, 10);
+    if (!isNaN(idx)) {
+      deleteHistoryEntry(idx);
+      renderHome();
+    }
+    return;
+  }
+
+  if (action === "clear-all-history") {
+    clearHistory();
+    renderHome();
     return;
   }
 
@@ -1184,6 +1299,9 @@ function toggleBookmark(questionId) {
 function submitSession(session) {
   const submittedSession = { ...session, submitted: true };
   const summary = scoreSession(submittedSession, state.questions);
+
+  // Save to history
+  saveHistory(summary, session);
 
   state.persisted.session = submittedSession;
   state.persisted.lastResult = summary;
