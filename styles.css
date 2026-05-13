@@ -1307,7 +1307,8 @@ mark.keyword-danger {
   color: var(--danger);
 }
 
-.history-delete-btn {
+.history-delete-btn,
+.history-detail-btn {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -1316,7 +1317,8 @@ mark.keyword-danger {
   transition: opacity .2s, transform .2s;
   padding: 4px;
 }
-.history-delete-btn:hover {
+.history-delete-btn:hover,
+.history-detail-btn:hover {
   opacity: 1;
   transform: scale(1.1);
 }

@@ -171,7 +171,7 @@ function loadHistory() {
   return Array.isArray(data) ? data : [];
 }
 
-function saveHistory(summary, session) {
+function saveHistory(summary, session, wrongReview = []) {
   const history = loadHistory();
   const modeLabel =
     session.mode === "wrong-only" ? "Ôn câu sai" :
@@ -189,7 +189,8 @@ function saveHistory(summary, session) {
     unanswered: summary.unansweredCount,
     percent: session.order.length > 0
       ? Math.round((summary.correctCount / session.order.length) * 100)
-      : 0
+      : 0,
+    wrongReview
   };
 
   history.unshift(entry);
@@ -584,6 +585,7 @@ function renderHistorySection(history) {
             </div>
             <div class="history-entry__right">
               <span class="history-score ${scoreClass}">${h.correct}/${h.total} · ${h.percent}%</span>
+              ${h.wrongReview && h.wrongReview.length > 0 ? `<button class="history-detail-btn" data-action="view-history-detail" data-index="${i}" title="Xem chi tiết">🔍</button>` : ""}
               <button class="history-delete-btn" data-action="delete-history-entry" data-index="${i}" title="Xóa lần này">🗑️</button>
             </div>
           </div>
@@ -881,6 +883,39 @@ function renderWrongItem(item) {
   `;
 }
 
+function renderHistoryDetail(index) {
+  currentView = "history-detail";
+  const history = loadHistory();
+  const entry = history[index];
+
+  if (!entry) {
+    renderHome();
+    return;
+  }
+
+  const d = new Date(entry.ts);
+  const dateStr = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+
+  app.innerHTML = `
+    <section class="result-panel">
+      <div class="result-header">
+        <h2>Chi tiết lần làm bài</h2>
+        <p class="result-copy">Thời gian: ${escapeHtml(dateStr)} · Chế độ: ${escapeHtml(entry.mode)}</p>
+        <p class="result-copy">Đúng: <strong>${entry.correct}/${entry.total} (${entry.percent}%)</strong></p>
+      </div>
+
+      <div class="button-row">
+        <button class="ghost-button" data-action="go-home">🏠 Về trang chính</button>
+      </div>
+
+      <div class="review-list">
+        <h3 style="margin: 16px 0 0; color: var(--muted); font-size: 1.1rem;">Các câu trả lời sai</h3>
+        ${entry.wrongReview && entry.wrongReview.length ? entry.wrongReview.map(renderWrongItem).join("") : "<p>Không có câu sai.</p>"}
+      </div>
+    </section>
+  `;
+}
+
 // ── Event Handlers ────────────────────────────────────────────────────────────
 function handleClick(event) {
   const button = event.target.closest("[data-action]");
@@ -942,6 +977,14 @@ function handleClick(event) {
   if (action === "history-toggle") {
     showHistory = !showHistory;
     renderHome();
+    return;
+  }
+
+  if (action === "view-history-detail") {
+    const idx = parseInt(button.dataset.index, 10);
+    if (!isNaN(idx)) {
+      renderHistoryDetail(idx);
+    }
     return;
   }
 
@@ -1299,9 +1342,10 @@ function toggleBookmark(questionId) {
 function submitSession(session) {
   const submittedSession = { ...session, submitted: true };
   const summary = scoreSession(submittedSession, state.questions);
+  const wrongReview = buildWrongAnswerReview(state.questions, submittedSession);
 
   // Save to history
-  saveHistory(summary, session);
+  saveHistory(summary, session, wrongReview);
 
   state.persisted.session = submittedSession;
   state.persisted.lastResult = summary;
