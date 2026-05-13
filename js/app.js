@@ -152,72 +152,14 @@ function isClinicalQuestion(questionText) {
 }
 // ── Kết thúc Keyword Highlight ───────────────────────────────────────────────
 
-// ── Stats / History tracking ─────────────────────────────────────────────────
-function getTodayStr() {
-  return new Date().toISOString().slice(0, 10);
-}
 
-function updateStudyHistory(stats, summary, totalInSession) {
-  const today = getTodayStr();
-  const newHistory = [...(stats.history || [])];
-
-  newHistory.push({
-    date: today,
-    correct: summary.correctCount,
-    total: totalInSession,
-    percent: totalInSession > 0 ? Math.round((summary.correctCount / totalInSession) * 100) : 0
-  });
-
-  // Keep only last 10 sessions
-  if (newHistory.length > 10) newHistory.splice(0, newHistory.length - 10);
-
-  // Update wrong frequency
-  const wrongFreq = { ...(stats.wrongFrequency || {}) };
-  for (const w of summary.wrongAnswers) {
-    wrongFreq[w.id] = (wrongFreq[w.id] || 0) + 1;
-  }
-
-  // Calculate streak
-  const lastDate = stats.lastStudyDate;
-  let streak = stats.streak || 0;
-  if (lastDate === today) {
-    // already counted today
-  } else {
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayStr = yesterday.toISOString().slice(0, 10);
-    if (lastDate === yesterdayStr) {
-      streak += 1;
-    } else {
-      streak = 1;
-    }
-  }
-
-  return {
-    history: newHistory,
-    wrongFrequency: wrongFreq,
-    streak,
-    lastStudyDate: today
-  };
-}
-
-function getTopWrongQuestions(wrongFreq, questionsById, limit = 5) {
-  return Object.entries(wrongFreq)
-    .sort(([, a], [, b]) => b - a)
-    .slice(0, limit)
-    .map(([id, count]) => ({ id: Number(id), count, question: questionsById.get(Number(id)) }))
-    .filter(item => item.question);
-}
-// ── Kết thúc Stats ───────────────────────────────────────────────────────────
 
 const app = document.querySelector("#app");
 const STORAGE_KEY = "htbt-quiz-app-state";
-const STATS_KEY = "htbt-quiz-app-stats";
 const HOME_PAGE_URL = "./index.html";
 const QUIZ_PAGE_URL = "./quiz.html";
 const pageMode = document.body.dataset.page === "quiz" ? "quiz" : "home";
 const storage = createQuizStorage(window.localStorage, STORAGE_KEY);
-const statsStorage = createQuizStorage(window.localStorage, STATS_KEY);
 
 const state = {
   questions: [],
@@ -241,12 +183,6 @@ const state = {
     lastResult: null,
     bookmarks: []
   },
-  stats: {
-    history: [],
-    wrongFrequency: {},
-    streak: 0,
-    lastStudyDate: null
-  }
 };
 
 // Track current view for keyboard handler
@@ -293,7 +229,6 @@ async function init() {
 
 function hydratePersistedState() {
   const saved = storage.load();
-  const savedStats = statsStorage.load();
 
   if (saved && typeof saved === "object") {
     const savedSettings = saved.settings ?? {};
@@ -322,16 +257,6 @@ function hydratePersistedState() {
       session: saved.session ?? null,
       lastResult: saved.lastResult ?? null,
       bookmarks: Array.isArray(saved.bookmarks) ? saved.bookmarks : []
-    };
-  }
-
-  if (savedStats && typeof savedStats === "object") {
-    state.stats = {
-      history: Array.isArray(savedStats.history) ? savedStats.history : [],
-      wrongFrequency: savedStats.wrongFrequency && typeof savedStats.wrongFrequency === "object"
-        ? savedStats.wrongFrequency : {},
-      streak: savedStats.streak || 0,
-      lastStudyDate: savedStats.lastStudyDate || null
     };
   }
 }
@@ -411,10 +336,6 @@ function persistState() {
   storage.save(state.persisted);
 }
 
-function persistStats() {
-  statsStorage.save(state.stats);
-}
-
 function render() {
   if (state.loading) {
     app.innerHTML = `
@@ -474,15 +395,6 @@ function renderHome() {
     ? formatRangeLabel(session.rangeStart, session.rangeEnd)
     : "";
 
-  // Stats
-  const { history, wrongFrequency, streak } = state.stats;
-  const totalSessions = history.length;
-  const avgPercent = totalSessions > 0
-    ? Math.round(history.reduce((s, h) => s + h.percent, 0) / totalSessions)
-    : null;
-
-  const topWrong = getTopWrongQuestions(wrongFrequency, state.questionsById, 5);
-
   app.innerHTML = `
     <div class="home-grid">
       <section class="stats-grid">
@@ -497,14 +409,6 @@ function renderHome() {
         <article class="stat-card">
           <p class="stat-label">Câu sai gần nhất</p>
           <p class="stat-value">${canReviewWrong ? wrongCount : "0"}</p>
-        </article>
-        <article class="stat-card stat-card--streak">
-          <p class="stat-label">🔥 Streak</p>
-          <p class="stat-value">${streak} ngày</p>
-        </article>
-        <article class="stat-card">
-          <p class="stat-label">Tỷ lệ đúng TB</p>
-          <p class="stat-value">${avgPercent !== null ? `${avgPercent}%` : "—"}</p>
         </article>
         <article class="stat-card stat-card--bookmark">
           <p class="stat-label">⭐ Đánh dấu</p>
@@ -610,67 +514,7 @@ function renderHome() {
       : ""
     }
 
-      ${renderDashboard(history, topWrong)}
     </div>
-  `;
-}
-
-function renderDashboard(history, topWrong) {
-  if (history.length === 0 && topWrong.length === 0) {
-    return `
-      <section class="dashboard-empty">
-        <p>📊 Hoàn thành bài thi đầu tiên để xem thống kê học tập!</p>
-      </section>
-    `;
-  }
-
-  const chartBars = history.length > 0
-    ? history.map((h, i) => {
-      const label = h.date.slice(5); // MM-DD
-      const colorClass = h.percent >= 75 ? "bar--good" : h.percent >= 50 ? "bar--ok" : "bar--bad";
-      return `
-          <div class="chart-column">
-            <div class="bar-wrapper">
-              <span class="bar-value">${h.percent}%</span>
-              <div class="chart-bar ${colorClass}" style="height: ${Math.max(h.percent, 4)}%"></div>
-            </div>
-            <span class="bar-label">#${i + 1}</span>
-          </div>
-        `;
-    }).join("")
-    : "";
-
-  const wrongList = topWrong.length > 0
-    ? topWrong.map(item => `
-        <li class="wrong-freq-item">
-          <span class="wrong-freq-count">${item.count}x</span>
-          <span class="wrong-freq-text">Câu ${item.id}: ${escapeHtml(item.question.question.slice(0, 70))}${item.question.question.length > 70 ? "…" : ""}</span>
-        </li>
-      `).join("")
-    : "";
-
-  return `
-    <section class="dashboard-section">
-      <h3 class="dashboard-title">📊 Thống kê học tập</h3>
-
-      ${history.length > 0 ? `
-        <div class="dashboard-chart-wrap">
-          <p class="dashboard-subtitle">Tỷ lệ đúng theo từng lần làm gần đây</p>
-          <div class="dashboard-chart">
-            ${chartBars}
-          </div>
-        </div>
-      ` : ""}
-
-      ${topWrong.length > 0 ? `
-        <div class="dashboard-wrong-wrap">
-          <p class="dashboard-subtitle">🔴 Câu hay sai nhất</p>
-          <ul class="wrong-freq-list">
-            ${wrongList}
-          </ul>
-        </div>
-      ` : ""}
-    </section>
   `;
 }
 
@@ -1340,10 +1184,6 @@ function toggleBookmark(questionId) {
 function submitSession(session) {
   const submittedSession = { ...session, submitted: true };
   const summary = scoreSession(submittedSession, state.questions);
-
-  // Update stats
-  state.stats = updateStudyHistory(state.stats, summary, session.order.length);
-  persistStats();
 
   state.persisted.session = submittedSession;
   state.persisted.lastResult = summary;
