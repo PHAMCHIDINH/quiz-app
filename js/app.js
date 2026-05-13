@@ -18,141 +18,30 @@ import {
 import { buildWrongAnswerReview } from "./review.js";
 import { createQuizStorage } from "./storage.js";
 import { resolvePageView } from "./page-routing.js";
-
-// ── Cute Reaction System 💖 ──────────────────────────────────────────────────
-const CORRECT_MESSAGES = [
-  { emoji: "💖", text: "Trời ơi đúng luôn á, bé giỏi quá làm tim anh tan chảy mất thôi." },
-  { emoji: "🌷", text: "Đúng đẹp quá nè, nhìn là biết bé thông minh và đáng yêu số một." },
-  { emoji: "✨", text: "Ui mượt ghê á, bé trả lời hay quá nghe mà muốn khen hoài luôn." },
-  { emoji: "🍓", text: "Câu này bé làm ngọt xỉu, xứng đáng được thưởng thật nhiều cái thơm." },
-  { emoji: "🫶", text: "Đúng rồi đó nha, giỏi như này thì ai mà không mê cho được." },
-  { emoji: "🌟", text: "Chuẩn quá luôn, đúng là cục cưng giỏi giang của anh." },
-  { emoji: "🎀", text: "Vừa xinh vừa giỏi nữa chứ, bé làm đúng nghe cưng muốn xỉu." },
-  { emoji: "🍬", text: "Đáp án này bé chốt ngọt như kẹo luôn, chuẩn ơi là chuẩn." },
-  { emoji: "🥰", text: "Đúng rồi nè, thương cái cách bé cố gắng và giỏi lên từng ngày ghê." },
-  { emoji: "💫", text: "Câu này bé xử khéo quá trời, nhìn phát là muốn ôm khen liền." },
-];
-
-const WRONG_MESSAGES = [
-  { emoji: "🫠", text: "Hơi tiếc một xíu thôi nè, nhưng bé ngoan của anh thử lại là được ngay." },
-  { emoji: "💞", text: "Câu này chưa đúng thôi, không sao hết, bé vẫn đáng yêu và cố thêm chút là ra nè." },
-  { emoji: "🌷", text: "Sai nhẹ một chút thôi à, bình tĩnh nha bé, mình làm lại là đúng liền." },
-  { emoji: "🥺", text: "Hong sao đâu nè, câu này chỉ đang thử thách bé chút xíu thôi đó." },
-  { emoji: "🍀", text: "Chưa trúng đáp án rồi, nhưng anh tin bé làm thêm một lần là chuẩn ngay." },
-  { emoji: "🫶", text: "Không sao hết á, bé cố gắng vậy là anh thương lắm rồi, mình thử lại nha." },
-  { emoji: "🌈", text: "Sai một câu không nói lên gì đâu, bé của anh vẫn giỏi và đáng khen lắm." },
-  { emoji: "💗", text: "Ui chưa đúng rồi nè, nhưng không buồn nha, có anh cổ vũ bé đây." },
-  { emoji: "✨", text: "Câu này mình lệch một chút thôi, tập trung lại xíu là bé làm được ngay." },
-  { emoji: "🎀", text: "Chưa đúng nhưng vẫn cưng lắm, bé thử lại thêm lần nữa nha yêu ơi." },
-];
-
-function randomItem(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-function showReactionToast(isCorrect) {
-  const old = document.getElementById("reaction-toast");
-  if (old) old.remove();
-  const msg = isCorrect ? randomItem(CORRECT_MESSAGES) : randomItem(WRONG_MESSAGES);
-  const toast = document.createElement("div");
-  toast.id = "reaction-toast";
-  toast.className = isCorrect
-    ? "reaction-toast reaction-toast--correct"
-    : "reaction-toast reaction-toast--wrong";
-  toast.innerHTML = `<span class="toast-emoji">${msg.emoji}</span><span class="toast-text">${msg.text}</span>`;
-  document.body.appendChild(toast);
-  requestAnimationFrame(() => toast.classList.add("reaction-toast--show"));
-  setTimeout(() => {
-    toast.classList.remove("reaction-toast--show");
-    setTimeout(() => toast.remove(), 400);
-  }, 2600);
-}
-
-function launchConfetti() {
-  const colors = ["#6366f1", "#10b981", "#f59e0b", "#ec4899", "#3b82f6", "#a855f7"];
-  for (let i = 0; i < 60; i++) {
-    const el = document.createElement("div");
-    el.className = "confetti-piece";
-    el.style.cssText = [
-      `left:${Math.random() * 100}vw`,
-      `background:${colors[Math.floor(Math.random() * colors.length)]}`,
-      `animation-duration:${0.9 + Math.random() * 1.2}s`,
-      `animation-delay:${Math.random() * 0.4}s`,
-      `width:${6 + Math.random() * 8}px`,
-      `height:${6 + Math.random() * 8}px`,
-      `border-radius:${Math.random() > 0.5 ? "50%" : "2px"}`,
-    ].join(";");
-    document.body.appendChild(el);
-    setTimeout(() => el.remove(), 2400);
-  }
-}
-
-function shakeCard() {
-  const card = document.querySelector(".question-card");
-  if (!card) return;
-  card.classList.remove("shake-anim");
-  void card.offsetWidth;
-  card.classList.add("shake-anim");
-  setTimeout(() => card.classList.remove("shake-anim"), 600);
-}
-
-function getResultEvaluation(percent) {
-  if (percent === 100) return {
-    emoji: "🏆", grade: "Hoàn Hảo Luôn!",
-    msg: "Ôi trời! Bé đạt 100 điểm rồi!! Tự hào về bé lắm luôn~ Bé là thiên tài ôn bài đó! 🥰",
-  };
-  if (percent >= 90) return {
-    emoji: "🌟", grade: "Xuất Sắc!",
-    msg: "Bé giỏi quá trời! Trả lời đúng gần hết rồi đó. Anh hãnh diện về bé lắm~ 💖",
-  };
-  if (percent >= 75) return {
-    emoji: "🎉", grade: "Rất Tốt Bé ơi!",
-    msg: "Bé học giỏi lắm rồi! Cố thêm một chút xíu nữa là điểm cao thôi~",
-  };
-  if (percent >= 60) return {
-    emoji: "💪", grade: "Khá Đấy Bé!",
-    msg: "Được rồi nhỉ! Tuy nhiên còn mấy câu cần ôn thêm. Bé ôn lại phần sai rồi thử lại nhé~",
-  };
-  if (percent >= 40) return {
-    emoji: "🌱", grade: "Cần Cố Thêm!",
-    msg: "Hmm bé ơi, hôm nay chưa tập trung lắm hả? Thử lại một lần nữa nhé, bé làm được mà! 🤗",
-  };
-  return {
-    emoji: "🫂", grade: "Cùng Ôn Lại Nào!",
-    msg: "Không sao đâu bé ơi! Lần đầu ai cũng vậy thôi. Bé ôn lại rồi làm lại nhé. Anh tin bé làm được! 💕",
-  };
-}
-// ── Kết thúc Reaction System ─────────────────────────────────────────────────
-
-// ── Keyword Highlight & Clinical Detection ───────────────────────────────────
-const DANGER_KEYWORDS = [
-  "không", "ngoại trừ", "không phải", "không đúng", "không có",
-  "không gặp", "không xảy ra", "sai", "không bao giờ", "trừ", "không thuộc"
-];
-
-function highlightKeywords(text) {
-  let result = escapeHtml(text);
-  // Sort longest first so "không phải" matches before "không"
-  const sorted = [...DANGER_KEYWORDS].sort((a, b) => b.length - a.length);
-  const pattern = new RegExp(
-    `(${sorted.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`,
-    'gi'
-  );
-  result = result.replace(pattern, '<mark class="keyword-danger">$1</mark>');
-  return result;
-}
-
-function isClinicalQuestion(questionText) {
-  const clinicalPrefixes = [
-    "bệnh nhân", "bệnh nhi", "người bệnh", "nb nam", "nb nữ", "bn nam", "bn nữ",
-    "anh ", "chị ", "cháu ", "em bé"
-  ];
-  const lower = questionText.toLowerCase();
-  return clinicalPrefixes.some(p => lower.startsWith(p) || lower.includes(p));
-}
-// ── Kết thúc Keyword Highlight ───────────────────────────────────────────────
-
-
+import {
+  escapeHtml,
+  countAnswered,
+  clampIndex,
+  isValidOptionOrder
+} from "./utils.js";
+import {
+  showReactionToast,
+  launchConfetti,
+  shakeCard
+} from "./reactions.js";
+import {
+  loadHistory,
+  saveHistory,
+  deleteHistoryEntry,
+  clearHistory
+} from "./history.js";
+import {
+  render as renderView,
+  renderHome as renderHomeView,
+  renderQuiz as renderQuizView,
+  renderResults as renderResultsView,
+  renderHistoryDetail as renderHistoryDetailView
+} from "./views.js";
 
 const app = document.querySelector("#app");
 const STORAGE_KEY = "htbt-quiz-app-state";
@@ -162,52 +51,6 @@ const QUIZ_PAGE_URL = "./quiz.html";
 const pageMode = document.body.dataset.page === "quiz" ? "quiz" : "home";
 const storage = createQuizStorage(window.localStorage, STORAGE_KEY);
 const historyStorage = createQuizStorage(window.localStorage, HISTORY_KEY);
-
-// ── History helpers ───────────────────────────────────────────────────────────
-const MAX_HISTORY = 30;
-
-function loadHistory() {
-  const data = historyStorage.load();
-  return Array.isArray(data) ? data : [];
-}
-
-function saveHistory(summary, session, wrongReview = []) {
-  const history = loadHistory();
-  const modeLabel =
-    session.mode === "wrong-only" ? "Ôn câu sai" :
-      session.mode === "bookmark" ? "Câu đánh dấu" :
-        (session.rangeStart && session.rangeEnd)
-          ? `Câu ${session.rangeStart}–${session.rangeEnd}`
-          : "Toàn bộ đề";
-
-  const entry = {
-    ts: Date.now(),
-    mode: modeLabel,
-    total: session.order.length,
-    correct: summary.correctCount,
-    incorrect: summary.incorrectCount,
-    unanswered: summary.unansweredCount,
-    percent: session.order.length > 0
-      ? Math.round((summary.correctCount / session.order.length) * 100)
-      : 0,
-    wrongReview
-  };
-
-  history.unshift(entry);
-  if (history.length > MAX_HISTORY) history.splice(MAX_HISTORY);
-  historyStorage.save(history);
-}
-
-function deleteHistoryEntry(index) {
-  const history = loadHistory();
-  history.splice(index, 1);
-  historyStorage.save(history);
-}
-
-function clearHistory() {
-  historyStorage.save([]);
-}
-// ── Kết thúc History helpers ──────────────────────────────────────────────────
 
 const state = {
   questions: [],
@@ -234,7 +77,7 @@ const state = {
 };
 
 // Track current view for keyboard handler
-let currentView = "home"; // "home" | "quiz" | "results"
+let currentView = "home"; // "home" | "quiz" | "results" | "history-detail"
 // Show/hide question map
 let showQuestionMap = false;
 // Show/hide history section
@@ -251,13 +94,10 @@ async function init() {
 
   try {
     const response = await fetch("./data/questions.json");
-
     if (!response.ok) {
       throw new Error(`Khong the tai data/questions.json (${response.status})`);
     }
-
     const questions = await response.json();
-
     if (!Array.isArray(questions) || questions.length === 0) {
       throw new Error("data/questions.json khong co du lieu hop le.");
     }
@@ -279,7 +119,6 @@ async function init() {
 
 function hydratePersistedState() {
   const saved = storage.load();
-
   if (saved && typeof saved === "object") {
     const savedSettings = saved.settings ?? {};
     const hasExplicitRangeStart = savedSettings.rangeStart != null;
@@ -313,11 +152,9 @@ function hydratePersistedState() {
 
 function sanitizePersistedSession() {
   const session = state.persisted.session;
-
   if (!session) return;
 
   const hasImmediateFeedback = !session.fastMode && Boolean(session.immediateFeedback);
-
   const validOrder = Array.isArray(session.order)
     ? session.order.filter((id) => state.questionsById.has(id))
     : [];
@@ -336,17 +173,14 @@ function sanitizePersistedSession() {
   for (const id of validOrder) {
     const savedAnswer = rawAnswers[id];
     const rawOptionOrder = session.optionOrderByQuestion?.[id];
-
     safeOptionOrderByQuestion[id] = isValidOptionOrder(rawOptionOrder)
       ? [...rawOptionOrder]
       : ["A", "B", "C", "D"];
 
     if (["A", "B", "C", "D"].includes(savedAnswer)) {
       safeAnswers[id] = savedAnswer;
-
       if (hasImmediateFeedback) {
         const correctAnswer = state.questionsById.get(id)?.answer;
-
         if (correctAnswer) {
           safeFeedback[id] = {
             selected: savedAnswer,
@@ -378,7 +212,6 @@ function buildLoadErrorMessage(error) {
     window.location.protocol === "file:"
       ? "Ban can mo app bang local server, vi fetch data/questions.json se khong on dinh khi mo truc tiep file://."
       : "";
-
   return [error.message, protocolHint].filter(Boolean).join(" ");
 }
 
@@ -387,539 +220,55 @@ function persistState() {
 }
 
 function render() {
-  if (state.loading) {
-    app.innerHTML = `
-      <div class="status-block">
-        <div class="loading-spinner"></div>
-        <p>Đang tải dữ liệu câu hỏi...</p>
-      </div>
-    `;
-    return;
-  }
-
-  if (state.error) {
-    app.innerHTML = `
-      <div class="error-state">
-        <div class="warning-box">
-          <strong>Không thể khởi tạo app.</strong>
-          <p>${escapeHtml(state.error)}</p>
-        </div>
-      </div>
-    `;
-    return;
-  }
-
-  const session = state.persisted.session;
-  const pageView = resolvePageView(pageMode, session);
-
-  if (pageView === "home") {
-    renderHome();
-    return;
-  }
-
-  if (pageView === "redirect-home") {
-    redirectToHomePage();
-    return;
-  }
-
-  if (pageView === "quiz") {
-    renderQuiz(session);
-    return;
-  }
-
-  renderResults(session);
+  renderView(app, state, {
+    pageMode,
+    session: state.persisted.session,
+    historyStorage,
+    showHistory,
+    showQuestionMap,
+    redirectToHomePage,
+    renderHome,
+    renderQuiz,
+    renderResults
+  });
 }
 
-// ── Home ─────────────────────────────────────────────────────────────────────
 function renderHome() {
   currentView = "home";
-  const session = state.persisted.session;
-  const lastResult = state.persisted.lastResult;
-  const wrongCount = lastResult?.wrongAnswers?.length ?? 0;
-  const canContinue = Boolean(session && !session.submitted);
-  const canReviewWrong = wrongCount > 0;
-  const bookmarkCount = state.persisted.bookmarks.length;
-  const answeredCount = session ? countAnswered(session) : 0;
-  const rangePresets = buildRangePresets(state.questions.length);
-  const sessionRangeLabel = session?.rangeStart && session?.rangeEnd
-    ? formatRangeLabel(session.rangeStart, session.rangeEnd)
-    : "";
-
-  app.innerHTML = `
-    <div class="home-grid">
-      <section class="stats-grid">
-        <article class="stat-card">
-          <p class="stat-label">Tổng câu hỏi</p>
-          <p class="stat-value">${state.questions.length}</p>
-        </article>
-        <article class="stat-card">
-          <p class="stat-label">Tiến độ hiện tại</p>
-          <p class="stat-value">${session && !session.submitted ? `${answeredCount}/${session.order.length}` : "Chưa có"}</p>
-        </article>
-        <article class="stat-card">
-          <p class="stat-label">Câu sai gần nhất</p>
-          <p class="stat-value">${canReviewWrong ? wrongCount : "0"}</p>
-        </article>
-        <article class="stat-card stat-card--bookmark">
-          <p class="stat-label">⭐ Đánh dấu</p>
-          <p class="stat-value">${bookmarkCount}</p>
-        </article>
-      </section>
-
-      <section class="control-row">
-        <label class="toggle-card">
-          <input type="checkbox" data-role="shuffle-toggle" ${state.persisted.settings.shuffleQuestions ? "checked" : ""} />
-          <span>🔀 Trộn thứ tự câu hỏi</span>
-        </label>
-        <label class="toggle-card">
-          <input type="checkbox" data-role="shuffle-options-toggle" ${state.persisted.settings.shuffleOptions ? "checked" : ""} />
-          <span>🔤 Đảo đáp án A/B/C/D</span>
-        </label>
-        <label class="toggle-card">
-          <input type="checkbox" data-role="fast-mode-toggle" ${state.persisted.settings.fastMode ? "checked" : ""} />
-          <span>⏩ Làm nhanh</span>
-        </label>
-        <label class="toggle-card">
-          <input type="checkbox" data-role="instant-feedback-toggle" ${state.persisted.settings.immediateFeedback ? "checked" : ""} />
-          <span>⚡ Báo đúng/sai ngay sau khi chọn</span>
-        </label>
-      </section>
-
-      <section class="setup-card">
-        <div>
-          <h3>🚀 Bắt đầu theo khoảng câu</h3>
-          <p class="subtle-text">
-            Chọn khoảng câu muốn luyện, nhập trực tiếp hoặc bấm preset để bắt đầu nhanh.
-          </p>
-        </div>
-
-        <div class="range-input-row">
-          <label class="input-stack" for="range-start-input">
-            <span>Từ câu</span>
-            <input
-              id="range-start-input"
-              class="number-input"
-              type="number"
-              min="1"
-              max="${state.questions.length}"
-              step="1"
-              value="${escapeHtml(state.persisted.settings.rangeStart)}"
-              data-role="range-start"
-            />
-          </label>
-          <label class="input-stack" for="range-end-input">
-            <span>Đến câu</span>
-            <input
-              id="range-end-input"
-              class="number-input"
-              type="number"
-              min="1"
-              max="${state.questions.length}"
-              step="1"
-              value="${escapeHtml(state.persisted.settings.rangeEnd)}"
-              data-role="range-end"
-            />
-          </label>
-          <button class="secondary-button" data-action="start-range">Bắt đầu</button>
-        </div>
-
-        ${state.ui.setupError
-      ? `<p class="setup-inline-error" role="alert">${escapeHtml(state.ui.setupError)}</p>`
-      : ""}
-
-        <div class="range-preset-row">
-          ${rangePresets.map((preset) => `
-            <button
-              class="ghost-button"
-              data-action="start-range-preset"
-              data-range-start="${preset.start}"
-              data-range-end="${preset.end}"
-            >
-              ${escapeHtml(preset.label)}
-            </button>
-          `).join("")}
-        </div>
-      </section>
-
-      <section class="button-row">
-        <button class="ghost-button" data-action="continue-session" ${canContinue ? "" : "disabled"}>
-          ▶️ Tiếp tục
-        </button>
-        <button class="secondary-button" data-action="review-wrong" ${canReviewWrong ? "" : "disabled"}>
-          🎯 Ôn lại câu sai
-        </button>
-        <button class="bookmark-button" data-action="review-bookmarks" ${bookmarkCount > 0 ? "" : "disabled"}>
-          ⭐ Ôn câu đánh dấu (${bookmarkCount})
-        </button>
-        <button class="danger-button" data-action="reset-state" ${canContinue || canReviewWrong || bookmarkCount > 0 ? "" : "disabled"}>
-          🗑️ Xóa tiến độ
-        </button>
-      </section>
-
-      ${session
-      ? `<p class="subtle-text">
-              Trạng thái lưu hiện tại:
-              <strong>${session.submitted ? "Đã nộp bài" : "Đang làm"}</strong>${sessionRangeLabel ? ` · Khoảng ${escapeHtml(sessionRangeLabel)}` : ""}.
-            </p>`
-      : ""
-    }
-
-      ${renderHistorySection(loadHistory())}
-    </div>
-  `;
+  renderHomeView(app, state, {
+    session: state.persisted.session,
+    lastResult: state.persisted.lastResult,
+    bookmarks: state.persisted.bookmarks,
+    historyStorage,
+    showHistory
+  });
 }
 
-function renderHistorySection(history) {
-  const hasHistory = history.length > 0;
-
-  const entriesHtml = hasHistory
-    ? history.map((h, i) => {
-      const d = new Date(h.ts);
-      const dateStr = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-      const scoreClass = h.percent >= 75 ? 'history-score--good' : h.percent >= 50 ? 'history-score--ok' : 'history-score--bad';
-      return `
-          <div class="history-entry">
-            <div class="history-entry__info">
-              <span class="history-entry__date">${escapeHtml(dateStr)}</span>
-              <span class="history-entry__mode">${escapeHtml(h.mode)}</span>
-            </div>
-            <div class="history-entry__right">
-              <span class="history-score ${scoreClass}">${h.correct}/${h.total} · ${h.percent}%</span>
-              ${h.wrongReview && h.wrongReview.length > 0 ? `<button class="history-detail-btn" data-action="view-history-detail" data-index="${i}" title="Xem chi tiết">🔍</button>` : ""}
-              <button class="history-delete-btn" data-action="delete-history-entry" data-index="${i}" title="Xóa lần này">🗑️</button>
-            </div>
-          </div>
-        `;
-    }).join("")
-    : `<p class="history-empty">Chưa có lịch sử. Hoàn thành một bài thi để bắt đầu!</p>`;
-
-  return `
-    <section class="history-section">
-      <div class="history-header">
-        <h3 class="history-title">📋 Lịch sử làm bài ${hasHistory ? `<span class="history-count">(${history.length})</span>` : ""}</h3>
-        <button class="history-toggle-btn" data-action="history-toggle">
-          ${showHistory ? '▲ Thu lại' : '▼ Mở ra'}
-        </button>
-      </div>
-
-      ${showHistory ? `
-        <div class="history-list">
-          ${entriesHtml}
-          ${hasHistory ? `
-            <button class="danger-button history-clear-btn" data-action="clear-all-history">🗑️ Xóa tất cả lịch sử</button>
-          ` : ""}
-        </div>
-      ` : ""}
-    </section>
-  `;
-}
-
-// ── Quiz ─────────────────────────────────────────────────────────────────────
 function renderQuiz(session) {
   currentView = "quiz";
-  const currentQuestionId = session.order[session.currentIndex];
-  const question = state.questionsById.get(currentQuestionId);
-  const selected = session.answers[currentQuestionId] ?? "";
-  const feedback = session.feedbackByQuestion?.[currentQuestionId] ?? null;
-  const isLocked = Boolean(session.immediateFeedback && feedback);
-  const answeredCount = countAnswered(session);
-  const progressPercent = Math.round(((session.currentIndex + 1) / session.order.length) * 100);
-  const isBookmarked = state.persisted.bookmarks.includes(currentQuestionId);
-  const isClinical = isClinicalQuestion(question.question);
-  const displayedOptions = getDisplayedOptions(question, session, currentQuestionId);
-  const selectedDisplay = selected
-    ? mapOriginalChoiceToDisplay(session, currentQuestionId, selected)
-    : "";
-  const correctDisplay = feedback
-    ? mapOriginalChoiceToDisplay(session, currentQuestionId, feedback.correct)
-    : "";
-  const rangeLabel = session.rangeStart && session.rangeEnd
-    ? formatRangeLabel(session.rangeStart, session.rangeEnd)
-    : "";
-
-  const selectionButtons = displayedOptions
-    .map(({ label, text }) => {
-      const isSelected = selectedDisplay === label;
-      const isCorrectChoice = feedback && correctDisplay === label;
-      const isWrongSelected = feedback && selectedDisplay === label && !feedback.isCorrect;
-      return `
-        <button
-          class="option-button ${isSelected ? "is-selected" : ""} ${isCorrectChoice ? "is-correct" : isWrongSelected ? "is-wrong" : ""}"
-          data-action="select-answer"
-          data-choice="${label}"
-          data-question-id="${question.id}"
-          ${isLocked ? "disabled" : ""}
-        >
-          <span class="option-letter">${label}</span>
-          <span class="option-copy">${highlightKeywords(text)}</span>
-        </button>
-      `;
-    })
-    .join("");
-
-  // Mini question map
-  const mapDots = session.order.map((qId, idx) => {
-    const isAnswered = Boolean(session.answers[qId]);
-    const isBookmarkedDot = state.persisted.bookmarks.includes(qId);
-    const isCurrent = idx === session.currentIndex;
-    const dotClass = [
-      "qmap-dot",
-      isCurrent ? "qmap-dot--current" : "",
-      isAnswered ? "qmap-dot--answered" : "",
-      isBookmarkedDot ? "qmap-dot--bookmarked" : ""
-    ].filter(Boolean).join(" ");
-    return `<button class="${dotClass}" data-action="jump-to-question" data-index="${idx}" title="Câu ${idx + 1}${isBookmarkedDot ? " ⭐" : ""}"></button>`;
-  }).join("");
-
-  app.innerHTML = `
-    <section class="quiz-panel">
-      <div class="quiz-header-row">
-        <div>
-          <h2>📝 Làm bài</h2>
-          <p class="quiz-meta">
-            Câu ${session.currentIndex + 1}/${session.order.length} · Đã trả lời ${answeredCount}/${session.order.length}
-          </p>
-          ${rangeLabel ? `<p class="quiz-range-label">Khoảng học: ${escapeHtml(rangeLabel)}</p>` : ""}
-        </div>
-        <div class="quiz-header-actions">
-          <button class="map-toggle-btn ${showQuestionMap ? "active" : ""}" data-action="toggle-map" title="Bản đồ câu hỏi">
-            🗺️ Bản đồ
-          </button>
-          <div class="kbd-hints">
-            <span class="kbd">A</span><span class="kbd">B</span><span class="kbd">C</span><span class="kbd">D</span>
-            <span class="kbd-sep">·</span>
-            <span class="kbd">←</span><span class="kbd">→</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="progress-bar" aria-hidden="true">
-        <div class="progress-fill" style="width: ${progressPercent}%"></div>
-      </div>
-
-      ${showQuestionMap ? `
-        <div class="question-map">
-          <div class="qmap-legend">
-            <span><span class="qmap-dot qmap-dot--answered" style="display:inline-block"></span> Đã trả lời</span>
-            <span><span class="qmap-dot qmap-dot--bookmarked" style="display:inline-block"></span> Đánh dấu</span>
-            <span><span class="qmap-dot qmap-dot--current" style="display:inline-block"></span> Hiện tại</span>
-          </div>
-          <div class="qmap-grid">${mapDots}</div>
-
-          <div class="quick-jump-row">
-            <label for="quick-jump-input">Nhảy đến câu:</label>
-            <input
-              id="quick-jump-input"
-              class="quick-jump-input"
-              type="number"
-              min="1"
-              max="${session.order.length}"
-              placeholder="1–${session.order.length}"
-              data-role="quick-jump-input"
-            />
-            <button class="ghost-button small-btn" data-action="do-quick-jump">Đi</button>
-          </div>
-        </div>
-      ` : ""}
-
-      <article class="question-card">
-        <div class="question-card-header">
-          <p class="question-number">Câu ${question.id}</p>
-          <div class="question-card-badges">
-            ${isClinical ? '<span class="clinical-badge">🏥 Lâm sàng</span>' : ""}
-            <button class="bookmark-toggle ${isBookmarked ? "is-bookmarked" : ""}" data-action="toggle-bookmark" data-question-id="${currentQuestionId}" title="${isBookmarked ? "Bỏ đánh dấu" : "Đánh dấu câu này"}">
-              ${isBookmarked ? "⭐" : "☆"} ${isBookmarked ? "Đã đánh dấu" : "Đánh dấu"}
-            </button>
-          </div>
-        </div>
-        <p class="question-text">${highlightKeywords(question.question)}</p>
-      </article>
-
-      ${feedback
-      ? `
-            <div class="feedback-banner ${feedback.isCorrect ? "is-correct" : "is-wrong"}">
-              <strong>${feedback.isCorrect ? "✅ Chính xác" : "❌ Sai rồi"}</strong>
-              <p>
-                ${feedback.isCorrect
-        ? "Bạn đã trả lời đúng. Bấm Câu sau để tiếp tục."
-        : `Đáp án đúng là <strong>${correctDisplay}</strong>`
-      }
-              </p>
-            </div>
-          `
-      : ""
-    }
-
-      <div class="options-list">
-        ${selectionButtons}
-      </div>
-
-      <div class="footer-bar">
-        <div class="button-row">
-          <button
-            class="ghost-button"
-            data-action="go-prev"
-            ${session.currentIndex === 0 ? "disabled" : ""}
-          >
-            ← Câu trước
-          </button>
-          <button
-            class="ghost-button"
-            data-action="go-next"
-          >
-            ${session.currentIndex === session.order.length - 1 ? "Đến cuối bài →" : "Câu sau →"}
-          </button>
-        </div>
-
-        <div class="button-row">
-          <button class="danger-button" data-action="go-home">🏠 Về trang chính</button>
-          <button class="button" data-action="submit-quiz">✅ Nộp bài</button>
-        </div>
-      </div>
-    </section>
-  `;
+  renderQuizView(app, session, {
+    questionsById: state.questionsById,
+    bookmarks: state.persisted.bookmarks,
+    showQuestionMap
+  });
 }
 
-// ── Results ───────────────────────────────────────────────────────────────────
 function renderResults(session) {
   currentView = "results";
-  const summary = state.persisted.lastResult ?? scoreSession(session, state.questions);
-  const wrongReview = buildWrongAnswerReview(state.questions, session);
-  const total = session.order.length;
-  const scorePercent = total > 0 ? Math.round((summary.correctCount / total) * 100) : 0;
-  const ev = getResultEvaluation(scorePercent);
-  const hasRangeContext = session.mode === "all" && session.rangeStart && session.rangeEnd;
-  const modeLabel = session.mode === "wrong-only"
-    ? "Ôn câu sai"
-    : session.mode === "bookmark"
-      ? "Câu đánh dấu"
-      : hasRangeContext
-        ? `Khoảng ${formatRangeLabel(session.rangeStart, session.rangeEnd)}`
-        : "Toàn bộ đề";
-  const restartRangeAttrs = hasRangeContext
-    ? ` data-range-start="${session.rangeStart}" data-range-end="${session.rangeEnd}"`
-    : "";
-
-  app.innerHTML = `
-    <section class="result-panel">
-      <div class="result-header">
-        <div class="result-grade-badge">${ev.emoji}</div>
-        <h2>${ev.grade}</h2>
-        <p class="result-copy">
-          Bé đúng ${summary.correctCount}/${total} câu, tương đương ${scorePercent}%.
-        </p>
-        <div class="result-evaluation-msg">${ev.msg}</div>
-      </div>
-
-      <div class="score-grid">
-        <article class="score-card is-correct">
-          <span class="stat-label">Đúng</span>
-          <strong>${summary.correctCount}</strong>
-        </article>
-        <article class="score-card is-wrong">
-          <span class="stat-label">Sai</span>
-          <strong>${summary.incorrectCount}</strong>
-        </article>
-        <article class="score-card">
-          <span class="stat-label">Chưa trả lời</span>
-          <strong>${summary.unansweredCount}</strong>
-        </article>
-        <article class="score-card">
-          <span class="stat-label">Chế độ</span>
-          <strong>${modeLabel}</strong>
-        </article>
-      </div>
-
-      <div class="button-row">
-        <button class="button" data-action="start-new"${restartRangeAttrs}>🔄 Làm lại từ đầu</button>
-        <button class="secondary-button" data-action="review-wrong" ${wrongReview.length ? "" : "disabled"}>
-          🎯 Ôn lại câu sai
-        </button>
-        <button class="ghost-button" data-action="go-home">🏠 Về trang chính</button>
-      </div>
-
-      ${wrongReview.length
-      ? `
-            <div class="review-list">
-              <h3 style="margin: 16px 0 0; color: var(--muted); font-size: 1.1rem;">Nội dung cần ôn tập</h3>
-              ${wrongReview.map(renderWrongItem).join("")}
-            </div>
-          `
-      : `
-            <div class="empty-state">
-              <p>🎉 Tuyệt vời! Không có câu sai để ôn lại.</p>
-            </div>
-          `
-    }
-    </section>
-  `;
-}
-
-function renderWrongItem(item) {
-  const optionList = ["A", "B", "C", "D"]
-    .map((choice) => {
-      const option = item.displayOptions.find((entry) => entry.label === choice);
-      const value = highlightKeywords(option?.text ?? "");
-      const prefix = choice === item.correctDisplay ? "Đúng" : choice === item.selectedDisplay ? "Bạn chọn" : "";
-
-      return `
-        <p class="answer-note ${choice === item.correctDisplay ? "is-correct" : choice === item.selectedDisplay ? "is-wrong" : ""}">
-          <strong>${choice}.</strong> ${value} ${prefix ? `· <em>${prefix}</em>` : ""}
-        </p>
-      `;
-    })
-    .join("");
-
-  const isClinical = isClinicalQuestion(item.question);
-
-  return `
-    <article class="review-item">
-      <h3>
-        ${isClinical ? '<span class="clinical-badge clinical-badge--sm">🏥</span>' : ""}
-        Câu ${item.id}: ${highlightKeywords(item.question)}
-      </h3>
-      ${optionList}
-    </article>
-  `;
+  renderResultsView(app, session, {
+    questions: state.questions,
+    lastResult: state.persisted.lastResult
+  });
 }
 
 function renderHistoryDetail(index) {
   currentView = "history-detail";
-  const history = loadHistory();
-  const entry = history[index];
-
-  if (!entry) {
-    renderHome();
-    return;
-  }
-
-  const d = new Date(entry.ts);
-  const dateStr = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-
-  app.innerHTML = `
-    <section class="result-panel">
-      <div class="result-header">
-        <h2>Chi tiết lần làm bài</h2>
-        <p class="result-copy">Thời gian: ${escapeHtml(dateStr)} · Chế độ: ${escapeHtml(entry.mode)}</p>
-        <p class="result-copy">Đúng: <strong>${entry.correct}/${entry.total} (${entry.percent}%)</strong></p>
-      </div>
-
-      <div class="button-row">
-        <button class="ghost-button" data-action="go-home">🏠 Về trang chính</button>
-      </div>
-
-      <div class="review-list">
-        <h3 style="margin: 16px 0 0; color: var(--muted); font-size: 1.1rem;">Các câu trả lời sai</h3>
-        ${entry.wrongReview && entry.wrongReview.length ? entry.wrongReview.map(renderWrongItem).join("") : "<p>Không có câu sai.</p>"}
-      </div>
-    </section>
-  `;
+  const success = renderHistoryDetailView(app, historyStorage, index);
+  if (!success) renderHome();
 }
 
-// ── Event Handlers ────────────────────────────────────────────────────────────
 function handleClick(event) {
   const button = event.target.closest("[data-action]");
-
   if (!button || state.loading || state.error) return;
 
   const { action } = button.dataset;
@@ -929,91 +278,69 @@ function handleClick(event) {
       startRangeSession(button.dataset.rangeStart, button.dataset.rangeEnd);
       return;
     }
-
-    if (button.dataset.count === "all" || !button.dataset.count) {
-      startRangeSession("1", String(state.questions.length));
-      return;
-    }
-
-    startRangeSession("1", String(button.dataset.count));
+    startRangeSession("1", String(button.dataset.count || state.questions.length));
     return;
   }
-
   if (action === "start-custom") {
     startRangeSession("1", String(state.persisted.settings.rangeEnd));
     return;
   }
-
   if (action === "start-range") {
     startRangeSession();
     return;
   }
-
   if (action === "start-range-preset") {
     startRangeSession(button.dataset.rangeStart, button.dataset.rangeEnd);
     return;
   }
-
   if (action === "continue-session") {
     navigateToQuizPage();
     return;
   }
-
   if (action === "review-wrong") {
     startReviewWrongSession();
     return;
   }
-
   if (action === "review-bookmarks") {
     startBookmarkSession();
     return;
   }
-
   if (action === "reset-state") {
     resetAllState();
     return;
   }
-
   if (action === "history-toggle") {
     showHistory = !showHistory;
     renderHome();
     return;
   }
-
   if (action === "view-history-detail") {
     const idx = parseInt(button.dataset.index, 10);
-    if (!isNaN(idx)) {
-      renderHistoryDetail(idx);
-    }
+    if (!isNaN(idx)) renderHistoryDetail(idx);
     return;
   }
-
   if (action === "delete-history-entry") {
     const idx = parseInt(button.dataset.index, 10);
     if (!isNaN(idx)) {
-      deleteHistoryEntry(idx);
+      deleteHistoryEntry(historyStorage, idx);
       renderHome();
     }
     return;
   }
-
   if (action === "clear-all-history") {
-    clearHistory();
+    clearHistory(historyStorage);
     renderHome();
     return;
   }
-
   if (action === "go-home") {
     navigateToHomePage();
     return;
   }
-
   if (action === "toggle-map") {
     showQuestionMap = !showQuestionMap;
     renderQuiz(state.persisted.session);
     return;
   }
-
   if (action === "jump-to-question") {
     const idx = parseInt(button.dataset.index, 10);
     if (!isNaN(idx)) {
@@ -1023,7 +350,6 @@ function handleClick(event) {
     }
     return;
   }
-
   if (action === "do-quick-jump") {
     const input = document.getElementById("quick-jump-input");
     if (input) {
@@ -1036,114 +362,71 @@ function handleClick(event) {
     }
     return;
   }
-
   if (action === "toggle-bookmark") {
-    const questionId = Number(button.dataset.questionId);
-    toggleBookmark(questionId);
+    toggleBookmark(Number(button.dataset.questionId));
     renderQuiz(state.persisted.session);
     return;
   }
 
   const session = state.persisted.session;
-
   if (!session || session.submitted) return;
 
   if (action === "select-answer") {
-    const questionId = Number(button.dataset.questionId);
-    handleAnswerSelection(session, questionId, button.dataset.choice);
+    handleAnswerSelection(session, Number(button.dataset.questionId), button.dataset.choice);
     return;
   }
-
   if (action === "go-prev") {
     state.persisted.session = goToQuestion(session, session.currentIndex - 1);
     persistState();
     renderQuiz(state.persisted.session);
     return;
   }
-
   if (action === "go-next") {
     state.persisted.session = goToQuestion(session, session.currentIndex + 1);
     persistState();
     renderQuiz(state.persisted.session);
     return;
   }
-
   if (action === "submit-quiz") {
     submitSession(session);
   }
 }
 
 function handleChange(event) {
-  const toggle = event.target.closest("[data-role='shuffle-toggle']");
-  const shuffleOptionsToggle = event.target.closest("[data-role='shuffle-options-toggle']");
-  const fastModeToggle = event.target.closest("[data-role='fast-mode-toggle']");
-  const instantFeedbackToggle = event.target.closest("[data-role='instant-feedback-toggle']");
-  const rangeStartInput = event.target.closest("[data-role='range-start']");
-  const rangeEndInput = event.target.closest("[data-role='range-end']");
-  const customQuestionCountInput = event.target.closest("[data-role='custom-question-count']");
+  const target = event.target;
+  const role = target.dataset.role;
 
-  if (toggle) {
-    state.persisted.settings.shuffleQuestions = toggle.checked;
-    persistState();
-    if (currentView === "home") renderHome();
-  }
-
-  if (shuffleOptionsToggle) {
-    state.persisted.settings.shuffleOptions = shuffleOptionsToggle.checked;
-    persistState();
-    if (currentView === "home") renderHome();
-  }
-
-  if (fastModeToggle) {
-    state.persisted.settings.fastMode = fastModeToggle.checked;
-
-    if (fastModeToggle.checked) {
-      state.persisted.settings.immediateFeedback = false;
-    }
-
-    persistState();
-    if (currentView === "home") renderHome();
-  }
-
-  if (instantFeedbackToggle) {
-    state.persisted.settings.immediateFeedback = instantFeedbackToggle.checked;
-
-    if (instantFeedbackToggle.checked) {
-      state.persisted.settings.fastMode = false;
-    }
-
-    persistState();
-    if (currentView === "home") renderHome();
-  }
-
-  if (rangeStartInput) {
-    state.persisted.settings.rangeStart = rangeStartInput.value;
+  if (role === 'shuffle-toggle') {
+    state.persisted.settings.shuffleQuestions = target.checked;
+  } else if (role === 'shuffle-options-toggle') {
+    state.persisted.settings.shuffleOptions = target.checked;
+  } else if (role === 'fast-mode-toggle') {
+    state.persisted.settings.fastMode = target.checked;
+    if (target.checked) state.persisted.settings.immediateFeedback = false;
+  } else if (role === 'instant-feedback-toggle') {
+    state.persisted.settings.immediateFeedback = target.checked;
+    if (target.checked) state.persisted.settings.fastMode = false;
+  } else if (role === 'range-start') {
+    state.persisted.settings.rangeStart = target.value;
     state.ui.setupError = "";
-    persistState();
-    if (currentView === "home") renderHome();
-  }
-
-  if (rangeEndInput) {
-    state.persisted.settings.rangeEnd = rangeEndInput.value;
+  } else if (role === 'range-end') {
+    state.persisted.settings.rangeEnd = target.value;
     state.ui.setupError = "";
-    persistState();
-    if (currentView === "home") renderHome();
-  }
-
-  if (customQuestionCountInput) {
+  } else if (role === 'custom-question-count') {
     state.persisted.settings.rangeStart = "1";
-    state.persisted.settings.rangeEnd = customQuestionCountInput.value;
+    state.persisted.settings.rangeEnd = target.value;
     state.ui.setupError = "";
-    persistState();
+  } else {
+    return;
   }
+
+  persistState();
+  if (currentView === "home") renderHome();
 }
 
-// ── Keyboard Shortcuts ────────────────────────────────────────────────────────
 function handleKeydown(event) {
-  // Don't capture when typing in an input
   const tag = document.activeElement?.tagName?.toLowerCase();
   if (tag === "input" || tag === "textarea") return;
-
   if (currentView !== "quiz") return;
 
   const session = state.persisted.session;
@@ -1153,52 +436,35 @@ function handleKeydown(event) {
   const feedback = session.feedbackByQuestion?.[currentQuestionId] ?? null;
   const isLocked = Boolean(session.immediateFeedback && feedback);
 
-  switch (event.key) {
+  switch (event.key.toLowerCase()) {
     case "a":
-    case "A":
-      if (!isLocked) selectAnswerByKey(session, currentQuestionId, "A");
-      break;
     case "b":
-    case "B":
-      if (!isLocked) selectAnswerByKey(session, currentQuestionId, "B");
-      break;
     case "c":
-    case "C":
-      if (!isLocked) selectAnswerByKey(session, currentQuestionId, "C");
-      break;
     case "d":
-    case "D":
-      if (!isLocked) selectAnswerByKey(session, currentQuestionId, "D");
+      if (!isLocked) handleAnswerSelection(session, currentQuestionId, event.key.toUpperCase());
       break;
-    case "ArrowRight":
+    case "arrowright":
     case " ":
       event.preventDefault();
       state.persisted.session = goToQuestion(session, session.currentIndex + 1);
       persistState();
       renderQuiz(state.persisted.session);
       break;
-    case "ArrowLeft":
+    case "arrowleft":
       event.preventDefault();
       state.persisted.session = goToQuestion(session, session.currentIndex - 1);
       persistState();
       renderQuiz(state.persisted.session);
       break;
     case "s":
-    case "S":
-      // S = Star = Bookmark toggle
       toggleBookmark(currentQuestionId);
       renderQuiz(state.persisted.session);
       break;
     case "m":
-    case "M":
       showQuestionMap = !showQuestionMap;
       renderQuiz(state.persisted.session);
       break;
   }
-}
-
-function selectAnswerByKey(session, questionId, choice) {
-  handleAnswerSelection(session, questionId, choice);
 }
 
 function handleAnswerSelection(session, questionId, displayChoice) {
@@ -1210,44 +476,37 @@ function handleAnswerSelection(session, questionId, displayChoice) {
   persistState();
 
   const nextStep = getAnswerFlowAction(updatedSession);
-
   if (nextStep === "submit") {
     submitSession(updatedSession);
     return;
   }
-
   if (nextStep === "next") {
     state.persisted.session = goToQuestion(updatedSession, updatedSession.currentIndex + 1);
     persistState();
     renderQuiz(state.persisted.session);
     return;
   }
-
   if (updatedSession.immediateFeedback && correctAnswer) {
     const isCorrect = chosenAnswer === correctAnswer;
     showReactionToast(isCorrect);
     if (isCorrect) launchConfetti();
     else shakeCard();
   }
-
   renderQuiz(state.persisted.session);
 }
 
-// ── Session Management ────────────────────────────────────────────────────────
 function startRangeSession(
   rangeStartValue = state.persisted.settings.rangeStart,
   rangeEndValue = state.persisted.settings.rangeEnd
 ) {
   showQuestionMap = false;
-
   const normalized = normalizeRangeSelection(rangeStartValue, rangeEndValue, state.questions.length);
   const sourceQuestionIds = normalized.isValid
     ? getQuestionIdsForRange(state.questions, normalized.rangeStart, normalized.rangeEnd)
     : [];
 
   if (!normalized.isValid || sourceQuestionIds.length === 0) {
-    state.ui.setupError =
-      normalized.error || "Khoảng câu không hợp lệ. Vui lòng kiểm tra lại từ câu và đến câu.";
+    state.ui.setupError = normalized.error || "Khoảng câu không hợp lệ.";
     renderHome();
     return;
   }
@@ -1267,22 +526,16 @@ function startRangeSession(
   });
   state.persisted.lastResult = null;
   persistState();
-  if (pageMode === "home") {
-    navigateToQuizPage();
-    return;
-  }
-
-  renderQuiz(state.persisted.session);
+  if (pageMode === "home") navigateToQuizPage();
+  else renderQuiz(state.persisted.session);
 }
 
 function startReviewWrongSession() {
   const wrongIds = state.persisted.lastResult?.wrongAnswers?.map((item) => item.id) ?? [];
-
   if (wrongIds.length === 0) {
     render();
     return;
   }
-
   showQuestionMap = false;
   state.ui.setupError = "";
   state.persisted.session = createSession(state.questions, {
@@ -1294,22 +547,16 @@ function startReviewWrongSession() {
     fastMode: state.persisted.settings.fastMode
   });
   persistState();
-  if (pageMode === "home") {
-    navigateToQuizPage();
-    return;
-  }
-
-  renderQuiz(state.persisted.session);
+  if (pageMode === "home") navigateToQuizPage();
+  else renderQuiz(state.persisted.session);
 }
 
 function startBookmarkSession() {
   const bookmarkIds = state.persisted.bookmarks;
-
   if (bookmarkIds.length === 0) {
     renderHome();
     return;
   }
-
   showQuestionMap = false;
   state.ui.setupError = "";
   state.persisted.session = createSession(state.questions, {
@@ -1321,21 +568,14 @@ function startBookmarkSession() {
     fastMode: state.persisted.settings.fastMode
   });
   persistState();
-  if (pageMode === "home") {
-    navigateToQuizPage();
-    return;
-  }
-
-  renderQuiz(state.persisted.session);
+  if (pageMode === "home") navigateToQuizPage();
+  else renderQuiz(state.persisted.session);
 }
 
 function toggleBookmark(questionId) {
   const idx = state.persisted.bookmarks.indexOf(questionId);
-  if (idx === -1) {
-    state.persisted.bookmarks.push(questionId);
-  } else {
-    state.persisted.bookmarks.splice(idx, 1);
-  }
+  if (idx === -1) state.persisted.bookmarks.push(questionId);
+  else state.persisted.bookmarks.splice(idx, 1);
   persistState();
 }
 
@@ -1343,10 +583,7 @@ function submitSession(session) {
   const submittedSession = { ...session, submitted: true };
   const summary = scoreSession(submittedSession, state.questions);
   const wrongReview = buildWrongAnswerReview(state.questions, submittedSession);
-
-  // Save to history
-  saveHistory(summary, session, wrongReview);
-
+  saveHistory(historyStorage, summary, session, wrongReview);
   state.persisted.session = submittedSession;
   state.persisted.lastResult = summary;
   persistState();
@@ -1360,53 +597,13 @@ function resetAllState() {
   state.persisted.bookmarks = [];
   storage.clear();
   persistState();
-  if (pageMode === "quiz") {
-    navigateToHomePage();
-    return;
-  }
-
-  renderHome();
+  if (pageMode === "quiz") navigateToHomePage();
+  else renderHome();
 }
 
-function navigateToQuizPage() {
-  window.location.href = QUIZ_PAGE_URL;
-}
-
-function navigateToHomePage() {
-  window.location.href = HOME_PAGE_URL;
-}
-
+function navigateToQuizPage() { window.location.href = QUIZ_PAGE_URL; }
+function navigateToHomePage() { window.location.href = HOME_PAGE_URL; }
 function redirectToHomePage() {
-  app.innerHTML = `
-    <div class="status-block">
-      <p>Khong co phien lam bai hop le. Dang quay ve trang chinh...</p>
-    </div>
-  `;
+  app.innerHTML = `<div class="status-block"><p>Khong co phien lam bai hop le. Dang quay ve trang chinh...</p></div>`;
   window.location.replace(HOME_PAGE_URL);
-}
-
-// ── Utilities ─────────────────────────────────────────────────────────────────
-function countAnswered(session) {
-  return session.order.filter((id) => Boolean(session.answers[id])).length;
-}
-
-function clampIndex(index, length) {
-  if (length <= 0) return 0;
-  return Math.min(Math.max(index, 0), length - 1);
-}
-
-function isValidOptionOrder(order) {
-  return Array.isArray(order)
-    && order.length === 4
-    && order.every((choice) => ["A", "B", "C", "D"].includes(choice))
-    && new Set(order).size === 4;
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
 }
