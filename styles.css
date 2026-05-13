@@ -1751,3 +1751,110 @@ mark.keyword-danger {
     grid-template-columns: 1fr 1fr;
   }
 }
+/* ==========================================================================
+   Sorting Game Styles
+   ========================================================================== */
+
+.sorting-app {
+  max-width: 800px;
+}
+
+.sorting-area {
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.current-item-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 32px;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  border: 2px solid var(--primary-light);
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.current-item-card h3 {
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.buckets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.color-bucket {
+  aspect-ratio: 1;
+  background: white;
+  border: 3px solid var(--line);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 16px;
+  text-align: center;
+  gap: 12px;
+}
+
+.color-bucket:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.color-bucket:active {
+  transform: translateY(0);
+}
+
+.color-bucket.is-correct {
+  border-color: var(--success);
+  background-color: var(--success-bg);
+  animation: celebrate 0.5s ease;
+}
+
+.color-bucket.is-wrong {
+  border-color: var(--danger);
+  background-color: var(--danger-bg);
+  animation: shake 0.5s ease;
+}
+
+.bucket-swatch {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.1);
+}
+
+.bucket-label {
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  color: var(--ink);
+}
+
+@keyframes celebrate {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@media (max-width: 600px) {
+  .buckets-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

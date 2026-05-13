@@ -184,6 +184,9 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
         <button class="ghost-button" data-action="continue-session" ${canContinue ? "" : "disabled"}>
           ▶️ Tiếp tục
         </button>
+        <a href="./sort.html" class="button secondary-button" style="text-decoration: none; text-align: center; display: inline-block;">
+          🧺 Game phân loại màu sắc
+        </a>
         <button class="secondary-button" data-action="review-wrong" ${canReviewWrong ? "" : "disabled"}>
           🎯 Ôn lại câu sai
         </button>
