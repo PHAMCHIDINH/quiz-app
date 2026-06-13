@@ -73,7 +73,7 @@ export function render(app, state, options) {
   renderResults(session);
 }
 
-export function renderHome(app, state, { session, lastResult, bookmarks, historyStorage, showHistory }) {
+export function renderHome(app, state, { session, lastResult, bookmarks, historyStorage, showHistory, currentTopicId, TOPICS }) {
   const wrongCount = lastResult?.wrongAnswers?.length ?? 0;
   const canContinue = Boolean(session && !session.submitted);
   const canReviewWrong = wrongCount > 0;
@@ -84,8 +84,29 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
     ? formatRangeLabel(session.rangeStart, session.rangeEnd)
     : "";
 
+  const topicTabsHtml = TOPICS.map(topic => {
+    const isActive = topic.id === currentTopicId;
+    const icon = topic.id === "duoc" ? "💊" : "🏛️";
+    return `
+      <button class="topic-tab ${isActive ? "active" : ""}" data-action="switch-topic" data-topic-id="${topic.id}">
+        <span class="topic-tab-icon">${icon}</span>
+        <span class="topic-tab-name">${escapeHtml(topic.name)}</span>
+      </button>
+    `;
+  }).join("");
+
+  const topicSelectorHtml = `
+    <section class="topic-selector-card">
+      <h3>📚 Chọn học phần cho Mun Ngu</h3>
+      <div class="topic-tabs">
+        ${topicTabsHtml}
+      </div>
+    </section>
+  `;
+
   app.innerHTML = `
     <div class="home-grid">
+      ${topicSelectorHtml}
       <section class="stats-grid">
         <article class="stat-card">
           <p class="stat-label">Tổng câu hỏi</p>

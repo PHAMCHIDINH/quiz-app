@@ -44,13 +44,43 @@ import {
 } from "./views.js";
 
 const app = document.querySelector("#app");
-const STORAGE_KEY = "htbt-quiz-app-state";
-const HISTORY_KEY = "htbt-quiz-history";
 const HOME_PAGE_URL = "./index.html";
 const QUIZ_PAGE_URL = "./quiz.html";
 const pageMode = document.body.dataset.page === "quiz" ? "quiz" : "home";
-const storage = createQuizStorage(window.localStorage, STORAGE_KEY);
-const historyStorage = createQuizStorage(window.localStorage, HISTORY_KEY);
+
+const TOPICS = [
+  { id: "duoc", name: "Hóa Dược", file: "./data/questions.json" },
+  { id: "gdct2", name: "Giáo dục chính trị 2", file: "./data/questions_gdct2.json" }
+];
+
+let currentTopicId = localStorage.getItem("htbt-quiz-current-topic") || "duoc";
+if (!TOPICS.some(t => t.id === currentTopicId)) {
+  currentTopicId = "duoc";
+}
+
+let storage = null;
+let historyStorage = null;
+
+function initTopicStorage(topicId) {
+  currentTopicId = topicId;
+  localStorage.setItem("htbt-quiz-current-topic", topicId);
+
+  const storageKey = `htbt-quiz-app-state-${topicId}`;
+  const historyKey = `htbt-quiz-history-${topicId}`;
+
+  // Migration for "duoc" topic if old generic keys exist
+  if (topicId === "duoc") {
+    if (!localStorage.getItem(storageKey) && localStorage.getItem("htbt-quiz-app-state")) {
+      localStorage.setItem(storageKey, localStorage.getItem("htbt-quiz-app-state"));
+    }
+    if (!localStorage.getItem(historyKey) && localStorage.getItem("htbt-quiz-history")) {
+      localStorage.setItem(historyKey, localStorage.getItem("htbt-quiz-history"));
+    }
+  }
+
+  storage = createQuizStorage(window.localStorage, storageKey);
+  historyStorage = createQuizStorage(window.localStorage, historyKey);
+}
 
 const state = {
   questions: [],
@@ -90,20 +120,31 @@ document.addEventListener("keydown", handleKeydown);
 init();
 
 async function init() {
-  hydratePersistedState();
+  initTopicStorage(currentTopicId);
+  await loadTopicData(currentTopicId);
+}
+
+async function loadTopicData(topicId) {
+  state.loading = true;
+  state.error = "";
+  render();
 
   try {
-    const response = await fetch("./data/questions.json");
+    const topic = TOPICS.find((t) => t.id === topicId) || TOPICS[0];
+    const response = await fetch(topic.file);
     if (!response.ok) {
-      throw new Error(`Khong the tai data/questions.json (${response.status})`);
+      throw new Error(`Khong the tai ${topic.file} (${response.status})`);
     }
     const questions = await response.json();
     if (!Array.isArray(questions) || questions.length === 0) {
-      throw new Error("data/questions.json khong co du lieu hop le.");
+      throw new Error(`${topic.file} khong co du lieu hop le.`);
     }
 
     state.questions = questions;
     state.questionsById = new Map(questions.map((question) => [question.id, question]));
+
+    hydratePersistedState();
+
     state.persisted.settings = {
       ...state.persisted.settings,
       ...hydrateRangeSettings(state.persisted.settings, state.questions.length)
@@ -240,7 +281,9 @@ function renderHome() {
     lastResult: state.persisted.lastResult,
     bookmarks: state.persisted.bookmarks,
     historyStorage,
-    showHistory
+    showHistory,
+    currentTopicId,
+    TOPICS
   });
 }
 
@@ -267,11 +310,20 @@ function renderHistoryDetail(index) {
   if (!success) renderHome();
 }
 
-function handleClick(event) {
+async function handleClick(event) {
   const button = event.target.closest("[data-action]");
   if (!button || state.loading || state.error) return;
 
   const { action } = button.dataset;
+
+  if (action === "switch-topic") {
+    const newTopicId = button.dataset.topicId;
+    if (newTopicId && newTopicId !== currentTopicId) {
+      initTopicStorage(newTopicId);
+      await loadTopicData(newTopicId);
+    }
+    return;
+  }
 
   if (action === "start-new") {
     if (button.dataset.rangeStart && button.dataset.rangeEnd) {

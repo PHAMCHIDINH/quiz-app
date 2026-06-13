@@ -1858,3 +1858,75 @@ mark.keyword-danger {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ── Topic Selector ────────────────────────────────────────────────────────── */
+.topic-selector-card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 16px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.topic-selector-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.topic-tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.topic-tab {
+  background: white;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--muted);
+  box-shadow: var(--shadow-sm);
+}
+
+.topic-tab:hover {
+  border-color: var(--primary-light);
+  color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.topic-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.topic-tab.active .topic-tab-icon {
+  transform: scale(1.15);
+}
+
+.topic-tab-icon {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.topic-tab-name {
+  font-family: 'Outfit', sans-serif;
+}
+
