@@ -50,7 +50,8 @@ const pageMode = document.body.dataset.page === "quiz" ? "quiz" : "home";
 
 const TOPICS = [
   { id: "duoc", name: "Hóa Dược", file: "./data/questions.json" },
-  { id: "gdct2", name: "Giáo dục chính trị 2", file: "./data/questions_gdct2.json" }
+  { id: "gdct2", name: "Giáo dục chính trị 2", file: "./data/questions_gdct2.json" },
+  { id: "thucvat", name: "Thực vật - Dược liệu", file: "./data/questions_thucvat_duoclieu.json" }
 ];
 
 let currentTopicId = localStorage.getItem("htbt-quiz-current-topic") || "duoc";

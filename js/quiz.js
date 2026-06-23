@@ -176,11 +176,17 @@ export function scoreSession(session, questions) {
     });
   }
 
+  const total = session.order.length;
+  const scoreOn10 = total > 0
+    ? Number((correctCount / total * 10).toFixed(2))
+    : 0;
+
   return {
     correctCount,
     incorrectCount,
     unansweredCount,
     answeredCount: correctCount + incorrectCount,
+    scoreOn10,
     wrongAnswers
   };
 }

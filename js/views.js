@@ -18,6 +18,21 @@ import { resolvePageView } from "./page-routing.js";
 import { getResultEvaluation } from "./reactions.js";
 import { loadHistory } from "./history.js";
 
+function formatScoreOn10(score) {
+  const value = typeof score === "number" && !Number.isNaN(score) ? score : 0;
+  return value.toFixed(2);
+}
+
+function resolveEntryScoreOn10(entry) {
+  if (entry && typeof entry.scoreOn10 === "number" && !Number.isNaN(entry.scoreOn10)) {
+    return entry.scoreOn10;
+  }
+  if (entry && entry.total > 0) {
+    return Number(((entry.correct / entry.total) * 10).toFixed(2));
+  }
+  return 0;
+}
+
 export function render(app, state, options) {
   const {
     pageMode,
@@ -205,9 +220,6 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
         <button class="ghost-button" data-action="continue-session" ${canContinue ? "" : "disabled"}>
           ▶️ Tiếp tục
         </button>
-        <a href="./sort.html" class="button secondary-button" style="text-decoration: none; text-align: center; display: inline-block;">
-          🧺 Game phân loại màu sắc
-        </a>
         <button class="secondary-button" data-action="review-wrong" ${canReviewWrong ? "" : "disabled"}>
           🎯 Ôn lại câu sai
         </button>
@@ -239,7 +251,8 @@ export function renderHistorySection(history, showHistory) {
     ? history.map((h, i) => {
       const d = new Date(h.ts);
       const dateStr = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-      const scoreClass = h.percent >= 75 ? 'history-score--good' : h.percent >= 50 ? 'history-score--ok' : 'history-score--bad';
+      const scoreOn10 = resolveEntryScoreOn10(h);
+      const scoreClass = scoreOn10 >= 7.5 ? 'history-score--good' : scoreOn10 >= 5 ? 'history-score--ok' : 'history-score--bad';
       return `
           <div class="history-entry">
             <div class="history-entry__info">
@@ -247,7 +260,7 @@ export function renderHistorySection(history, showHistory) {
               <span class="history-entry__mode">${escapeHtml(h.mode)}</span>
             </div>
             <div class="history-entry__right">
-              <span class="history-score ${scoreClass}">${h.correct}/${h.total} · ${h.percent}%</span>
+              <span class="history-score ${scoreClass}">${formatScoreOn10(scoreOn10)}/10 · ${h.percent}%</span>
               ${h.wrongReview && h.wrongReview.length > 0 ? `<button class="history-detail-btn" data-action="view-history-detail" data-index="${i}" title="Xem chi tiết">🔍</button>` : ""}
               <button class="history-delete-btn" data-action="delete-history-entry" data-index="${i}" title="Xóa lần này">🗑️</button>
             </div>
@@ -464,8 +477,9 @@ export function renderResults(app, session, { questions, lastResult }) {
       <div class="result-header">
         <div class="result-grade-badge">${ev.emoji}</div>
         <h2>${ev.grade}</h2>
+        <div class="result-score-10">${formatScoreOn10(summary.scoreOn10)}<span class="result-score-10__denom">/10</span></div>
         <p class="result-copy">
-          Bé đúng ${summary.correctCount}/${total} câu, tương đương ${scorePercent}%.
+          Bé đúng ${summary.correctCount}/${total} câu · ${scorePercent}%.
         </p>
         <div class="result-evaluation-msg">${ev.msg}</div>
       </div>
@@ -558,6 +572,7 @@ export function renderHistoryDetail(app, historyStorage, index) {
       <div class="result-header">
         <h2>Chi tiết lần làm bài</h2>
         <p class="result-copy">Thời gian: ${escapeHtml(dateStr)} · Chế độ: ${escapeHtml(entry.mode)}</p>
+        <div class="result-score-10">${formatScoreOn10(resolveEntryScoreOn10(entry))}<span class="result-score-10__denom">/10</span></div>
         <p class="result-copy">Đúng: <strong>${entry.correct}/${entry.total} (${entry.percent}%)</strong></p>
       </div>
 

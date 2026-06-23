@@ -177,6 +177,7 @@ test("scoreSession counts correct, wrong, and unanswered questions", () => {
   assert.equal(result.incorrectCount, 1);
   assert.equal(result.unansweredCount, 1);
   assert.equal(result.answeredCount, 2);
+  assert.equal(result.scoreOn10, 3.33);
   assert.deepEqual(result.wrongAnswers, [
     {
       id: 2,
@@ -184,6 +185,56 @@ test("scoreSession counts correct, wrong, and unanswered questions", () => {
       correct: "C"
     }
   ]);
+});
+
+test("scoreOn10 counts all questions including unanswered in the denominator", () => {
+  let session = createSession(questions);
+  session = selectAnswer(session, 1, "A");
+  session = selectAnswer(session, 2, "C");
+  session = selectAnswer(session, 3, "D");
+
+  const result = scoreSession(session, questions);
+
+  assert.equal(result.correctCount, 2);
+  assert.equal(result.scoreOn10, 6.67);
+});
+
+test("scoreOn10 returns 0 when session is empty", () => {
+  const session = createSession(questions);
+  const result = scoreSession(session, questions);
+
+  assert.equal(result.correctCount, 0);
+  assert.equal(result.scoreOn10, 0);
+});
+
+test("scoreOn10 reaches exactly 10 when every question is correct", () => {
+  let session = createSession(questions);
+  session = selectAnswer(session, 1, "A");
+  session = selectAnswer(session, 2, "C");
+  session = selectAnswer(session, 3, "B");
+
+  const result = scoreSession(session, questions);
+
+  assert.equal(result.correctCount, 3);
+  assert.equal(result.scoreOn10, 10);
+});
+
+test("scoreOn10 rounds to two decimal places", () => {
+  const customQuestions = [
+    { id: 1, question: "Q1", options: { A: "a", B: "b", C: "c", D: "d" }, answer: "A" },
+    { id: 2, question: "Q2", options: { A: "a", B: "b", C: "c", D: "d" }, answer: "A" },
+    { id: 3, question: "Q3", options: { A: "a", B: "b", C: "c", D: "d" }, answer: "A" },
+    { id: 4, question: "Q4", options: { A: "a", B: "b", C: "c", D: "d" }, answer: "A" }
+  ];
+  let session = createSession(customQuestions);
+  session = selectAnswer(session, 1, "A");
+  session = selectAnswer(session, 2, "A");
+  session = selectAnswer(session, 3, "A");
+
+  const result = scoreSession(session, customQuestions);
+
+  assert.equal(result.correctCount, 3);
+  assert.equal(result.scoreOn10, 7.5);
 });
 
 test("buildWrongAnswerReview returns the wrong questions with selected and correct answers", () => {

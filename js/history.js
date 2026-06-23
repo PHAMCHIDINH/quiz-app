@@ -21,6 +21,7 @@ export function saveHistory(historyStorage, summary, session, wrongReview = []) 
     correct: summary.correctCount,
     incorrect: summary.incorrectCount,
     unanswered: summary.unansweredCount,
+    scoreOn10: typeof summary.scoreOn10 === "number" ? summary.scoreOn10 : 0,
     percent: session.order.length > 0
       ? Math.round((summary.correctCount / session.order.length) * 100)
       : 0,
