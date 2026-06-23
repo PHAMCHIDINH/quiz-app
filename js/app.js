@@ -118,24 +118,8 @@ document.addEventListener("click", handleClick);
 document.addEventListener("change", handleChange);
 document.addEventListener("keydown", handleKeydown);
 
-initTheme();
+
 init();
-
-function initTheme() {
-  const saved = localStorage.getItem("htbt-quiz-theme");
-  const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
-  const theme = (saved === "dark" || saved === "light")
-    ? saved
-    : (prefersDark ? "dark" : "light");
-  document.documentElement.dataset.theme = theme;
-
-  // Lắng nghe khi user đổi OS theme - chỉ áp dụng nếu user chưa explicit
-  window.matchMedia?.("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    if (!localStorage.getItem("htbt-quiz-theme")) {
-      document.documentElement.dataset.theme = e.matches ? "dark" : "light";
-    }
-  });
-}
 
 async function init() {
   initTopicStorage(currentTopicId);
@@ -503,11 +487,6 @@ function handleChange(event) {
     state.persisted.settings.rangeStart = "1";
     state.persisted.settings.rangeEnd = target.value;
     state.ui.setupError = "";
-  } else if (role === 'dark-mode-toggle') {
-    const next = target.checked ? "dark" : "light";
-    document.documentElement.dataset.theme = next;
-    localStorage.setItem("htbt-quiz-theme", next);
-    return;
   } else {
     return;
   }

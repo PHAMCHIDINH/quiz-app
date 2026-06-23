@@ -95,48 +95,7 @@
   --max-width: 920px;
 }
 
-/* ── Dark Mode Theme Override 🌙 ───────────────────────────────────────────── */
-[data-theme="dark"] {
-  --bg-color: #1a1620;
-  --panel-bg: rgba(40, 32, 52, .88);
-  --panel-soft: rgba(40, 32, 52, .6);
-  --ink: #f0e8f5;
-  --muted: #a89bb5;
-  --line: rgba(168, 140, 200, .4);
 
-  /* Shadows — giảm alpha để không chói trên nền tối */
-  --shadow-sm: 0 4px 12px -2px rgba(255, 111, 163, .06), 0 2px 4px -1px rgba(255, 111, 163, .03);
-  --shadow-md: 0 10px 24px -4px rgba(255, 111, 163, .10), 0 4px 8px -2px rgba(255, 111, 163, .05);
-  --shadow-lg: 0 20px 40px -8px rgba(255, 111, 163, .14), 0 10px 16px -4px rgba(255, 111, 163, .07);
-  --shadow-glow: 0 0 24px rgba(255, 111, 163, .22);
-
-  --shadow-lavender-md: 0 10px 24px -4px rgba(168, 133, 208, .18);
-  --shadow-peach-md: 0 10px 24px -4px rgba(242, 148, 102, .18);
-  --shadow-lemon-md: 0 10px 24px -4px rgba(232, 190, 77, .18);
-  --shadow-mint-md: 0 10px 24px -4px rgba(118, 194, 168, .18);
-  --shadow-sky-md: 0 10px 24px -4px rgba(127, 188, 222, .18);
-}
-
-[data-theme="dark"] .background-shapes {
-  background: linear-gradient(135deg, #1a1620 0%, #2a1f38 60%, #1f1729 100%);
-}
-
-[data-theme="dark"] .shape-1 {
-  background: rgba(255, 111, 163, .14);
-}
-
-[data-theme="dark"] .shape-2 {
-  background: rgba(158, 216, 198, .12);
-}
-
-[data-theme="dark"] .shape-3 {
-  background: rgba(200, 168, 233, .10);
-}
-
-[data-theme="dark"] .background-shapes::before,
-[data-theme="dark"] .background-shapes::after {
-  color: rgba(255, 179, 209, .25);
-}
 
 * {
   box-sizing: border-box;

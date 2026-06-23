@@ -182,7 +182,7 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
   const sessionRangeLabel = session?.rangeStart && session?.rangeEnd
     ? formatRangeLabel(session.rangeStart, session.rangeEnd)
     : "";
-  const isDark = document.documentElement.dataset.theme === "dark";
+
 
   const topicTabsHtml = TOPICS.map(topic => {
     const isActive = topic.id === currentTopicId;
@@ -243,10 +243,6 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
         <label class="toggle-card">
           <input type="checkbox" data-role="instant-feedback-toggle" ${state.persisted.settings.immediateFeedback ? "checked" : ""} />
           <span>⚡ Báo đúng/sai cho Mun ngu</span>
-        </label>
-        <label class="toggle-card">
-          <input type="checkbox" data-role="dark-mode-toggle" ${isDark ? "checked" : ""} />
-          <span>🌙 Dark mode cho Mun ngu</span>
         </label>
       </section>
 
