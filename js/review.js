@@ -20,7 +20,8 @@ export function buildWrongAnswerReview(questions, session) {
       selected: item.selected,
       correct: item.correct,
       selectedDisplay: mapOriginalChoiceToDisplay(session, question.id, item.selected),
-      correctDisplay: mapOriginalChoiceToDisplay(session, question.id, item.correct)
+      correctDisplay: mapOriginalChoiceToDisplay(session, question.id, item.correct),
+      ...(question.explanation ? { explanation: question.explanation } : {})
     };
   });
 }

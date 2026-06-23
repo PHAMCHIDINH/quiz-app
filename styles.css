@@ -20,6 +20,48 @@
   --accent: #ffb3d1;
   --accent-glow: #ffd6e7;
 
+  /* ── Pastel Accent Palette 🌸 — mở rộng tương phản ─────────────────────── */
+  /* Lavender */
+  --accent-lavender: #c8a8e9;
+  --accent-lavender-hover: #a685d0;
+  --accent-lavender-light: #f0e6fa;
+  --accent-lavender-soft: #f9f3fd;
+  --accent-lavender-text: #5b3d8a;
+
+  /* Peach */
+  --accent-peach: #ffb088;
+  --accent-peach-hover: #f29466;
+  --accent-peach-light: #ffe3d2;
+  --accent-peach-soft: #fff4ec;
+  --accent-peach-text: #9a4f1e;
+
+  /* Lemon */
+  --accent-lemon: #f7d774;
+  --accent-lemon-hover: #e8be4d;
+  --accent-lemon-light: #fff3cc;
+  --accent-lemon-soft: #fffaeb;
+  --accent-lemon-text: #8a6814;
+
+  /* Mint */
+  --accent-mint: #9ed8c6;
+  --accent-mint-hover: #76c2a8;
+  --accent-mint-light: #dff4ec;
+  --accent-mint-soft: #edfaf4;
+  --accent-mint-text: #2c6e58;
+
+  /* Sky */
+  --accent-sky: #a9d4f5;
+  --accent-sky-hover: #7fbcde;
+  --accent-sky-light: #e3f1fb;
+  --accent-sky-soft: #f0f7fd;
+  --accent-sky-text: #2a5b80;
+
+  --shadow-lavender-md: 0 10px 24px -4px rgba(168, 133, 208, .25);
+  --shadow-peach-md: 0 10px 24px -4px rgba(242, 148, 102, .25);
+  --shadow-lemon-md: 0 10px 24px -4px rgba(232, 190, 77, .25);
+  --shadow-mint-md: 0 10px 24px -4px rgba(118, 194, 168, .25);
+  --shadow-sky-md: 0 10px 24px -4px rgba(127, 188, 222, .25);
+
   --success: #f17fb1;
   --success-bg: #ffe6f0;
   --success-border: #ffc1d9;
@@ -51,6 +93,49 @@
   --radius-full: 9999px;
 
   --max-width: 920px;
+}
+
+/* ── Dark Mode Theme Override 🌙 ───────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-color: #1a1620;
+  --panel-bg: rgba(40, 32, 52, .88);
+  --panel-soft: rgba(40, 32, 52, .6);
+  --ink: #f0e8f5;
+  --muted: #a89bb5;
+  --line: rgba(168, 140, 200, .4);
+
+  /* Shadows — giảm alpha để không chói trên nền tối */
+  --shadow-sm: 0 4px 12px -2px rgba(255, 111, 163, .06), 0 2px 4px -1px rgba(255, 111, 163, .03);
+  --shadow-md: 0 10px 24px -4px rgba(255, 111, 163, .10), 0 4px 8px -2px rgba(255, 111, 163, .05);
+  --shadow-lg: 0 20px 40px -8px rgba(255, 111, 163, .14), 0 10px 16px -4px rgba(255, 111, 163, .07);
+  --shadow-glow: 0 0 24px rgba(255, 111, 163, .22);
+
+  --shadow-lavender-md: 0 10px 24px -4px rgba(168, 133, 208, .18);
+  --shadow-peach-md: 0 10px 24px -4px rgba(242, 148, 102, .18);
+  --shadow-lemon-md: 0 10px 24px -4px rgba(232, 190, 77, .18);
+  --shadow-mint-md: 0 10px 24px -4px rgba(118, 194, 168, .18);
+  --shadow-sky-md: 0 10px 24px -4px rgba(127, 188, 222, .18);
+}
+
+[data-theme="dark"] .background-shapes {
+  background: linear-gradient(135deg, #1a1620 0%, #2a1f38 60%, #1f1729 100%);
+}
+
+[data-theme="dark"] .shape-1 {
+  background: rgba(255, 111, 163, .14);
+}
+
+[data-theme="dark"] .shape-2 {
+  background: rgba(158, 216, 198, .12);
+}
+
+[data-theme="dark"] .shape-3 {
+  background: rgba(200, 168, 233, .10);
+}
+
+[data-theme="dark"] .background-shapes::before,
+[data-theme="dark"] .background-shapes::after {
+  color: rgba(255, 179, 209, .25);
 }
 
 * {
@@ -100,7 +185,7 @@ body {
 .shape-2 {
   width: 600px;
   height: 600px;
-  background: rgba(255, 179, 209, .35);
+  background: rgba(158, 216, 198, .35); /* mint */
   bottom: -200px;
   right: -100px;
   animation-delay: -5s;
@@ -109,7 +194,7 @@ body {
 .shape-3 {
   width: 400px;
   height: 400px;
-  background: rgba(255, 207, 232, .4);
+  background: rgba(200, 168, 233, .32); /* lavender */
   top: 30%;
   left: 40%;
   animation-delay: -10s;
@@ -660,6 +745,49 @@ input {
   background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
   box-shadow: 0 10px 26px rgba(255, 111, 163, .55);
   transform: translateY(-3px);
+}
+
+/* Button accent variants (data-color) */
+.button[data-color="lavender"] {
+  background: linear-gradient(135deg, var(--accent-lavender) 0%, var(--accent-lavender-light) 100%);
+  box-shadow: var(--shadow-lavender-md);
+}
+.button[data-color="lavender"]:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-lavender-hover) 0%, var(--accent-lavender) 100%);
+  box-shadow: 0 10px 26px rgba(168, 133, 208, .55);
+}
+.button[data-color="peach"] {
+  background: linear-gradient(135deg, var(--accent-peach) 0%, var(--accent-peach-light) 100%);
+  box-shadow: var(--shadow-peach-md);
+}
+.button[data-color="peach"]:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-peach-hover) 0%, var(--accent-peach) 100%);
+  box-shadow: 0 10px 26px rgba(242, 148, 102, .55);
+}
+.button[data-color="mint"] {
+  background: linear-gradient(135deg, var(--accent-mint) 0%, var(--accent-mint-light) 100%);
+  box-shadow: var(--shadow-mint-md);
+}
+.button[data-color="mint"]:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-mint-hover) 0%, var(--accent-mint) 100%);
+  box-shadow: 0 10px 26px rgba(118, 194, 168, .55);
+}
+.button[data-color="lemon"] {
+  background: linear-gradient(135deg, var(--accent-lemon) 0%, var(--accent-lemon-light) 100%);
+  box-shadow: var(--shadow-lemon-md);
+  color: var(--accent-lemon-text);
+}
+.button[data-color="lemon"]:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-lemon-hover) 0%, var(--accent-lemon) 100%);
+  color: white;
+}
+.button[data-color="sky"] {
+  background: linear-gradient(135deg, var(--accent-sky) 0%, var(--accent-sky-light) 100%);
+  box-shadow: var(--shadow-sky-md);
+}
+.button[data-color="sky"]:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-sky-hover) 0%, var(--accent-sky) 100%);
+  box-shadow: 0 10px 26px rgba(127, 188, 222, .55);
 }
 
 .secondary-button {
@@ -1446,7 +1574,7 @@ mark.keyword-danger {
 }
 
 .chart-bar.bar--bad {
-  background: linear-gradient(180deg, #ffd0dc, #ff7a9c);
+  background: linear-gradient(180deg, var(--accent-peach-light), var(--accent-peach-hover));
 }
 
 .bar-label {
@@ -1602,15 +1730,17 @@ mark.keyword-danger {
 }
 
 .reaction-toast--correct {
-  background: linear-gradient(135deg, #ffd0e2, #ffb3d1);
-  border: 1.5px solid #ff9ec4;
-  color: #9d2e63;
+  background: linear-gradient(135deg, var(--accent-mint-light), var(--accent-mint));
+  border: 1.5px solid var(--accent-mint-hover);
+  color: var(--accent-mint-text);
+  box-shadow: var(--shadow-mint-md);
 }
 
 .reaction-toast--wrong {
-  background: linear-gradient(135deg, #ffd0dc, #ffb6c8);
-  border: 1.5px solid #ff8fa9;
-  color: #b12953;
+  background: linear-gradient(135deg, var(--accent-peach-light), var(--accent-peach));
+  border: 1.5px solid var(--accent-peach-hover);
+  color: var(--accent-peach-text);
+  box-shadow: var(--shadow-peach-md);
 }
 
 .toast-emoji {
@@ -1897,17 +2027,56 @@ mark.keyword-danger {
 }
 
 .topic-tab:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background: var(--primary-soft);
+  border-color: var(--tab-color, var(--primary));
+  color: var(--tab-color, var(--primary));
+  background: var(--tab-soft, var(--primary-soft));
   transform: translateY(-3px);
 }
 
 .topic-tab.active {
-  background: linear-gradient(135deg, var(--primary), #ff8fb8);
-  border-color: var(--primary);
+  background: linear-gradient(135deg, var(--tab-color, var(--primary)), var(--tab-light, #ff8fb8));
+  border-color: var(--tab-color, var(--primary));
   color: white;
-  box-shadow: 0 6px 18px rgba(255, 111, 163, .4);
+  box-shadow: 0 6px 18px var(--tab-shadow, rgba(255, 111, 163, .4));
+}
+
+/* ── Topic tab color variants (mở rộng pastel accent) 🌸 ─────────────────── */
+.topic-tab[data-color="pink"] {
+  --tab-color: var(--primary);
+  --tab-light: #ff8fb8;
+  --tab-soft: var(--primary-soft);
+  --tab-shadow: rgba(255, 111, 163, .4);
+}
+.topic-tab[data-color="lavender"] {
+  --tab-color: var(--accent-lavender);
+  --tab-light: var(--accent-lavender-light);
+  --tab-soft: var(--accent-lavender-soft);
+  --tab-shadow: rgba(168, 133, 208, .4);
+  /* khi active cần text trắng → giữ nguyên .active rule */
+}
+.topic-tab[data-color="peach"] {
+  --tab-color: var(--accent-peach);
+  --tab-light: var(--accent-peach-light);
+  --tab-soft: var(--accent-peach-soft);
+  --tab-shadow: rgba(242, 148, 102, .4);
+}
+.topic-tab[data-color="mint"] {
+  --tab-color: var(--accent-mint);
+  --tab-light: var(--accent-mint-light);
+  --tab-soft: var(--accent-mint-soft);
+  --tab-shadow: rgba(118, 194, 168, .4);
+}
+.topic-tab[data-color="lemon"] {
+  --tab-color: var(--accent-lemon);
+  --tab-light: var(--accent-lemon-light);
+  --tab-soft: var(--accent-lemon-soft);
+  --tab-shadow: rgba(232, 190, 77, .4);
+}
+.topic-tab[data-color="sky"] {
+  --tab-color: var(--accent-sky);
+  --tab-light: var(--accent-sky-light);
+  --tab-soft: var(--accent-sky-soft);
+  --tab-shadow: rgba(127, 188, 222, .4);
 }
 
 .topic-tab.active .topic-tab-icon {
@@ -2014,4 +2183,44 @@ mark.keyword-danger {
   .stats-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* ── Surprise Me Button ────────────────────────────────────────────────────── */
+.surprise-button {
+  background: linear-gradient(135deg, var(--accent-lavender), var(--accent-peach));
+  box-shadow: var(--shadow-lavender-md);
+}
+
+.surprise-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-lavender-hover), var(--accent-peach-hover));
+  box-shadow: 0 10px 24px rgba(168, 133, 208, .5);
+}
+
+/* ── Question Explanations ─────────────────────────────────────────────────── */
+.review-explanation {
+  background: linear-gradient(135deg, var(--accent-lemon-soft), var(--accent-lemon-light));
+  border-left: 3px solid var(--accent-lemon-hover);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-top: 12px;
+  font-size: .92rem;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.review-explanation-label {
+  font-weight: 700;
+  color: var(--accent-lemon-text);
+  margin-right: 4px;
+}
+
+.feedback-explanation {
+  font-size: .9rem;
+  color: var(--ink);
+  margin-top: 6px;
+  font-style: italic;
+  background: rgba(255, 243, 204, .6);
+  border-radius: 10px;
+  padding: 8px 12px;
+  border-left: 2px solid var(--accent-lemon-hover);
 }

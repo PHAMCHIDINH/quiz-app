@@ -45,7 +45,13 @@ export function showReactionToast(isCorrect) {
 }
 
 export function launchConfetti() {
-  const colors = ["#6366f1", "#10b981", "#f59e0b", "#ec4899", "#3b82f6", "#a855f7"];
+  const colors = [
+    "#ff6fa3", "#ff8fb8", "#ffb3d1", "#ffd6e7", // pink
+    "#c8a8e9", "#a685d0", "#f0e6fa",             // lavender
+    "#ffb088", "#f29466", "#ffe3d2",             // peach
+    "#9ed8c6", "#76c2a8", "#dff4ec",             // mint
+    "#f7d774", "#fff3cc"                          // lemon
+  ];
   for (let i = 0; i < 60; i++) {
     const el = document.createElement("div");
     el.className = "confetti-piece";

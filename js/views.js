@@ -33,6 +33,90 @@ function resolveEntryScoreOn10(entry) {
   return 0;
 }
 
+function scoreColorClass(scoreOn10) {
+  if (scoreOn10 >= 7.5) return "good";
+  if (scoreOn10 >= 5) return "ok";
+  return "bad";
+}
+
+function truncate(text, max) {
+  if (!text) return "";
+  return text.length > max ? `${text.slice(0, max - 1)}…` : text;
+}
+
+export function renderDashboard(history) {
+  const entries = Array.isArray(history) ? history.slice(0, 10).reverse() : [];
+
+  if (entries.length === 0) {
+    return `
+      <section class="dashboard-section">
+        <h3 class="dashboard-title">📊 Thống kê của Mun ngu</h3>
+        <div class="dashboard-empty">
+          <p>Hoàn thành một bài để Mun ngu mở khoá thống kê nha~ 🌷</p>
+        </div>
+      </section>
+    `;
+  }
+
+  // Bar chart — newest on the right
+  const columns = entries.map((entry, idx) => {
+    const score = resolveEntryScoreOn10(entry);
+    const cls = scoreColorClass(score);
+    const heightPct = Math.max(4, Math.min(100, Number(entry.percent) || 0));
+    return `
+      <div class="chart-column">
+        <span class="bar-value">${formatScoreOn10(score)}</span>
+        <div class="bar-wrapper">
+          <div class="chart-bar bar--${cls}" style="height:${heightPct}%"></div>
+        </div>
+        <span class="bar-label">${escapeHtml(truncate(entry.mode, 8))}</span>
+      </div>
+    `;
+  }).join("");
+
+  // Wrong-question frequency — aggregate across all entries
+  const freq = new Map();
+  for (const entry of entries) {
+    const review = Array.isArray(entry.wrongReview) ? entry.wrongReview : [];
+    for (const item of review) {
+      const existing = freq.get(item.id) ?? { count: 0, question: item.question };
+      existing.count += 1;
+      freq.set(item.id, existing);
+    }
+  }
+  const topWrong = [...freq.entries()]
+    .map(([id, v]) => ({ id, ...v }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 5);
+
+  const wrongFreqHtml = topWrong.length === 0
+    ? `<p class="history-empty">Chưa có câu sai nào được ghi nhận. Bé giỏi quá! 🌷</p>`
+    : `<ul class="wrong-freq-list">
+        ${topWrong.map((w) => `
+          <li class="wrong-freq-item">
+            <span class="wrong-freq-count">${w.count}×</span>
+            <span class="wrong-freq-text">Câu ${escapeHtml(String(w.id))}: ${escapeHtml(truncate(w.question, 80))}</span>
+          </li>
+        `).join("")}
+      </ul>`;
+
+  return `
+    <section class="dashboard-section">
+      <div>
+        <h3 class="dashboard-title">📊 Thống kê của Mun ngu</h3>
+        <p class="dashboard-subtitle">10 lần làm bài gần nhất</p>
+      </div>
+      <div class="dashboard-chart-wrap">
+        <div class="dashboard-chart">${columns}</div>
+      </div>
+      <div>
+        <h4 class="dashboard-title" style="font-size:1.05rem;">🎯 Câu hay sai nhất</h4>
+        ${wrongFreqHtml}
+      </div>
+    </section>
+  `;
+}
+
 export function render(app, state, options) {
   const {
     pageMode,
@@ -98,12 +182,14 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
   const sessionRangeLabel = session?.rangeStart && session?.rangeEnd
     ? formatRangeLabel(session.rangeStart, session.rangeEnd)
     : "";
+  const isDark = document.documentElement.dataset.theme === "dark";
 
   const topicTabsHtml = TOPICS.map(topic => {
     const isActive = topic.id === currentTopicId;
-    const icon = topic.id === "duoc" ? "💊" : "🏛️";
+    const icon = topic.id === "duoc" ? "💊" : topic.id === "gdct2" ? "🏛️" : "🌿";
+    const color = topic.color ?? "pink";
     return `
-      <button class="topic-tab ${isActive ? "active" : ""}" data-action="switch-topic" data-topic-id="${topic.id}">
+      <button class="topic-tab ${isActive ? "active" : ""}" data-action="switch-topic" data-topic-id="${topic.id}" data-color="${color}">
         <span class="topic-tab-icon">${icon}</span>
         <span class="topic-tab-name">${escapeHtml(topic.name)}</span>
       </button>
@@ -157,6 +243,10 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
         <label class="toggle-card">
           <input type="checkbox" data-role="instant-feedback-toggle" ${state.persisted.settings.immediateFeedback ? "checked" : ""} />
           <span>⚡ Báo đúng/sai cho Mun ngu</span>
+        </label>
+        <label class="toggle-card">
+          <input type="checkbox" data-role="dark-mode-toggle" ${isDark ? "checked" : ""} />
+          <span>🌙 Dark mode cho Mun ngu</span>
         </label>
       </section>
 
@@ -217,6 +307,9 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
       </section>
 
       <section class="button-row">
+        <button class="button surprise-button" data-action="start-surprise">
+          🎲 Surprise Me (10 câu ngẫu nhiên)
+        </button>
         <button class="ghost-button" data-action="continue-session" ${canContinue ? "" : "disabled"}>
           ▶️ Tiếp tục
         </button>
@@ -240,6 +333,8 @@ export function renderHome(app, state, { session, lastResult, bookmarks, history
     }
 
       ${renderHistorySection(loadHistory(historyStorage), showHistory)}
+
+      ${renderDashboard(loadHistory(historyStorage))}
     </div>
   `;
 }
@@ -419,6 +514,9 @@ export function renderQuiz(app, session, { questionsById, bookmarks, showQuestio
         : `Đáp án đúng là <strong>${correctDisplay}</strong>`
       }
               </p>
+              ${question.explanation
+        ? `<p class="feedback-explanation">💡 ${escapeHtml(question.explanation)}</p>`
+        : ""}
             </div>
           `
       : ""
@@ -544,6 +642,12 @@ export function renderWrongItem(item) {
     .join("");
 
   const isClinical = isClinicalQuestion(item.question);
+  const explanationHtml = item.explanation
+    ? `<p class="review-explanation">
+        <span class="review-explanation-label">💡 Giải thích:</span>
+        ${escapeHtml(item.explanation)}
+      </p>`
+    : "";
 
   return `
     <article class="review-item">
@@ -552,6 +656,7 @@ export function renderWrongItem(item) {
         Câu ${item.id}: ${highlightKeywords(item.question)}
       </h3>
       ${optionList}
+      ${explanationHtml}
     </article>
   `;
 }

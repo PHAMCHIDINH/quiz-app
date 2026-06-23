@@ -49,9 +49,9 @@ const QUIZ_PAGE_URL = "./quiz.html";
 const pageMode = document.body.dataset.page === "quiz" ? "quiz" : "home";
 
 const TOPICS = [
-  { id: "duoc", name: "Hóa Dược", file: "./data/questions.json" },
-  { id: "gdct2", name: "Giáo dục chính trị 2", file: "./data/questions_gdct2.json" },
-  { id: "thucvat", name: "Thực vật - Dược liệu", file: "./data/questions_thucvat_duoclieu.json" }
+  { id: "duoc", name: "Hóa Dược", file: "./data/questions.json", color: "pink" },
+  { id: "gdct2", name: "Giáo dục chính trị 2", file: "./data/questions_gdct2.json", color: "lavender" },
+  { id: "thucvat", name: "Thực vật - Dược liệu", file: "./data/questions_thucvat_duoclieu.json", color: "mint" }
 ];
 
 let currentTopicId = localStorage.getItem("htbt-quiz-current-topic") || "duoc";
@@ -118,7 +118,24 @@ document.addEventListener("click", handleClick);
 document.addEventListener("change", handleChange);
 document.addEventListener("keydown", handleKeydown);
 
+initTheme();
 init();
+
+function initTheme() {
+  const saved = localStorage.getItem("htbt-quiz-theme");
+  const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+  const theme = (saved === "dark" || saved === "light")
+    ? saved
+    : (prefersDark ? "dark" : "light");
+  document.documentElement.dataset.theme = theme;
+
+  // Lắng nghe khi user đổi OS theme - chỉ áp dụng nếu user chưa explicit
+  window.matchMedia?.("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    if (!localStorage.getItem("htbt-quiz-theme")) {
+      document.documentElement.dataset.theme = e.matches ? "dark" : "light";
+    }
+  });
+}
 
 async function init() {
   initTopicStorage(currentTopicId);
@@ -346,6 +363,23 @@ async function handleClick(event) {
     startRangeSession(button.dataset.rangeStart, button.dataset.rangeEnd);
     return;
   }
+  if (action === "start-surprise") {
+    showQuestionMap = false;
+    state.ui.setupError = "";
+    state.persisted.session = createSession(state.questions, {
+      shuffleQuestions: true,
+      shuffleOptions: state.persisted.settings.shuffleOptions,
+      questionLimit: 10,
+      mode: "all",
+      immediateFeedback: state.persisted.settings.immediateFeedback,
+      fastMode: state.persisted.settings.fastMode
+    });
+    state.persisted.lastResult = null;
+    persistState();
+    if (pageMode === "home") navigateToQuizPage();
+    else renderQuiz(state.persisted.session);
+    return;
+  }
   if (action === "continue-session") {
     navigateToQuizPage();
     return;
@@ -469,6 +503,11 @@ function handleChange(event) {
     state.persisted.settings.rangeStart = "1";
     state.persisted.settings.rangeEnd = target.value;
     state.ui.setupError = "";
+  } else if (role === 'dark-mode-toggle') {
+    const next = target.checked ? "dark" : "light";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("htbt-quiz-theme", next);
+    return;
   } else {
     return;
   }

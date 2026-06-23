@@ -10,9 +10,10 @@ export function saveHistory(historyStorage, summary, session, wrongReview = []) 
   const modeLabel =
     session.mode === "wrong-only" ? "Ôn câu sai" :
       session.mode === "bookmark" ? "Câu đánh dấu" :
-        (session.rangeStart && session.rangeEnd)
-          ? `Câu ${session.rangeStart}–${session.rangeEnd}`
-          : "Toàn bộ đề";
+        session.mode === "search" ? "Tìm kiếm" :
+          (session.rangeStart && session.rangeEnd)
+            ? `Câu ${session.rangeStart}–${session.rangeEnd}`
+            : "Toàn bộ đề";
 
   const entry = {
     ts: Date.now(),
